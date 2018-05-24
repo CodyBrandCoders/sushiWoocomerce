@@ -1,0 +1,261 @@
+/*
+======================================================================
+BLOCK-GRID.LESS - GLOBAL BLOCK-GRID SETTINGS
+======================================================================
+*/
+
+/*
+USAGE: Add these classes to the outer div tag to control the break points and how many columns show:
+.block-grid-xs-1 = @0px-479px show 2 columns
+.block-grid-xs-2 = @480px-767px show 2 columns
+.block-grid-sm-3 = @768px-991px show 3 columns
+.block-grid-md-4 = @992px-1199px show 4 columns
+.block-grid-lg-5 = @1200px+ show 5 columns
+
+EXAMPLE:
+<div class="block-grid-xxs-2 block-grid-xs-3 block-grid-sm-4 block-grid-md-5 block-grid-lg-6 mt5 mb20">
+	<div class="block-grid-item">
+		<img class="img-responsive" src="http://placehold.it/600x450" alt="Test">
+	</div>
+	<div class="block-grid-item">
+		<img class="img-responsive" src="http://placehold.it/600x450" alt="Test">
+	</div>
+	<div class="block-grid-item">
+		<img class="img-responsive" src="http://placehold.it/600x450" alt="Test">
+	</div>
+	<div class="block-grid-item">
+		<img class="img-responsive" src="http://placehold.it/600x450" alt="Test">
+	</div>
+	<div class="block-grid-item">
+		<img class="img-responsive" src="http://placehold.it/600x450" alt="Test">
+	</div>
+	<div class="block-grid-item">
+		<img class="img-responsive" src="http://placehold.it/600x450" alt="Test">
+	</div>
+</div>
+<div style="clear: both;"></div>
+*/
+
+/*
+----------------------------------------------------------------------
+QUICK EDIT VARIABLES
+----------------------------------------------------------------------
+*/
+
+//Bootstrap Variables.less Add-Ons by BrandCoders
+// Extra Extra small screen / phone
+@screen-xxs:                  0px;
+@screen-xxs-min:              @screen-xxs;
+
+// Padding between columns. Gets divided in half for the left and right. (Overrides Bootstrap Default of 30px)
+@grid-gutter-width:         20px;
+
+/*
+----------------------------------------------------------------------
+DO NOT EDIT BELOW THIS SECTION UNLESS ADDING VARIABLES
+----------------------------------------------------------------------
+*/
+
+[class*="block-grid-"] {
+  display: block;
+  margin: 0 -(@grid-gutter-width/2);
+  margin-top: 0;
+  padding: 0;
+  .clearfix();
+}
+
+.block-grid::after{
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.block-grid-item {
+  display: inline;
+  margin: 0;
+  padding: 0 (@grid-gutter-width/2) @grid-gutter-width;
+  height: auto;
+  float: left;
+  width: 100%;
+  list-style: none;  // for those who like to use `li` elements as block-grid-items
+}
+
+.block-grid.block-grid-gutter-none{
+  margin: 0;
+  .block-grid-item{
+    padding: 0 0 0 0;
+  }
+}
+.block-grid.block-grid-gutter-5{
+  margin: 0 -(5px/2);
+  .block-grid-item{
+    padding: 0 (5px / 2) 5px;
+  }
+}
+.block-grid.block-grid-gutter-10{
+  margin: 0 -(10px/2);
+  .block-grid-item{
+    padding: 0 (10px / 2) 10px;
+  }
+}
+.block-grid.block-grid-gutter-15{
+  margin: 0 -(15px/2);
+  .block-grid-item{
+    padding: 0 (15px / 2) 15px;
+  }
+}
+.block-grid.block-grid-gutter-20{
+  margin: 0 -(20px/2);
+  .block-grid-item{
+    padding: 0 (20px / 2) 20px;
+  }
+}
+.block-grid.block-grid-gutter-25{
+  margin: 0 -(25px/2);
+  .block-grid-item{
+    padding: 0 (25px / 2) 25px;
+  }
+}
+.block-grid.block-grid-gutter-30{
+  margin: 0 -(30px/2);
+  .block-grid-item{
+    padding: 0 (30px / 2) 30px;
+  }
+}
+.block-grid.block-grid-gutter-35{
+  margin: 0 -(35px/2);
+  .block-grid-item{
+    padding: 0 (35px / 2) 35px;
+  }
+}
+.block-grid.block-grid-gutter-40{
+  margin: 0 -(40px/2);
+  .block-grid-item{
+    padding: 0 (40px / 2) 40px;
+  }
+}
+.block-grid.block-grid-gutter-45{
+  margin: 0 -(45px/2);
+  .block-grid-item{
+    padding: 0 (45px / 2) 45px;
+  }
+}
+.block-grid.block-grid-gutter-50{
+  margin: 0 -(50px/2);
+  .block-grid-item{
+    padding: 0 (50px / 2) 50px;
+  }
+}
+.block-grid.block-grid-lower-gutter-none{
+  .block-grid-item{
+    padding-bottom: 0px;
+  }
+}
+.block-grid.block-grid-lower-gutter-5{
+  .block-grid-item{
+    padding-bottom: 5px;
+  }
+}
+.block-grid.block-grid-lower-gutter-10{
+  .block-grid-item{
+    padding-bottom: 10px;
+  }
+}
+.block-grid.block-grid-lower-gutter-15{
+  .block-grid-item{
+    padding-bottom: 15px;
+  }
+}
+.block-grid.block-grid-lower-gutter-20{
+  .block-grid-item{
+    padding-bottom: 20px;
+  }
+}
+.block-grid.block-grid-lower-gutter-25{
+  .block-grid-item{
+    padding-bottom: 25px;
+  }
+}
+.block-grid.block-grid-lower-gutter-30{
+  .block-grid-item{
+    padding-bottom: 30px;
+  }
+}
+.block-grid.block-grid-lower-gutter-35{
+  .block-grid-item{
+    padding-bottom: 35px;
+  }
+}
+.block-grid.block-grid-lower-gutter-40{
+  .block-grid-item{
+    padding-bottom: 40px;
+  }
+}
+.block-grid.block-grid-lower-gutter-45{
+  .block-grid-item{
+    padding-bottom: 40px;
+  }
+}
+.block-grid.block-grid-lower-gutter-50{
+  .block-grid-item{
+    padding-bottom: 50px;
+  }
+}
+.block-grid (@per-row) {
+  & > .block-grid-item {
+    width: (100%/@per-row);
+
+    @nth-equation: ~"@{per-row}n+1";
+    &:nth-of-type(n) { clear: none; }
+    &:nth-of-type(@{nth-equation}) { clear: both; }
+  }
+}
+.block-grid.block-grid-pop, .block-grid.block-grid-random-pop, .block-grid.block-grid-all-pop{
+  .block-grid-item{
+    transition: opacity .3s, transform .3s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.block-grid.block-grid-slide{
+  .block-grid-item{
+    opacity: 0;
+    transition: opacity .4s, transform .4s;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.block-grid.block-grid-up-down{
+  .block-grid-item:nth-of-type(even){
+    opacity: 0;
+    transition: opacity .4s, transform .4s;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  .block-grid-item:nth-of-type(odd){
+    opacity: 0;
+    transition: opacity .4s, transform .4s;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+// Recursive loop that produces rules for block grids of @per-row many items
+// per row down to 1 many items per row.
+.block-grids(@size, @per-row: @grid-columns) when (@per-row > 0) {
+  .block-grid-@{size}-@{per-row} { .block-grid(@per-row); }
+  .block-grids(@size, (@per-row - 1));
+}
+
+.block-grids(xxs);
+@media (min-width: @screen-xxs-min) { .block-grids(xxs) }
+@media (min-width: @screen-xs-min) { .block-grids(xs) }
+@media (min-width: @screen-sm-min) { .block-grids(sm) }
+@media (min-width: @screen-md-min) { .block-grids(md) }
+@media (min-width: @screen-lg-min) { .block-grids(lg) }

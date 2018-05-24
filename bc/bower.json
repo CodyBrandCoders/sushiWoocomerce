@@ -1,0 +1,21 @@
+{
+  "name": "bc-starter",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "wp-content/themes/bc-starter/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "bxslider-4": "^4.2.5",
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,0 +1,422 @@
+0000.000 (0) Opened log file at time: Mon, 10 Jul 2017 07:50:29 +0000 on http://quickplugins.com/bc
+0000.025 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.13.4.21 WP: 4.8 PHP: 5.6.30 (cgi-fcgi, Linux server.orlandowebguys.com 2.6.32-696.299.3.2.cp6.x86_64 #1 SMP Tue Jun 20 17:32:23 UTC 2017 x86_64) MySQL: 5.6.35 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 42M | 42.5M) multisite: N openssl: OpenSSL 1.0.1e-fips 11 Feb 2013 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.027 (0) Free space on disk containing Updraft's temporary directory: 287447.6 MB
+0000.029 (0) Tasks: Backup files: 1 (schedule: weekly) Backup DB: 1 (schedule: weekly)
+0000.043 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.056 (0) Set semaphore last lock (fd) time to 2017-07-10 07:50:29
+0000.058 (0) Semaphore lock (fd) complete
+0000.064 (0) Backup run: resumption=0, nonce=4a8e405384fb, begun at=1499673029 (0s ago), job type=backup
+0000.068 (0) Scheduling a resumption (1) after 300 seconds (1499673329) in case this run gets aborted
+0000.126 (0) Checking if we have a zip executable available
+0000.145 (0) Creation of backups of directories: beginning
+0000.153 (0) Beginning creation of dump of plugins (split every: 1700 MB)
+0000.661 (0) Total entities for the zip file: 618 directories, 4313 files (0 skipped as non-modified), 45 MB
+0000.676 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.684 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.692 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.701 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.711 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.713 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.3 MB, 4313 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0002.154 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 600 files added (on-disk size: 2322.1 KB)
+0002.164 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 700 files added (on-disk size: 2322.1 KB)
+0002.175 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 800 files added (on-disk size: 2322.1 KB)
+0002.187 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 900 files added (on-disk size: 2322.1 KB)
+0002.199 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1000 files added (on-disk size: 2322.1 KB)
+0002.202 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2 MB, 4313 files batched, 501 (1002) added so far); re-opening (prior size: 2322.1 KB)
+0002.834 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1100 files added (on-disk size: 3017.2 KB)
+0002.847 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1200 files added (on-disk size: 3017.2 KB)
+0002.861 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1300 files added (on-disk size: 3017.2 KB)
+0002.874 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1400 files added (on-disk size: 3017.2 KB)
+0002.887 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1500 files added (on-disk size: 3017.2 KB)
+0002.889 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (10.4 MB, 4313 files batched, 501 (1503) added so far); re-opening (prior size: 3017.2 KB)
+0004.440 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1600 files added (on-disk size: 5062 KB)
+0004.455 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1700 files added (on-disk size: 5062 KB)
+0004.491 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1800 files added (on-disk size: 5062 KB)
+0004.505 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 1900 files added (on-disk size: 5062 KB)
+0004.520 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2000 files added (on-disk size: 5062 KB)
+0004.523 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.5 MB, 4313 files batched, 501 (2004) added so far); re-opening (prior size: 5062 KB)
+0005.769 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2100 files added (on-disk size: 8503 KB)
+0005.784 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2200 files added (on-disk size: 8503 KB)
+0005.800 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2300 files added (on-disk size: 8503 KB)
+0005.818 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2400 files added (on-disk size: 8503 KB)
+0005.834 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2500 files added (on-disk size: 8503 KB)
+0005.838 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.5 MB, 4313 files batched, 501 (2505) added so far); re-opening (prior size: 8503 KB)
+0006.558 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2600 files added (on-disk size: 9426 KB)
+0006.575 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2700 files added (on-disk size: 9426 KB)
+0006.593 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2800 files added (on-disk size: 9426 KB)
+0006.610 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 2900 files added (on-disk size: 9426 KB)
+0006.628 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3000 files added (on-disk size: 9426 KB)
+0006.632 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.3 MB, 4313 files batched, 501 (3006) added so far); re-opening (prior size: 9426 KB)
+0008.132 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3100 files added (on-disk size: 11728.3 KB)
+0008.151 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3200 files added (on-disk size: 11728.3 KB)
+0008.170 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3300 files added (on-disk size: 11728.3 KB)
+0008.189 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3400 files added (on-disk size: 11728.3 KB)
+0008.209 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3500 files added (on-disk size: 11728.3 KB)
+0008.213 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4 MB, 4313 files batched, 501 (3507) added so far); re-opening (prior size: 11728.3 KB)
+0009.311 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3600 files added (on-disk size: 13445.8 KB)
+0009.363 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3700 files added (on-disk size: 13445.8 KB)
+0009.383 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3800 files added (on-disk size: 13445.8 KB)
+0009.404 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 3900 files added (on-disk size: 13445.8 KB)
+0009.425 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 4000 files added (on-disk size: 13445.8 KB)
+0009.429 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.7 MB, 4313 files batched, 501 (4008) added so far); re-opening (prior size: 13445.8 KB)
+0010.155 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 4100 files added (on-disk size: 14369.6 KB)
+0010.179 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 4200 files added (on-disk size: 14369.6 KB)
+0010.202 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip.tmp: 4300 files added (on-disk size: 14369.6 KB)
+0011.127 (0) Created plugins zip (0) - 15041.8 KB in 11 s (1370.9 KB/s) (sha1: ff5a5dfce7e2d1b47e2ec76e64e3e8d7e912005a, sha256: ab776e6abe915a9ea8d846d84d032fc23671ed170bbf5b8103c5e5ec19f9dfbb)
+0011.134 (0) Beginning creation of dump of themes (split every: 1700 MB)
+0011.279 (0) Total entities for the zip file: 84 directories, 481 files (0 skipped as non-modified), 5 MB
+0011.285 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0011.292 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0011.298 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0011.305 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0012.655 (0) Created themes zip (0) - 1860.3 KB in 1.5 s (1241.4 KB/s) (sha1: 8190db3d0694a4527417b4df8b0336be2f8ca089, sha256: 0dde85e3a84726d177b06e496a3b3d1b83a74e9c34678858465f61f79c22bb3f)
+0012.661 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0012.663 (0) Looking for candidates to back up in: /home/quickplugins/public_html/bc/wp-content/uploads
+0012.665 (0) finding files: Review-Us-On-Angies-List-150x150.png: adding to list (1)
+0012.667 (0) finding files: Review-Us-On-Angies-List-768x768.png: adding to list (2)
+0012.669 (0) finding files: placehold-image-long.png: adding to list (3)
+0012.672 (0) finding files: wpcf7_uploads: adding to list (4)
+0012.675 (0) finding files: Review-Us-On-Google-768x768.png: adding to list (5)
+0012.678 (0) finding files: Review-Us-On-BBB-300x300.png: adding to list (6)
+0012.680 (0) finding files: Review-Us-On-Home-Advisor-150x150.png: adding to list (7)
+0012.682 (0) finding files: Review-Us-On-Yellow-Pages-768x768.png: adding to list (8)
+0012.684 (0) finding files: Review-Us-On-Yelp-150x150.png: adding to list (9)
+0012.687 (0) finding files: Review-Us-On-Yellow-Pages-300x300.png: adding to list (10)
+0012.689 (0) finding files: Review-Us-On-Google.png: adding to list (11)
+0012.692 (0) finding files: Review-Us-On-Manta-300x300.png: adding to list (12)
+0012.694 (0) finding files: Review-Us-On-BBB-768x768.png: adding to list (13)
+0012.697 (0) finding files: placehold-image-long-150x150.png: adding to list (14)
+0012.699 (0) finding files: Review-Us-On-Angies-List-300x300.png: adding to list (15)
+0012.701 (0) finding files: Review-Us-On-Manta-768x768.png: adding to list (16)
+0012.703 (0) finding files: brandcoders-logo-red-150x100.png: adding to list (17)
+0012.705 (0) finding files: Review-Us-On-Facebook-300x300.png: adding to list (18)
+0012.707 (0) finding files: placehold-image-long-225x300.png: adding to list (19)
+0012.709 (0) finding files: bc-placeholder-image-300x300.png: adding to list (20)
+0012.711 (0) finding files: brandcoders-logo-red.png: adding to list (21)
+0012.713 (0) finding files: bc-placeholder-image-768x768.png: adding to list (22)
+0012.715 (0) finding files: Review-Us-On-BBB.png: adding to list (23)
+0012.717 (0) finding files: Review-Us-On-Manta.png: adding to list (24)
+0012.719 (0) finding files: Review-Us-On-Home-Advisor-768x768.png: adding to list (25)
+0012.721 (0) finding files: Review-Us-On-Facebook-150x150.png: adding to list (26)
+0012.723 (0) finding files: Review-Us-On-BBB-150x150.png: adding to list (27)
+0012.726 (0) finding files: Review-Us-On-Google-300x300.png: adding to list (28)
+0012.728 (0) finding files: wp-less: adding to list (29)
+0012.730 (0) finding files: revslider: adding to list (30)
+0012.732 (0) finding files: Review-Us-On-Google-150x150.png: adding to list (31)
+0012.734 (0) finding files: location-default-thumb.png: adding to list (32)
+0012.736 (0) finding files: Review-Us-On-Yelp-300x300.png: adding to list (33)
+0012.738 (0) finding files: bc-placeholder-image.png: adding to list (34)
+0012.740 (0) finding files: 2016: adding to list (35)
+0012.742 (0) finding files: Review-Us-On-Facebook-768x768.png: adding to list (36)
+0012.744 (0) finding files: Review-Us-On-Facebook.png: adding to list (37)
+0012.746 (0) finding files: Review-Us-On-Yelp-768x768.png: adding to list (38)
+0012.748 (0) finding files: Review-Us-On-Yellow-Pages.png: adding to list (39)
+0012.751 (0) finding files: Review-Us-On-Home-Advisor-300x300.png: adding to list (40)
+0012.752 (0) finding files: Review-Us-On-Yellow-Pages-150x150.png: adding to list (41)
+0012.755 (0) finding files: wpcf7_captcha: adding to list (42)
+0012.757 (0) finding files: Review-Us-On-Home-Advisor.png: adding to list (43)
+0012.760 (0) finding files: Review-Us-On-Yelp.png: adding to list (44)
+0012.762 (0) finding files: brandcoders-logo-red-300x47.png: adding to list (45)
+0012.764 (0) finding files: Review-Us-On-Manta-150x150.png: adding to list (46)
+0012.767 (0) finding files: Review-Us-On-Angies-List.png: adding to list (47)
+0012.769 (0) finding files: bc-placeholder-image-150x150.png: adding to list (48)
+0012.772 (0) Beginning creation of dump of uploads (split every: 1700 MB)
+0012.904 (0) Total entities for the zip file: 72 directories, 228 files (0 skipped as non-modified), 3.9 MB
+0012.912 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0012.918 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0013.619 (0) Created uploads zip (0) - 3468.2 KB in 0.8 s (4109.2 KB/s) (sha1: 76d98538c59ab4cef22931be906571fa33458536, sha256: 18d00bbe65125d7726b9708f7ec7d77895d4492c15d5ef0366bfecabe1753bdf)
+0013.626 (0) Exclusion option setting (wpcore): 
+0013.628 (0) Looking for candidates to back up in: /home/quickplugins/public_html/bc
+0013.630 (0) finding files: license.txt: adding to list (1)
+0013.632 (0) finding files: wp-admin: adding to list (2)
+0013.634 (0) finding files: index.php: adding to list (3)
+0013.636 (0) finding files: package.json: adding to list (4)
+0013.637 (0) finding files: error_log: adding to list (5)
+0013.639 (0) finding files: xmlrpc.php: adding to list (6)
+0013.641 (0) finding files: wp-links-opml.php: adding to list (7)
+0013.643 (0) finding files: wp-signup.php: adding to list (8)
+0013.645 (0) finding files: wp-load.php: adding to list (9)
+0013.648 (0) finding files: wp-content: skipping: this is the wp-content directory
+0013.650 (0) finding files: wp-blog-header.php: adding to list (10)
+0013.652 (0) finding files: wp-config-sample.php: adding to list (11)
+0013.654 (0) finding files: wp-includes: adding to list (12)
+0013.655 (0) finding files: wp-cron.php: adding to list (13)
+0013.657 (0) finding files: readme.html: adding to list (14)
+0013.659 (0) finding files: bower.json: adding to list (15)
+0013.661 (0) finding files: node_modules: adding to list (16)
+0013.662 (0) finding files: wp-settings.php: adding to list (17)
+0013.664 (0) finding files: wp-login.php: adding to list (18)
+0013.666 (0) finding files: wp-trackback.php: adding to list (19)
+0013.668 (0) finding files: wp-comments-post.php: adding to list (20)
+0013.669 (0) finding files: wp-activate.php: adding to list (21)
+0013.671 (0) finding files: wp-mail.php: adding to list (22)
+0013.673 (0) finding files: Gruntfile.js: adding to list (23)
+0013.675 (0) finding files: README.md: adding to list (24)
+0013.677 (0) finding files: wp-config.php: adding to list (25)
+0013.679 (0) Beginning creation of dump of wpcore (split every: 1700 MB)
+0014.353 (0) Total entities for the zip file: 811 directories, 5374 files (0 skipped as non-modified), 38.6 MB
+0014.374 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 100 files added (on-disk size: 0 KB)
+0014.382 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 200 files added (on-disk size: 0 KB)
+0014.390 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 300 files added (on-disk size: 0 KB)
+0014.399 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 400 files added (on-disk size: 0 KB)
+0014.407 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 500 files added (on-disk size: 0 KB)
+0014.410 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.8 MB, 5374 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0015.846 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 600 files added (on-disk size: 2068.2 KB)
+0015.856 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 700 files added (on-disk size: 2068.2 KB)
+0015.866 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 800 files added (on-disk size: 2068.2 KB)
+0015.877 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 900 files added (on-disk size: 2068.2 KB)
+0015.888 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1000 files added (on-disk size: 2068.2 KB)
+0015.890 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8.3 MB, 5374 files batched, 501 (1002) added so far); re-opening (prior size: 2068.2 KB)
+0017.580 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1100 files added (on-disk size: 4945.2 KB)
+0017.601 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1200 files added (on-disk size: 4945.2 KB)
+0017.614 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1300 files added (on-disk size: 4945.2 KB)
+0017.627 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1400 files added (on-disk size: 4945.2 KB)
+0017.641 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1500 files added (on-disk size: 4945.2 KB)
+0017.644 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.2 MB, 5374 files batched, 501 (1503) added so far); re-opening (prior size: 4945.2 KB)
+0018.743 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1600 files added (on-disk size: 6842.4 KB)
+0018.767 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1700 files added (on-disk size: 6842.4 KB)
+0018.782 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1800 files added (on-disk size: 6842.4 KB)
+0018.798 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 1900 files added (on-disk size: 6842.4 KB)
+0018.814 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2000 files added (on-disk size: 6842.4 KB)
+0018.817 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.7 MB, 5374 files batched, 501 (2004) added so far); re-opening (prior size: 6842.4 KB)
+0020.941 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2100 files added (on-disk size: 8537.5 KB)
+0020.957 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2200 files added (on-disk size: 8537.5 KB)
+0020.975 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2300 files added (on-disk size: 8537.5 KB)
+0020.993 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2400 files added (on-disk size: 8537.5 KB)
+0021.011 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2500 files added (on-disk size: 8537.5 KB)
+0021.015 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.3 MB, 5374 files batched, 501 (2505) added so far); re-opening (prior size: 8537.5 KB)
+0022.129 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2600 files added (on-disk size: 9564.3 KB)
+0022.148 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2700 files added (on-disk size: 9564.3 KB)
+0022.166 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2800 files added (on-disk size: 9564.3 KB)
+0022.186 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 2900 files added (on-disk size: 9564.3 KB)
+0022.207 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3000 files added (on-disk size: 9564.3 KB)
+0022.211 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1 MB, 5374 files batched, 501 (3006) added so far); re-opening (prior size: 9564.3 KB)
+0022.856 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3100 files added (on-disk size: 9967.2 KB)
+0022.877 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3200 files added (on-disk size: 9967.2 KB)
+0022.898 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3300 files added (on-disk size: 9967.2 KB)
+0022.920 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3400 files added (on-disk size: 9967.2 KB)
+0022.942 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3500 files added (on-disk size: 9967.2 KB)
+0022.945 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.6 MB, 5374 files batched, 501 (3507) added so far); re-opening (prior size: 9967.2 KB)
+0023.505 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3600 files added (on-disk size: 10294.1 KB)
+0023.529 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3700 files added (on-disk size: 10294.1 KB)
+0023.553 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3800 files added (on-disk size: 10294.1 KB)
+0023.578 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 3900 files added (on-disk size: 10294.1 KB)
+0023.603 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4000 files added (on-disk size: 10294.1 KB)
+0023.611 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.7 MB, 5374 files batched, 501 (4008) added so far); re-opening (prior size: 10294.1 KB)
+0024.288 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4100 files added (on-disk size: 10641.1 KB)
+0024.314 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4200 files added (on-disk size: 10641.1 KB)
+0024.341 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4300 files added (on-disk size: 10641.1 KB)
+0024.370 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4400 files added (on-disk size: 10641.1 KB)
+0024.401 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4500 files added (on-disk size: 10641.1 KB)
+0024.409 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.5 MB, 5374 files batched, 501 (4509) added so far); re-opening (prior size: 10641.1 KB)
+0025.107 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4600 files added (on-disk size: 11334 KB)
+0025.140 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4700 files added (on-disk size: 11334 KB)
+0025.173 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4800 files added (on-disk size: 11334 KB)
+0025.209 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 4900 files added (on-disk size: 11334 KB)
+0025.244 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 5000 files added (on-disk size: 11334 KB)
+0025.251 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.9 MB, 5374 files batched, 501 (5010) added so far); re-opening (prior size: 11334 KB)
+0026.260 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 5100 files added (on-disk size: 12294.3 KB)
+0026.290 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 5200 files added (on-disk size: 12294.3 KB)
+0026.328 (0) Zip: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip.tmp: 5300 files added (on-disk size: 12294.3 KB)
+0027.003 (0) Created wpcore zip (0) - 12557.2 KB in 13.3 s (942.6 KB/s) (sha1: d90b58d2a4e908635dd16e791258d674bb4fed87, sha256: c88a0f99e6abcd7424b70eed8bebee5852dedb43d55f3637c1d8169992aaa62b)
+0027.008 (0) Beginning backup of other directories found in the content directory (index: 0)
+0027.030 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0027.032 (0) Looking for candidates to back up in: /home/quickplugins/public_html/bc/wp-content
+0027.034 (0) finding files: index.php: adding to list (1)
+0027.036 (0) finding files: updraft: skipping: this is the updraft directory
+0027.040 (0) finding files: themes: skipping: this is the themes directory
+0027.055 (0) finding files: w3tc-config: adding to list (2)
+0027.057 (0) finding files: uploads: skipping: this is the uploads directory
+0027.058 (0) finding files: upgrade: skipping: excluded by options
+0027.060 (0) finding files: plugins: skipping: this is the plugins directory
+0027.062 (0) finding files: .DS_Store: adding to list (3)
+0027.064 (0) finding files: cache: skipping: excluded by options
+0027.082 (0) Total entities for the zip file: 1 directories, 5 files (0 skipped as non-modified), 0 MB
+0027.179 (0) Created others zip (0) - 6.3 KB in 0.1 s (55.8 KB/s) (sha1: 73f47e6fd8279b198024b560621c664d3d5662bd, sha256: cbd3f584cdb9e233619bd48d2adbce1ddfe2606b98d3c20128ec31d362591e52)
+0027.181 (0) No backup of more: excluded by user's options
+0027.190 (0) Saving backup status to database (elements: 10)
+0027.195 (0) Beginning creation of database dump (WordPress DB)
+0027.198 (0) All tables found will be backed up (indicated by backupdb_nonwp option)
+0027.241 (0) Table wp_options: Total expected rows (approximate): 433
+0027.288 (0) Table wp_options: Total rows added: 444 in 0.04 seconds
+0027.291 (0) Table wp_options: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_options.table.gz - 207.1 KB)
+0027.332 (0) Table wp_users: Total expected rows (approximate): 4
+0027.335 (0) Table wp_users: Total rows added: 4 in 0.00 seconds
+0027.337 (0) Table wp_users: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_users.table.gz - 0.7 KB)
+0027.346 (0) Table wp_usermeta: Total expected rows (approximate): 124
+0027.351 (0) Table wp_usermeta: Total rows added: 124 in 0.00 seconds
+0027.353 (0) Table wp_usermeta: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_usermeta.table.gz - 4.1 KB)
+0027.386 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0027.390 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0027.392 (0) Table wp_commentmeta: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0027.426 (0) Table wp_comments: Total expected rows (approximate): 0
+0027.429 (0) Table wp_comments: Total rows added: 0 in 0.00 seconds
+0027.432 (0) Table wp_comments: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_comments.table.gz - 0.5 KB)
+0027.461 (0) Table wp_links: Total expected rows (approximate): 0
+0027.465 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0027.467 (0) Table wp_links: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_links.table.gz - 0.4 KB)
+0027.474 (0) Table wp_postmeta: Total expected rows (approximate): 2621
+0027.530 (0) Table wp_postmeta: Total rows added: 3464 in 0.05 seconds
+0027.536 (0) Table wp_postmeta: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_postmeta.table.gz - 28.9 KB)
+0027.543 (0) Table wp_posts: Total expected rows (approximate): 464
+0027.612 (0) Table wp_posts: Total rows added: 447 in 0.05 seconds
+0027.616 (0) Table wp_posts: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_posts.table.gz - 53.3 KB)
+0027.624 (0) Table wp_term_relationships: Total expected rows (approximate): 21
+0027.627 (0) Table wp_term_relationships: Total rows added: 26 in 0.00 seconds
+0027.629 (0) Table wp_term_relationships: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0027.637 (0) Table wp_term_taxonomy: Total expected rows (approximate): 3
+0027.640 (0) Table wp_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0027.642 (0) Table wp_term_taxonomy: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_term_taxonomy.table.gz - 0.4 KB)
+0027.650 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0027.653 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0027.655 (0) Table wp_termmeta: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_termmeta.table.gz - 0.4 KB)
+0027.664 (0) Table wp_terms: Total expected rows (approximate): 3
+0027.676 (0) Table wp_terms: Total rows added: 3 in 0.00 seconds
+0027.679 (0) Table wp_terms: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_terms.table.gz - 0.4 KB)
+0027.687 (0) Table wp_revslider_css: Total expected rows (approximate): 109
+0027.725 (0) Table wp_revslider_css: Total rows added: 109 in 0.04 seconds
+0027.728 (0) Table wp_revslider_css: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_css.table.gz - 4.8 KB)
+0027.767 (0) Table wp_revslider_layer_animations: Total expected rows (approximate): 0
+0027.771 (0) Table wp_revslider_layer_animations: Total rows added: 0 in 0.00 seconds
+0027.774 (0) Table wp_revslider_layer_animations: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_layer_animations.table.gz - 0.3 KB)
+0027.811 (0) Table wp_revslider_navigations: Total expected rows (approximate): 0
+0027.814 (0) Table wp_revslider_navigations: Total rows added: 0 in 0.00 seconds
+0027.816 (0) Table wp_revslider_navigations: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_navigations.table.gz - 0.3 KB)
+0027.823 (0) Table wp_revslider_sliders: Total expected rows (approximate): 0
+0027.826 (0) Table wp_revslider_sliders: Total rows added: 0 in 0.00 seconds
+0027.828 (0) Table wp_revslider_sliders: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_sliders.table.gz - 0.3 KB)
+0027.836 (0) Table wp_revslider_slides: Total expected rows (approximate): 0
+0027.838 (0) Table wp_revslider_slides: Total rows added: 0 in 0.00 seconds
+0027.841 (0) Table wp_revslider_slides: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_slides.table.gz - 0.3 KB)
+0027.848 (0) Table wp_revslider_static_slides: Total expected rows (approximate): 0
+0027.851 (0) Table wp_revslider_static_slides: Total rows added: 0 in 0.00 seconds
+0027.853 (0) Table wp_revslider_static_slides: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_static_slides.table.gz - 0.3 KB)
+0027.862 (0) Table wp_wpeditor_settings: Total expected rows (approximate): 38
+0027.877 (0) Table wp_wpeditor_settings: Total rows added: 38 in 0.01 seconds
+0027.909 (0) Table wp_wpeditor_settings: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_wpeditor_settings.table.gz - 0.8 KB)
+0027.916 (0) Table wp_yoast_seo_links: Total expected rows (approximate): 22
+0027.940 (0) Table wp_yoast_seo_links: Total rows added: 22 in 0.02 seconds
+0027.942 (0) Table wp_yoast_seo_links: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_yoast_seo_links.table.gz - 0.6 KB)
+0027.950 (0) Table wp_yoast_seo_meta: Total expected rows (approximate): 4
+0027.952 (0) Table wp_yoast_seo_meta: Total rows added: 4 in 0.00 seconds
+0027.954 (0) Table wp_yoast_seo_meta: finishing file (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_yoast_seo_meta.table.gz - 0.4 KB)
+0027.962 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_options.table.gz (1/21): adding to final database dump
+0028.002 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_users.table.gz (2/21): adding to final database dump
+0028.005 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_usermeta.table.gz (3/21): adding to final database dump
+0028.008 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_commentmeta.table.gz (4/21): adding to final database dump
+0028.010 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_comments.table.gz (5/21): adding to final database dump
+0028.013 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_links.table.gz (6/21): adding to final database dump
+0028.015 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_postmeta.table.gz (7/21): adding to final database dump
+0028.039 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_posts.table.gz (8/21): adding to final database dump
+0028.054 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_term_relationships.table.gz (9/21): adding to final database dump
+0028.056 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_term_taxonomy.table.gz (10/21): adding to final database dump
+0028.059 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_termmeta.table.gz (11/21): adding to final database dump
+0028.062 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_terms.table.gz (12/21): adding to final database dump
+0028.064 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_css.table.gz (13/21): adding to final database dump
+0028.069 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_layer_animations.table.gz (14/21): adding to final database dump
+0028.071 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_navigations.table.gz (15/21): adding to final database dump
+0028.074 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_sliders.table.gz (16/21): adding to final database dump
+0028.076 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_slides.table.gz (17/21): adding to final database dump
+0028.078 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_revslider_static_slides.table.gz (18/21): adding to final database dump
+0028.080 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_wpeditor_settings.table.gz (19/21): adding to final database dump
+0028.082 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_yoast_seo_links.table.gz (20/21): adding to final database dump
+0028.084 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db-table-wp_yoast_seo_meta.table.gz (21/21): adding to final database dump
+0028.087 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db.gz: finished writing out complete database file (288 KB)
+0028.101 (0) Total database tables backed up: 21 (backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db.gz, size: 308034, sha256)
+0028.112 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0028.114 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0028.116 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0028.117 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip: wpcore: This file has not yet been successfully uploaded: will queue
+0028.120 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-others.zip: others: This file has not yet been successfully uploaded: will queue
+0028.122 (0) backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db.gz: db: This file has not yet been successfully uploaded: will queue
+0028.124 (0) Saving backup history. Total backup size: 32.5 MB
+0028.129 (0) Requesting upload of the files that have not yet been successfully uploaded (6)
+0028.137 (0) Cloud backup selection (1/1): s3 (last)
+0028.139 (0) Beginning dispatch of backup to remote (s3)
+0028.615 (0) S3 upload (): backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip (chunks: 3) -> s3://brandcoders/WordPressBackups/QuickPlugins.com/backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip
+0028.835 (0) S3 chunked upload: got multipart ID: Z7D2_vsbkH67tZgtmdF8VJEkyn0vnyLhL74APwwajVpTM76Pa6L.OnPrb2xUc9XCO5XJBxhN6W8iiPeB7nPqXyJ9CAkR2LFhcZ_qNtA835JpT12Rs3Yy02W2yQ_SDbUP
+0029.693 (0) S3 chunked upload: 33.3 % uploaded (1, "1747621e2908baeee82487c70d10c6c9")
+0029.950 (0) S3 chunked upload: 66.7 % uploaded (2, "f67e59483ca809e5fc28c1651a7a641b")
+0030.335 (0) S3 chunked upload: 100 % uploaded (3, "d0adfce6c510dcf17474eb9586fdc2d6")
+0030.369 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0030.499 (0) S3 upload (plugins0): re-assembly succeeded
+0030.511 (0) Recording as successfully uploaded: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip (90cac7470c0df2d4530ad9e519897927)
+0030.522 (0) Deleting local file: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-plugins.zip: OK
+0030.525 (0) S3 upload (): backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip (chunks: 1) -> s3://brandcoders/WordPressBackups/QuickPlugins.com/backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip
+0030.790 (0) S3 regular upload: success
+0030.795 (0) Recording as successfully uploaded: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip (39519b552b624e1af34017e56e8a5382)
+0030.803 (0) Deleting local file: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-themes.zip: OK
+0030.805 (0) S3 upload (): backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-uploads.zip (chunks: 1) -> s3://brandcoders/WordPressBackups/QuickPlugins.com/backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-uploads.zip
+0031.211 (0) S3 regular upload: success
+0031.217 (0) Recording as successfully uploaded: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-uploads.zip (9401e5786389baafcb0bc64350a49e7e)
+0031.229 (0) Deleting local file: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-uploads.zip: OK
+0031.232 (0) S3 upload (): backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip (chunks: 3) -> s3://brandcoders/WordPressBackups/QuickPlugins.com/backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip
+0031.280 (0) S3 chunked upload: got multipart ID: yHc47al0okRdD0NWaCC047HIXYCOo0qbJxKQM.s5PZEVLwR4AhOwvHajHzT1KZU7mlp.hdCkfQhc0F2N2C5mw2bFX9cmeEBEXzahYsk5uHGN7PNSfBAtYTIWPBtyjQnD
+0031.620 (0) S3 chunked upload: 33.3 % uploaded (1, "4cd17abdd924762c3c703b186bf2b884")
+0031.914 (0) S3 chunked upload: 66.7 % uploaded (2, "90b85eea4bdd7fa9170802e53b9d4155")
+0032.083 (0) S3 chunked upload: 100 % uploaded (3, "1a5d951f1e1a27dad88e8d93b5299fdf")
+0032.089 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0032.270 (0) S3 upload (wpcore0): re-assembly succeeded
+0032.282 (0) Recording as successfully uploaded: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip (114326770d9814735677d4da8c6958ee)
+0032.291 (0) Deleting local file: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-wpcore.zip: OK
+0032.294 (0) S3 upload (): backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-others.zip (chunks: 1) -> s3://brandcoders/WordPressBackups/QuickPlugins.com/backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-others.zip
+0032.382 (0) S3 regular upload: success
+0032.387 (0) Recording as successfully uploaded: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-others.zip (b9a8c439a891cf2b464cfd622f358fa8)
+0032.395 (0) Deleting local file: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-others.zip: OK
+0032.397 (0) S3 upload (): backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db.gz (chunks: 1) -> s3://brandcoders/WordPressBackups/QuickPlugins.com/backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db.gz
+0032.566 (0) S3 regular upload: success
+0032.571 (0) Recording as successfully uploaded: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db.gz (75aa2d43d366e740bb68e8ff0e8a3f15)
+0032.579 (0) Deleting local file: backup_2017-07-10-0250_BrandCoders_Theme_4a8e405384fb-db.gz: OK
+0032.584 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0032.587 (0) Number of backup sets in history: 3; groups (db): 1
+0032.589 (0) Examining (for databases) backup set with group_id=0, nonce=4a8e405384fb, datestamp=1499673029 (Jul 10 2017 07:50:29)
+0032.591 (0) This backup set is the backup set just made, so will not be deleted.
+0032.593 (0) Examining (for databases) backup set with group_id=0, nonce=ff9d9e0a5af8, datestamp=1499492913 (Jul 08 2017 05:48:33)
+0032.596 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0032.597 (0) Examining (for databases) backup set with group_id=0, nonce=349b0e4e5566, datestamp=1498886470 (Jul 01 2017 05:21:10)
+0032.599 (0) 1498886470: db: this set includes a database (backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-db.gz); db count is now 2
+0032.602 (0) 1498886470: db: over retain limit (2); will delete this database
+0032.604 (0) Delete file: backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-db.gz, service=s3
+0032.606 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/QuickPlugins.com/backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-db.gz
+0032.651 (0) S3 delete failed: Access Denied (line: 91, file: /home/quickplugins/public_html/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0032.656 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0032.659 (0) Number of backup sets in history: 3; groups (files): 1
+0032.662 (0) Examining (for files) backup set with nonce=4a8e405384fb, datestamp=1499673029 (Jul 10 2017 07:50:29)
+0032.664 (0) This backup set is the backup set just made, so will not be deleted.
+0032.666 (0) This backup set is the backup set just made, so will not be deleted.
+0032.667 (0) This backup set is the backup set just made, so will not be deleted.
+0032.667 (0) This backup set is the backup set just made, so will not be deleted.
+0032.667 (0) This backup set is the backup set just made, so will not be deleted.
+0032.667 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0032.669 (0) Examining (for files) backup set with nonce=ff9d9e0a5af8, datestamp=1499492913 (Jul 08 2017 05:48:33)
+0032.672 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0032.674 (0) Examining (for files) backup set with nonce=349b0e4e5566, datestamp=1498886470 (Jul 01 2017 05:21:10)
+0032.677 (0) plugins: over retain limit (2); will delete this file entity
+0032.679 (0) themes: over retain limit (2); will delete this file entity
+0032.681 (0) uploads: over retain limit (2); will delete this file entity
+0032.683 (0) wpcore: over retain limit (2); will delete this file entity
+0032.686 (0) others: over retain limit (2); will delete this file entity
+0032.687 (0) Delete file: backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-plugins.zip, service=s3
+0032.690 (0) Delete file: backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-themes.zip, service=s3
+0032.692 (0) Delete file: backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-uploads.zip, service=s3
+0032.694 (0) Delete file: backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-wpcore.zip, service=s3
+0032.696 (0) Delete file: backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-others.zip, service=s3
+0032.698 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/QuickPlugins.com/backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-plugins.zip
+0032.738 (0) S3 delete failed: Access Denied (line: 91, file: /home/quickplugins/public_html/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0032.747 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/QuickPlugins.com/backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-themes.zip
+0032.788 (0) S3 delete failed: Access Denied (line: 91, file: /home/quickplugins/public_html/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0032.798 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/QuickPlugins.com/backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-uploads.zip
+0032.841 (0) S3 delete failed: Access Denied (line: 91, file: /home/quickplugins/public_html/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0032.846 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/QuickPlugins.com/backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-wpcore.zip
+0032.886 (0) S3 delete failed: Access Denied (line: 91, file: /home/quickplugins/public_html/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0032.890 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/QuickPlugins.com/backup_2017-07-01-0021_BrandCoders_Theme_349b0e4e5566-others.zip
+0032.959 (0) S3 delete failed: Access Denied (line: 91, file: /home/quickplugins/public_html/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0032.964 (0) This backup set is now empty; will remove from history
+0032.966 (0) Deleting log file (log.349b0e4e5566.txt)
+0032.980 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0032.988 (0) Resume backup (4a8e405384fb, 0): finish run
+0033.021 (0) Decremented the semaphore (fd) by 1
+0033.025 (0) Semaphore (fd) unlocked
+0033.026 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0033.038 (0) Sending email ('Files and database (Full backup)') report (attachments: 0, size: 45.9 KB) to: backu...
+0033.122 (0) The backup apparently succeeded and is now complete

@@ -1,0 +1,471 @@
+/*
+======================================================================
+DESKTOP-NAVBAR.LESS - DESKTOP NAVBAR AND TOPBAR STYLES
+======================================================================
+*/
+
+/**** Topbar ****/
+@topbar-padding: 3px;
+@topbar-background-color: @color-2;
+.topbar-left-styles{
+  color: #FFF;
+  font-size: 21px;
+  margin-top: -6px;
+  margin-bottom:  -6px;
+  a {
+    color: #FFF;
+    &:not(:last-of-type) {
+      margin-right: 3px;
+    }
+    &:hover{
+      color: #CCC;
+    }
+  }
+}
+.topbar-right-styles{
+  font-size: 13px;
+  color: #fff;
+  a{
+    color: #FFF;
+    &:hover{
+      color: #CCC;
+    }
+  }
+}
+/**** Desktop Nav ****/
+
+/*// Height*/
+@d-height: 130px;
+
+/*// Logo Home*/
+@d-logo-height: 150px;
+@d-logo-margin-top: 0px;
+@d-logo-filter: none;
+
+/*Logo Landing Page*/
+@d-logo-height-landing: 80px;
+@d-logo-margin-landing-top: 10px;
+@d-logo-filter-landing: none;
+
+/*// Background*/
+@d-background-color: transparent;
+@d-background-image: none;
+
+/*//Border*/
+@d-border-bottom: none;
+
+/*// Primary and Mobile Nav Font Family*/
+@navbar-font-family: @body-font-family;
+
+/*// Links*/
+@d-link-spacing-top: 30px;
+@d-link-spacing: 10px;
+@d-link-size: 17px;
+@d-link-color: #FFF;
+@d-link-hover: #FFF;
+@d-link-weight: 700;
+@d-link-transform: none;
+@d-link-text-shadow: none;
+
+/*// Links Landing*/
+@d-link-spacing-top-landing: 40px;
+
+/*// Top Level Link Customs Styles*/
+.top-level-link-styles{
+
+}
+
+/*// Desktop Sub Menu*/
+@d-sub-min-width: 200px; // min width of the sub menu
+@d-sub-padding: 12px 0;//padding for the <ul class="sub-menu">
+@d-sub-dropdown-icon: '\f103';
+@d-sub-dropdown-icon-size: 14px;
+@d-sub-dropdown-space-left: 3px;
+@sub-spacing-top: 90px;
+@d-sub-border-radius: 0 0 5px 5px;
+@d-sub-box-shadow: 1px 5px 7px rgba(0,0,0,.2);
+@d-sub-background-color: rgba(23, 42, 81, .9);
+@d-sub-font-weight: 400;
+@d-sub-font-size: 15px;
+@d-sub-link-padding: 8px 20px;
+@d-sub-link-color: #FFF;
+@d-sub-link-hover: yellow;
+
+/**** Style Change ****/
+// if this is set to `true` in header.php these control styles
+// of navbar when it clears the page banner or slider
+@d-style-change-background: rgba(0,0,0,1);
+@d-style-change-link-color: #FFF;
+@d-style-change-link-hover: #EEE;
+@d-style-change-logo-filter: none;
+@d-style-change-sub-menu-background: green;
+@d-style-change-sub-menu-link-color: black;
+@d-style-change-sub-menu-link-hover: yellow;
+
+// Sometimes we need to change a few propterties of nav links from 768px - 992px
+// In order to avoid it breaking and leaking. The following rules are
+// To help handle that
+@t-link-spacing: 5px;
+@t-link-size: 15px;
+
+
+/**** Desktop Scroll Shrink Styles****/
+@d-shrink-height: 60px; // height of navbar on shrink
+@d-shrink-logo-height: (@d-shrink-height - 10); // height of logo on srhink
+@d-shrink-logo-margin-top: 5px; // margin top of logo on shrink
+@d-shrink-link-spacing-top: (@d-shrink-height - 28) / 2; // padding top of nav links on shrink
+@d-shrink-sub-menu-top: @d-shrink-height; // Position of drop down menu on shrink
+
+/**** Desktop Scroll Shrink Styles Landing****/
+@d-shrink-height-landing: 60px; // height of navbar on shrink
+@d-shrink-logo-height-landing: (@d-shrink-height - 10); // height of logo on srhink
+@d-shrink-logo-margin-top-landing: 5px; // margin top of logo on shrink
+@d-shrink-link-spacing-top-landing: (@d-shrink-height - 28) / 2; // padding top of nav links on shrink
+@d-shrink-sub-menu-top-landing: @d-shrink-height; // Position of drop down menu on shrink
+
+.topbar{
+  position: relative;
+  padding: @topbar-padding;
+  background-color: @topbar-background-color;
+  p{
+    margin: 0;
+  }
+  .topbar-left{
+    float: left;
+    .topbar-left-styles;
+  }
+  .topbar-right{
+    float: right;
+    .topbar-right-styles;
+  }
+  @media(max-width: 991px){
+    display: none;
+  }
+}
+.primary-nav{
+  background-color: @d-background-color;
+  background-image: @d-background-image;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-bottom: @d-border-bottom;
+  height: @d-height;
+  width: 100%;
+  transition: height .7s, background-color .7s, background .7s, opacity .7s, padding .7s;
+  z-index: 2001;
+  .nav-logo{
+    a{
+      display: block;
+      transition: margin-top .7s;
+      margin-top: @d-logo-margin-top;
+      img{
+        transition: height .7s;
+        height: @d-logo-height;
+        -webkit-filter: @d-logo-filter;
+        filter: @d-logo-filter;
+      }
+    }
+  }
+  .nav-logo-landing{
+    a{
+      display: block;
+      transition: margin-top .7s;
+      margin-top: @d-logo-margin-landing-top;
+      img{
+        transition: height .7s;
+        height: @d-logo-height-landing;
+        -webkit-filter: @d-logo-filter-landing;
+        filter: @d-logo-filter-landing;
+      }
+    }
+  }
+  #menu-primary{
+    float: right;
+    margin: 0;
+    padding: 0;
+    font-family: @navbar-font-family;
+    & > li{
+      display: inline-block;
+      position: relative;
+      &.current-menu-parent > a, &.current-menu-item > a {
+        color: @d-link-hover;
+        padding-top: 28px;
+        background-position: center;
+        background-image: url('/bc/wp-content/uploads/menu-underline-chopstick.png');
+        background-repeat: no-repeat;
+      }
+      & > a{
+        color: @d-link-color;
+        font-size: @d-link-size;
+        font-weight: @d-link-weight;
+        text-transform: @d-link-transform;
+        text-shadow: @d-link-text-shadow;
+        background-image: none;
+        transition: all .5s;
+        &:hover{
+          padding-top: 28px;
+          background-position: center;
+          background-image: url('/bc/wp-content/uploads/menu-underline-chopstick.png');
+          background-repeat: no-repeat;
+          color: @d-link-hover;
+        }
+      }
+      .sub-menu {
+        margin-top: 0;
+        position: absolute;
+        float: left;
+        top: @sub-spacing-top;
+        box-shadow: @d-sub-box-shadow;
+        z-index: 1;
+        background-color: @d-sub-background-color;
+        display: none;
+        min-width: @d-sub-min-width;
+        left: 0;
+        padding: @d-sub-padding;
+        border-radius: @d-sub-border-radius;
+        li{
+          float: none;
+          display: block;
+          position: relative;
+          a{
+            display: block;
+            min-width: @d-sub-min-width;
+            white-space: nowrap;
+            padding: @d-sub-link-padding;
+            font-weight: @d-sub-font-weight;
+            font-size: @d-sub-font-size;
+            color: @d-sub-link-color;
+            clear: both;
+            &:hover{
+              color: @d-sub-link-hover;
+            }
+          }
+          &.menu-item-has-children{
+            & > a {
+              &::after{
+                content: '\f105';
+                margin-left: 5px;
+              }
+            }
+          }
+          &.current-menu-item{
+            & > a{
+              color: @d-link-hover;
+            }
+          }
+        }
+        .sub-menu{
+          right: 100%;
+          top: 0;
+          display: none;
+          border-radius: 4px;
+        }
+      }
+      &.menu-item-has-children{
+        &:hover{
+          & > .sub-menu{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+// styles for the dropdown
+.admin-bar .primary-nav.fixed-top {
+  top: 32px!important;
+}
+.primary-nav .menu-item-has-children > a{
+  &::after{
+    font-family: 'Font Awesome 5 Solid';
+    content: @d-sub-dropdown-icon;
+    margin-left: @d-sub-dropdown-space-left;
+    font-size: @d-sub-dropdown-icon-size;
+
+  }
+}
+.primary-nav #menu-primary > li > a{
+  transition: all .5s;
+  height: @d-height;
+  padding-top: @d-link-spacing-top;
+  padding-left: @d-link-spacing;
+  padding-right: @d-link-spacing;
+  display: block;
+  .top-level-link-styles;
+  @media(max-width: 991px){
+    font-size: @t-link-size;
+    padding-left: @t-link-spacing;
+    padding-right: @t-link-spacing;
+  }
+}
+
+.primary-nav-landing #menu-primary > li > a{
+  transition: all .5s;
+  height: @d-height;
+  padding-top: @d-link-spacing-top-landing;
+  padding-left: @d-link-spacing;
+  padding-right: @d-link-spacing;
+  display: block;
+  .top-level-link-styles;
+  @media(max-width: 991px){
+    font-size: @t-link-size;
+    padding-left: @t-link-spacing;
+    padding-right: @t-link-spacing;
+  }
+}
+
+.primary-nav.fixed-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.primary-nav.shrink-on-scroll{
+  height: @d-shrink-height;
+  .nav-logo{
+    a{
+      margin-top: @d-shrink-logo-margin-top;
+      img{
+        height: @d-shrink-logo-height;
+      }
+    }
+  }
+  height: @d-shrink-height;
+  .nav-logo-landing{
+    a{
+      margin-top: @d-shrink-logo-margin-top-landing;
+      img{
+        height: @d-shrink-logo-height-landing;
+      }
+    }
+  }
+  #menu-primary{
+    li{
+      .sub-menu{
+        top: @d-shrink-sub-menu-top;
+      }
+      .sub-menu-landing{
+        top: @d-shrink-sub-menu-top;
+      }
+    }
+  }
+
+}
+.primary-nav.shrink-on-scroll #menu-primary > li > a{
+  height: @d-shrink-height;
+  padding-top: @d-shrink-link-spacing-top;
+  display: block;
+}
+.primary-nav.navbar-style-change.navbar-style-change-active{
+  background: @d-style-change-background;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  .nav-logo{
+    a{
+      img{
+        -webkit-filter: @d-style-change-logo-filter;
+        filter: @d-style-change-logo-filter;
+      }
+    }
+  }
+  #menu-primary{
+    & > li{
+      a{
+        color: @d-style-change-link-color;
+        &:hover{
+          padding-top: 5px;
+          background-position: center;
+          background-image: url('/bc/wp-content/uploads/menu-underline-chopstick.png');
+          background-repeat: no-repeat;
+          color: @d-style-change-link-hover;
+        }
+      }
+      &.current-menu-item{
+        a{
+          padding-top: 5px;
+          background-position: center;
+          background-image: url('/bc/wp-content/uploads/menu-underline-chopstick.png');
+          background-repeat: no-repeat;
+          color: @d-style-change-link-hover;
+        }
+      }
+      &.current-menu-parent > a{
+        color: @d-style-change-link-hover;
+      }
+      .sub-menu{
+        background-color:  @d-style-change-sub-menu-background;
+        li{
+          a{
+            color:@d-style-change-sub-menu-link-color;
+            &:hover{
+                color: @d-style-change-sub-menu-link-hover;
+            }
+          }
+          &.current-menu-item > a{
+            color: @d-style-change-sub-menu-link-hover;
+          }
+        }
+      }
+    }
+  }
+}
+.primary-nav.navbar-sit-over-banner{
+  position: fixed;
+}
+.primary-nav-search-toggle{
+  @media(max-width: 767px){
+    display: none!important;
+  }
+}
+.primary-nav-search-form{
+  position: absolute;
+  min-width: 250px;
+  background-color: @color-2;
+  padding: 20px;
+  z-index: 1;
+  top: 100%;
+  right: 0;
+  border-radius: 0 0 4px 4px;
+  input{
+    width: 70%;
+    margin-right: 5%;
+    margin-bottom: 0;
+  }
+  button{
+    width: 25%;
+    background-color: @color-1;
+    color: #FFF;
+    border: none;
+    outline: none;
+    padding: 6px 0 9px 0;
+    &:hover{
+      background-color: darken(@color-1, 10%);
+    }
+  }
+}
+
+@media(max-width: 991px){
+  .desktop-nav-wrap.nav-break-992{
+    display: none;
+  }
+  .primary-nav.nav-break-992{
+    display: none;
+  }
+}
+@media(max-width: 767px){
+  .desktop-nav-wrap.nav-break-768{
+    display: none;
+  }
+  .primary-nav.nav-break-768 {
+    display: none;
+  }
+}
+
+
+.header-social-icons{
+  position: relative;
+  top: 25px;
+  text-align: right;
+  z-index: 20;
+}
