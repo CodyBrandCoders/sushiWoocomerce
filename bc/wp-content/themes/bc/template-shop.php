@@ -71,18 +71,20 @@
 							<?php echo do_shortcode( '[product_category category="addon"]' ); ?>
 						</div>
 						<div class="col-lg-2">
-							<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
-							<a class="button" href="<?php echo $woocommerce->cart->get_cart_url(); ?>?empty-cart"><?php _e( 'Empty Cart', 'woocommerce' ); ?></a>
-							<?php echo do_shortcode('[woocommerce_cart]');?>
+							<div class="cart-ajax-wrapper"></div>
 						</div>
 					</section>
 					<h3>Event Information</h3>
 					<section>
-						<?php echo do_shortcode( '[product_page id="2951"]' ); ?>
+						<div class="product-ajax-wrapper"></div>
+
+						<!-- THIS LOADS THE CORRECT JS FILES NEEDS TO BE HERE -->
+						<div style="display:none"><?php echo do_shortcode( '[product_page id="2951"]') ?></div>
+
 					</section>
 					<h3>Payment Information</h3>
 					<section>
-						<p>The next and previous buttons help you to navigate through your content.</p>
+						<div class="checkout-ajax-wrapper"></div>
 					</section>
 					<h3>Complete Booking</h3>
 					<section>

@@ -15,28 +15,50 @@ function theme_js() {
 
 add_action('wp_enqueue_scripts', 'theme_js');
 
-//AJAX woocommerce cart
-add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
-function woocommerce_header_add_to_cart_fragment( $fragments ) {
-	global $woocommerce;
+//AJAX URL
+add_action('wp_head', 'myplugin_ajaxurl');
 
-	ob_start();
+function myplugin_ajaxurl() {
 
-	?>
-	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
-	<?php
-	$fragments['a.cart-customlocation'] = ob_get_clean();
-	return $fragments;
+   echo '<script type="text/javascript">
+           var ajaxurl = "' . admin_url('admin-ajax.php') . '";
+         </script>';
 }
 
+//INJECT THE CORRECT PRODUCT INTO THE FORM
+add_action( 'wp_ajax_get_product_shortcode', 'get_product_shortcode' );
+add_action( 'wp_ajax_nopriv_get_product_shortcode', 'get_product_shortcode' );
 
-// check for empty-cart get param to clear the cart
-add_action( 'init', 'woocommerce_clear_cart_url' );
-function woocommerce_clear_cart_url() {
-  global $woocommerce;
-	
-	if ( isset( $_GET['empty-cart'] ) ) {
-		$woocommerce->cart->empty_cart(); 
-	}
+function get_product_shortcode() {
+
+	$product_id = $_REQUEST['prodID'];
+
+	echo do_shortcode('[product_page id="' . $product_id . '"]');
+
+
+    wp_die(); // this is required to terminate immediately and return a proper response
+}
+
+//RELOAD THE CHECKOUT ON PRODUCT ADD
+add_action( 'wp_ajax_get_checkout_shortcode', 'get_checkout_shortcode' );
+add_action( 'wp_ajax_nopriv_get_checkout_shortcode', 'get_checkout_shortcode' );
+
+function get_checkout_shortcode() {
+
+	echo do_shortcode('[woocommerce_checkout]');
+
+
+    wp_die(); // this is required to terminate immediately and return a proper response
+}
+
+//RELOAD THE CART ON PRODUCT ADD
+add_action( 'wp_ajax_get_cart_shortcode', 'get_cart_shortcode' );
+add_action( 'wp_ajax_nopriv_get_cart_shortcode', 'get_cart_shortcode' );
+
+function get_cart_shortcode() {
+
+	echo do_shortcode('[woocommerce_cart]');
+
+    wp_die(); // this is required to terminate immediately and return a proper response
 }
