@@ -196,9 +196,10 @@ jQuery(document).ready( function($) {
     });
 
     function reloadCalc() {
-        setTimeout(function(){
+       // setTimeout(function(){
 
-            packageTotal = $('.package-price').data('id');
+            packageTotal ='';
+            packageTotal = $('.col-flex .package-price').attr('data-id');
 
             //GET DATA FROM ALL CHILDREN(ADDONS)
             var addonArray =[];
@@ -223,6 +224,6 @@ jQuery(document).ready( function($) {
             }
 
             $('.sushie-value-total').html(sushiTotal);
-        }, 500);
+        //}, 500);
     }
 });
