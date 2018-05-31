@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div id="sushi-bookable-item">
+<div id="sushi-bookable-item" <?php post_class(); ?>>
 	<div class="sushi-bookable-item-wrapper">
 	<li <?php post_class(); ?>>
 		<?php
@@ -52,7 +52,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		 * @hooked woocommerce_template_loop_product_title - 10
 		 */
 		do_action( 'woocommerce_shop_loop_item_title' );
-		echo '<div class="content-bookable-item">' . get_the_content() . '</div>';
+		echo '<div class="sub-title-bookable-item">' . get_field('product_sub_title') . '</div>';
+		echo '<div class="content-bookable-item">' . get_field('product_description') . '</div>';
 		
 		/**
 		 * woocommerce_after_shop_loop_item_title hook.
@@ -74,10 +75,14 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		//Modifications to user count/price stroed vars
 		$this_product_price = $product->get_price();
 
-		echo '<h2 class="price-bookable-item">$' . $this_product_price . ' Per Person</h2>';
-		
-		?>
-		
+		echo '<h2 class="price-bookable-item">$' . $this_product_price . ' Per Person</h2>'; ?>
+
+		<!-- PARTY INPUT -->
+		<div class="sushi-party-size">
+			<span>Party Size: </span>
+			<input class="sushi-value force-select-all" onClick="this.select();" type="number" name="pnumber" value="1">
+		</div>
+
 	</li>
 	
 </div>
@@ -90,6 +95,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 	?>
 	<a class="product-var-bookable" data-id="<?php echo $id; ?>" href="#">Get Started</a>
+	
 
 </div>
 

@@ -34,9 +34,18 @@ function get_product_shortcode() {
 
 	$product_id = $_REQUEST['prodID'];
 
-	echo do_shortcode('[product_page id="' . $product_id . '"]');
+	//ALSO EMPTY CART AS WERE SELECTING NEW MAIN PRODUCT
+	global $woocommerce;
+	$woocommerce->cart->empty_cart(true);
 
+	//GATHER BOTH DATA SETS
+	$shortcode_array = [];
 
+	$shortcode_array['data_1'] = do_shortcode('[product_page id="' . $product_id . '"]');
+	$shortcode_array['data_2'] = clear_cart();
+
+	echo json_encode($shortcode_array);
+	
     wp_die(); // this is required to terminate immediately and return a proper response
 }
 
@@ -52,13 +61,72 @@ function get_checkout_shortcode() {
     wp_die(); // this is required to terminate immediately and return a proper response
 }
 
-//RELOAD THE CART ON PRODUCT ADD
-add_action( 'wp_ajax_get_cart_shortcode', 'get_cart_shortcode' );
-add_action( 'wp_ajax_nopriv_get_cart_shortcode', 'get_cart_shortcode' );
+//PRODUCT TYPE ON CALCULATOR//RELOAD THE CHECKOUT ON PRODUCT ADD
+add_action( 'wp_ajax_get_checkout_price', 'get_checkout_price' );
+add_action( 'wp_ajax_nopriv_get_checkout_price', 'get_checkout_price' );
 
-function get_cart_shortcode() {
+function get_checkout_price() {
 
-	echo do_shortcode('[woocommerce_cart]');
+    $product_id = $_REQUEST['prodID'];
+
+    $_product = wc_get_product( $product_id );
+
+    $return['price'] = $_product->get_price();
+    $return['title'] = $_product->get_title();
+
+    echo json_encode($return);
 
     wp_die(); // this is required to terminate immediately and return a proper response
+}
+
+//ADD PRODUCT ADDONS IN CALCULATOR
+add_action( 'wp_ajax_get_addons', 'get_addons' );
+add_action( 'wp_ajax_nopriv_get_addons', 'get_addons' );
+
+function get_addons() {
+
+	echo clear_cart();
+
+    wp_die(); // this is required to terminate immediately and return a proper response
+}
+
+//REMOVE PRODUCT ADDONS IN CALCULATOR
+add_action( 'wp_ajax_remove_addon', 'remove_addon' );
+add_action( 'wp_ajax_nopriv_remove_addon', 'remove_addon' );
+
+function remove_addon() {
+
+	$addon_id = $_REQUEST['addonID'];
+
+	global $woocommerce;
+	foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
+
+		if ($cart_item['product_id'] == $addon_id) {
+			//remove single product
+			$woocommerce->cart->remove_cart_item($cart_item_key);
+			$woocommerce->cart->empty_cart();
+		}
+	};
+
+	echo clear_cart();
+
+	wp_die(); // this is required to terminate immediately and return a proper response
+	
+}
+
+function clear_cart() {
+
+	global $woocommerce;
+	$items = $woocommerce->cart->get_cart();
+
+	foreach($items as $item => $values) { 
+		$_product =  wc_get_product( $values['data']->get_id()); 
+		$price = get_post_meta($values['product_id'] , '_price', true);
+
+		echo '<div class="addon-item product-'. $_product->get_type() .'" data-price="'.$price.'">';
+			echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
+			echo '<span class="package-title">'.$_product->get_title().'</span>';
+			echo '<span class="package-price">'.$price.'</span>';
+		echo '</div>';
+	}   
 }

@@ -1,0 +1,966 @@
+0000.006 (0) Opened log file at time: Wed, 30 May 2018 13:36:22 +0000 on http://sushiexperience.com.test/bc
+0000.008 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.14.8.24 WP: 4.9.6 PHP: 7.2.1 (apache2handler, Darwin Dimitris-iMac 15.6.0 Darwin Kernel Version 15.6.0: Fri Feb 17 10:21:18 PST 2017; root:xnu-3248.60.11.4.1~1/RELEASE_X86_64 x86_64) MySQL: 5.6.38 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 43.9M | 46.3M) multisite: N openssl: OpenSSL 1.0.2j  26 Sep 2016 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.009 (0) Free space on disk containing Updraft's temporary directory: 171396.9 MB
+0000.018 (0) Tasks: Backup files: 1 (schedule: weekly) Backup DB:  (schedule: weekly)
+0000.019 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.053 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1526728579, seconds_ago=958803)
+0000.056 (0) Set semaphore last lock (fd) time to 2018-05-30 13:36:22
+0000.058 (0) Semaphore lock (fd) complete
+0000.062 (0) Backup run: resumption=0, nonce=3d9c247f26a5, begun at=1527687382 (0s ago), job type=backup
+0000.063 (0) Scheduling a resumption (1) after 300 seconds (1527687682) in case this run gets aborted
+0000.099 (0) Checking if we have a zip executable available
+0000.106 (0) Testing: /usr/bin/zip
+0000.136 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.137 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.139 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.140 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.141 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.160 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.162 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.196 (0) Working binary zip found: /usr/bin/zip
+0000.198 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.200 (0) Creation of backups of directories: beginning
+0000.210 (0) Beginning creation of dump of plugins (split every: 700 MB)
+0001.444 (0) Total entities for the zip file: 894 directories, 5794 files (0 skipped as non-modified), 64.7 MB
+0001.449 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.452 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.456 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.460 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.464 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.465 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.2 MB, 5794 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0001.692 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: size is now: 1.30 MB
+0001.698 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 600 files added (on-disk size: 1344.8 KB)
+0001.701 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 700 files added (on-disk size: 1344.8 KB)
+0001.705 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 800 files added (on-disk size: 1344.8 KB)
+0001.709 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 900 files added (on-disk size: 1344.8 KB)
+0001.713 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1000 files added (on-disk size: 1344.8 KB)
+0001.714 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.8 MB, 5794 files batched, 501 (1002) added so far); re-opening (prior size: 1344.8 KB)
+0001.945 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: size is now: 2.20 MB
+0001.951 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1100 files added (on-disk size: 2302.8 KB)
+0001.954 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1200 files added (on-disk size: 2302.8 KB)
+0001.958 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1300 files added (on-disk size: 2302.8 KB)
+0001.961 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1400 files added (on-disk size: 2302.8 KB)
+0001.965 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1500 files added (on-disk size: 2302.8 KB)
+0001.966 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (9.9 MB, 5794 files batched, 501 (1503) added so far); re-opening (prior size: 2302.8 KB)
+0002.611 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: size is now: 6.30 MB
+0002.616 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1600 files added (on-disk size: 6495.9 KB)
+0002.619 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1700 files added (on-disk size: 6495.9 KB)
+0002.623 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1800 files added (on-disk size: 6495.9 KB)
+0002.626 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 1900 files added (on-disk size: 6495.9 KB)
+0002.630 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2000 files added (on-disk size: 6495.9 KB)
+0002.631 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (11.6 MB, 5794 files batched, 501 (2004) added so far); re-opening (prior size: 6495.9 KB)
+0003.175 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: size is now: 9.00 MB
+0003.181 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2100 files added (on-disk size: 9258.4 KB)
+0003.185 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2200 files added (on-disk size: 9258.4 KB)
+0003.189 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2300 files added (on-disk size: 9258.4 KB)
+0003.193 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2400 files added (on-disk size: 9258.4 KB)
+0003.197 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2500 files added (on-disk size: 9258.4 KB)
+0003.198 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.9 MB, 5794 files batched, 501 (2505) added so far); re-opening (prior size: 9258.4 KB)
+0003.510 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2600 files added (on-disk size: 10206.7 KB)
+0003.513 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2700 files added (on-disk size: 10206.7 KB)
+0003.517 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2800 files added (on-disk size: 10206.7 KB)
+0003.521 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 2900 files added (on-disk size: 10206.7 KB)
+0003.524 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3000 files added (on-disk size: 10206.7 KB)
+0003.525 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.4 MB, 5794 files batched, 501 (3006) added so far); re-opening (prior size: 10206.7 KB)
+0003.746 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3100 files added (on-disk size: 11012.8 KB)
+0003.750 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3200 files added (on-disk size: 11012.8 KB)
+0003.753 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3300 files added (on-disk size: 11012.8 KB)
+0003.757 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3400 files added (on-disk size: 11012.8 KB)
+0003.760 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3500 files added (on-disk size: 11012.8 KB)
+0003.762 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.1 MB, 5794 files batched, 501 (3507) added so far); re-opening (prior size: 11012.8 KB)
+0004.197 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: size is now: 13.10 MB
+0004.202 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3600 files added (on-disk size: 13378.9 KB)
+0004.206 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3700 files added (on-disk size: 13378.9 KB)
+0004.210 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3800 files added (on-disk size: 13378.9 KB)
+0004.214 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 3900 files added (on-disk size: 13378.9 KB)
+0004.218 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4000 files added (on-disk size: 13378.9 KB)
+0004.219 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.4 MB, 5794 files batched, 501 (4008) added so far); re-opening (prior size: 13378.9 KB)
+0004.457 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4100 files added (on-disk size: 14649.3 KB)
+0004.461 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4200 files added (on-disk size: 14649.3 KB)
+0004.465 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4300 files added (on-disk size: 14649.3 KB)
+0004.468 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4400 files added (on-disk size: 14649.3 KB)
+0004.472 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4500 files added (on-disk size: 14649.3 KB)
+0004.473 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.3 MB, 5794 files batched, 501 (4509) added so far); re-opening (prior size: 14649.3 KB)
+0004.757 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4600 files added (on-disk size: 16070.2 KB)
+0004.761 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4700 files added (on-disk size: 16070.2 KB)
+0004.765 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4800 files added (on-disk size: 16070.2 KB)
+0004.769 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 4900 files added (on-disk size: 16070.2 KB)
+0004.772 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 5000 files added (on-disk size: 16070.2 KB)
+0004.774 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.9 MB, 5794 files batched, 501 (5010) added so far); re-opening (prior size: 16070.2 KB)
+0004.972 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 5100 files added (on-disk size: 17237.6 KB)
+0004.976 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 5200 files added (on-disk size: 17237.6 KB)
+0004.979 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 5300 files added (on-disk size: 17237.6 KB)
+0004.983 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 5400 files added (on-disk size: 17237.6 KB)
+0004.986 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 5500 files added (on-disk size: 17237.6 KB)
+0004.987 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10 MB, 5794 files batched, 501 (5511) added so far); re-opening (prior size: 17237.6 KB)
+0005.461 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: size is now: 20.20 MB
+0005.467 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 5600 files added (on-disk size: 20712.9 KB)
+0005.471 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip.tmp: 5700 files added (on-disk size: 20712.9 KB)
+0006.142 (0) Created plugins zip (0) - 21724.2 KB in 5.9 s (3662.7 KB/s) (sha1: 8eb0439abd29894d948e10f73e82caef9c7c883c, sha256: 9e4831423d08225adbb45522b9d36edb06bdeec38cb19c63e1c8ceda98113b93)
+0006.145 (0) Beginning creation of dump of themes (split every: 700 MB)
+0006.502 (0) Total entities for the zip file: 690 directories, 6486 files (6 skipped as non-modified), 40.8 MB
+0006.506 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0006.510 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0006.513 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0006.517 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0006.520 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0006.521 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10.5 MB, 6486 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0007.122 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: size is now: 4.10 MB
+0007.127 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 600 files added (on-disk size: 4205.9 KB)
+0007.131 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 700 files added (on-disk size: 4205.9 KB)
+0007.135 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 800 files added (on-disk size: 4205.9 KB)
+0007.138 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 900 files added (on-disk size: 4205.9 KB)
+0007.142 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1000 files added (on-disk size: 4205.9 KB)
+0007.143 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (17.3 MB, 6486 files batched, 501 (1002) added so far); re-opening (prior size: 4205.9 KB)
+0007.833 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: size is now: 10.30 MB
+0007.839 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1100 files added (on-disk size: 10512.9 KB)
+0007.843 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1200 files added (on-disk size: 10512.9 KB)
+0007.847 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1300 files added (on-disk size: 10512.9 KB)
+0007.851 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1400 files added (on-disk size: 10512.9 KB)
+0007.855 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1500 files added (on-disk size: 10512.9 KB)
+0007.856 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 6486 files batched, 501 (1503) added so far); re-opening (prior size: 10512.9 KB)
+0008.064 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1600 files added (on-disk size: 11304 KB)
+0008.068 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1700 files added (on-disk size: 11304 KB)
+0008.072 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1800 files added (on-disk size: 11304 KB)
+0008.075 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 1900 files added (on-disk size: 11304 KB)
+0008.079 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2000 files added (on-disk size: 11304 KB)
+0008.080 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1 MB, 6486 files batched, 501 (2004) added so far); re-opening (prior size: 11304 KB)
+0008.232 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2100 files added (on-disk size: 11822.8 KB)
+0008.236 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2200 files added (on-disk size: 11822.8 KB)
+0008.240 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2300 files added (on-disk size: 11822.8 KB)
+0008.243 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2400 files added (on-disk size: 11822.8 KB)
+0008.247 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2500 files added (on-disk size: 11822.8 KB)
+0008.248 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.6 MB, 6486 files batched, 501 (2505) added so far); re-opening (prior size: 11822.8 KB)
+0008.382 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2600 files added (on-disk size: 12147.6 KB)
+0008.386 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2700 files added (on-disk size: 12147.6 KB)
+0008.389 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2800 files added (on-disk size: 12147.6 KB)
+0008.393 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 2900 files added (on-disk size: 12147.6 KB)
+0008.397 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3000 files added (on-disk size: 12147.6 KB)
+0008.398 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.5 MB, 6486 files batched, 501 (3006) added so far); re-opening (prior size: 12147.6 KB)
+0008.531 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3100 files added (on-disk size: 12474.4 KB)
+0008.535 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3200 files added (on-disk size: 12474.4 KB)
+0008.539 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3300 files added (on-disk size: 12474.4 KB)
+0008.542 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3400 files added (on-disk size: 12474.4 KB)
+0008.546 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3500 files added (on-disk size: 12474.4 KB)
+0008.547 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.8 MB, 6486 files batched, 501 (3507) added so far); re-opening (prior size: 12474.4 KB)
+0008.738 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3600 files added (on-disk size: 12836.4 KB)
+0008.742 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3700 files added (on-disk size: 12836.4 KB)
+0008.746 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3800 files added (on-disk size: 12836.4 KB)
+0008.749 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 3900 files added (on-disk size: 12836.4 KB)
+0008.753 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4000 files added (on-disk size: 12836.4 KB)
+0008.754 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.8 MB, 6486 files batched, 501 (4008) added so far); re-opening (prior size: 12836.4 KB)
+0008.975 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4100 files added (on-disk size: 13902.3 KB)
+0008.979 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4200 files added (on-disk size: 13902.3 KB)
+0008.982 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4300 files added (on-disk size: 13902.3 KB)
+0008.986 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4400 files added (on-disk size: 13902.3 KB)
+0008.989 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4500 files added (on-disk size: 13902.3 KB)
+0008.991 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.4 MB, 6486 files batched, 501 (4509) added so far); re-opening (prior size: 13902.3 KB)
+0009.119 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4600 files added (on-disk size: 14206.4 KB)
+0009.123 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4700 files added (on-disk size: 14206.4 KB)
+0009.126 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4800 files added (on-disk size: 14206.4 KB)
+0009.130 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 4900 files added (on-disk size: 14206.4 KB)
+0009.133 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5000 files added (on-disk size: 14206.4 KB)
+0009.134 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.6 MB, 6486 files batched, 501 (5010) added so far); re-opening (prior size: 14206.4 KB)
+0009.308 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5100 files added (on-disk size: 14547.4 KB)
+0009.311 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5200 files added (on-disk size: 14547.4 KB)
+0009.315 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5300 files added (on-disk size: 14547.4 KB)
+0009.318 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5400 files added (on-disk size: 14547.4 KB)
+0009.322 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5500 files added (on-disk size: 14547.4 KB)
+0009.324 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.2 MB, 6486 files batched, 501 (5511) added so far); re-opening (prior size: 14547.4 KB)
+0009.455 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5600 files added (on-disk size: 14740.6 KB)
+0009.459 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5700 files added (on-disk size: 14740.6 KB)
+0009.463 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5800 files added (on-disk size: 14740.6 KB)
+0009.466 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 5900 files added (on-disk size: 14740.6 KB)
+0009.470 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 6000 files added (on-disk size: 14740.6 KB)
+0009.471 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.8 MB, 6486 files batched, 501 (6012) added so far); re-opening (prior size: 14740.6 KB)
+0009.670 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 6100 files added (on-disk size: 15368.6 KB)
+0009.673 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 6200 files added (on-disk size: 15368.6 KB)
+0009.677 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 6300 files added (on-disk size: 15368.6 KB)
+0009.681 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip.tmp: 6400 files added (on-disk size: 15368.6 KB)
+0010.270 (0) Created themes zip (0) - 16169.6 KB in 4.1 s (3921.9 KB/s) (sha1: 1e37d25993143befa71dd1b743e9885e7cac054d, sha256: 54eb48a5d7bab535569638de6764d08a50f9c4dea22ae162dd49628e85bb8abf)
+0010.273 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0010.274 (0) Looking for candidates to back up in: /Users/brandcoders/Sites/sushi/bc/wp-content/uploads
+0010.285 (0) finding files: 2016: adding to list (1)
+0010.286 (0) finding files: about-the-sushi-experience-chef-vu-bg-100x100.jpg: adding to list (2)
+0010.287 (0) finding files: about-the-sushi-experience-chef-vu-bg-1024x320.jpg: adding to list (3)
+0010.288 (0) finding files: about-the-sushi-experience-chef-vu-bg-150x150.jpg: adding to list (4)
+0010.289 (0) finding files: about-the-sushi-experience-chef-vu-bg-300x300.jpg: adding to list (5)
+0010.290 (0) finding files: about-the-sushi-experience-chef-vu-bg-300x94.jpg: adding to list (6)
+0010.291 (0) finding files: about-the-sushi-experience-chef-vu-bg-600x188.jpg: adding to list (7)
+0010.292 (0) finding files: about-the-sushi-experience-chef-vu-bg-768x240.jpg: adding to list (8)
+0010.293 (0) finding files: about-the-sushi-experience-chef-vu-bg.jpg: adding to list (9)
+0010.294 (0) finding files: basic-100x100.jpg: adding to list (10)
+0010.295 (0) finding files: basic-150x150.jpg: adding to list (11)
+0010.296 (0) finding files: basic-300x195.jpg: adding to list (12)
+0010.297 (0) finding files: basic-300x300.jpg: adding to list (13)
+0010.297 (0) finding files: basic-600x391.jpg: adding to list (14)
+0010.298 (0) finding files: basic-768x500.jpg: adding to list (15)
+0010.299 (0) finding files: basic.jpg: adding to list (16)
+0010.300 (0) finding files: bc-placeholder-image-100x100.png: adding to list (17)
+0010.301 (0) finding files: bc-placeholder-image-150x150.png: adding to list (18)
+0010.301 (0) finding files: bc-placeholder-image-300x300.png: adding to list (19)
+0010.302 (0) finding files: bc-placeholder-image-600x600.png: adding to list (20)
+0010.303 (0) finding files: bc-placeholder-image-768x768.png: adding to list (21)
+0010.304 (0) finding files: bc-placeholder-image.png: adding to list (22)
+0010.305 (0) finding files: book-now-sushi-experience-never-forget-bg-100x80.jpg: adding to list (23)
+0010.306 (0) finding files: book-now-sushi-experience-never-forget-bg-1024x43.jpg: adding to list (24)
+0010.306 (0) finding files: book-now-sushi-experience-never-forget-bg-150x80.jpg: adding to list (25)
+0010.307 (0) finding files: book-now-sushi-experience-never-forget-bg-300x13.jpg: adding to list (26)
+0010.308 (0) finding files: book-now-sushi-experience-never-forget-bg-300x80.jpg: adding to list (27)
+0010.309 (0) finding files: book-now-sushi-experience-never-forget-bg-600x25.jpg: adding to list (28)
+0010.310 (0) finding files: book-now-sushi-experience-never-forget-bg-768x32.jpg: adding to list (29)
+0010.311 (0) finding files: book-now-sushi-experience-never-forget-bg.jpg: adding to list (30)
+0010.312 (0) finding files: brandcoders-logo-red-100x100.png: adding to list (31)
+0010.313 (0) finding files: brandcoders-logo-red-150x100.png: adding to list (32)
+0010.314 (0) finding files: brandcoders-logo-red-300x100.png: adding to list (33)
+0010.314 (0) finding files: brandcoders-logo-red-300x47.png: adding to list (34)
+0010.315 (0) finding files: brandcoders-logo-red-600x94.png: adding to list (35)
+0010.316 (0) finding files: brandcoders-logo-red.png: adding to list (36)
+0010.317 (0) finding files: chef-gallery-1-100x100.jpg: adding to list (37)
+0010.318 (0) finding files: chef-gallery-1-150x150.jpg: adding to list (38)
+0010.319 (0) finding files: chef-gallery-1-300x300.jpg: adding to list (39)
+0010.320 (0) finding files: chef-gallery-1-600x598.jpg: adding to list (40)
+0010.320 (0) finding files: chef-gallery-1-768x765.jpg: adding to list (41)
+0010.321 (0) finding files: chef-gallery-1.jpg: adding to list (42)
+0010.322 (0) finding files: chef-gallery-2-100x100.jpg: adding to list (43)
+0010.323 (0) finding files: chef-gallery-2-150x150.jpg: adding to list (44)
+0010.324 (0) finding files: chef-gallery-2-300x300.jpg: adding to list (45)
+0010.325 (0) finding files: chef-gallery-2-600x598.jpg: adding to list (46)
+0010.326 (0) finding files: chef-gallery-2-768x765.jpg: adding to list (47)
+0010.327 (0) finding files: chef-gallery-2.jpg: adding to list (48)
+0010.328 (0) finding files: chef-gallery-3-100x100.jpg: adding to list (49)
+0010.328 (0) finding files: chef-gallery-3-150x150.jpg: adding to list (50)
+0010.329 (0) finding files: chef-gallery-3-300x300.jpg: adding to list (51)
+0010.329 (0) finding files: chef-gallery-3-600x598.jpg: adding to list (52)
+0010.330 (0) finding files: chef-gallery-3-768x765.jpg: adding to list (53)
+0010.330 (0) finding files: chef-gallery-3.jpg: adding to list (54)
+0010.330 (0) finding files: chef-gallery-4-100x100.jpg: adding to list (55)
+0010.330 (0) finding files: chef-gallery-4-150x150.jpg: adding to list (56)
+0010.330 (0) finding files: chef-gallery-4-300x300.jpg: adding to list (57)
+0010.330 (0) finding files: chef-gallery-4-600x598.jpg: adding to list (58)
+0010.330 (0) finding files: chef-gallery-4-768x765.jpg: adding to list (59)
+0010.330 (0) finding files: chef-gallery-4.jpg: adding to list (60)
+0010.330 (0) finding files: chef-vu-100x100.jpg: adding to list (61)
+0010.330 (0) finding files: chef-vu-150x150.jpg: adding to list (62)
+0010.330 (0) finding files: chef-vu-300x261.jpg: adding to list (63)
+0010.330 (0) finding files: chef-vu-300x300.jpg: adding to list (64)
+0010.330 (0) finding files: chef-vu-600x522.jpg: adding to list (65)
+0010.330 (0) finding files: chef-vu-768x668.jpg: adding to list (66)
+0010.330 (0) finding files: chef-vu-headshot-100x100.jpg: adding to list (67)
+0010.336 (0) finding files: chef-vu-headshot-150x150.jpg: adding to list (68)
+0010.336 (0) finding files: chef-vu-headshot-300x300.jpg: adding to list (69)
+0010.336 (0) finding files: chef-vu-headshot-600x600.jpg: adding to list (70)
+0010.336 (0) finding files: chef-vu-headshot-768x768.jpg: adding to list (71)
+0010.336 (0) finding files: chef-vu-headshot.jpg: adding to list (72)
+0010.336 (0) finding files: chef-vu.jpg: adding to list (73)
+0010.337 (0) finding files: chopsticks-100x100.png: adding to list (74)
+0010.337 (0) finding files: chopsticks-150x150.png: adding to list (75)
+0010.337 (0) finding files: chopsticks-159x300.png: adding to list (76)
+0010.337 (0) finding files: chopsticks-300x300.png: adding to list (77)
+0010.337 (0) finding files: chopsticks-542x1024.png: adding to list (78)
+0010.337 (0) finding files: chopsticks-600x1134.png: adding to list (79)
+0010.337 (0) finding files: chopsticks-768x1451.png: adding to list (80)
+0010.337 (0) finding files: chopsticks.png: adding to list (81)
+0010.337 (0) finding files: contact-form-logo-1-100x100.png: adding to list (82)
+0010.337 (0) finding files: contact-form-logo-1-150x150.png: adding to list (83)
+0010.337 (0) finding files: contact-form-logo-1-300x216.png: adding to list (84)
+0010.337 (0) finding files: contact-form-logo-1-300x300.png: adding to list (85)
+0010.337 (0) finding files: contact-form-logo-1-600x433.png: adding to list (86)
+0010.337 (0) finding files: contact-form-logo-1-768x554.png: adding to list (87)
+0010.337 (0) finding files: contact-form-logo-1.png: adding to list (88)
+0010.337 (0) finding files: contact-form-logo-100x100.png: adding to list (89)
+0010.337 (0) finding files: contact-form-logo-150x150.png: adding to list (90)
+0010.338 (0) finding files: contact-form-logo-300x216.png: adding to list (91)
+0010.338 (0) finding files: contact-form-logo-300x300.png: adding to list (92)
+0010.338 (0) finding files: contact-form-logo-600x433.png: adding to list (93)
+0010.338 (0) finding files: contact-form-logo-768x554.png: adding to list (94)
+0010.338 (0) finding files: contact-form-logo.png: adding to list (95)
+0010.338 (0) finding files: custom-100x100.jpg: adding to list (96)
+0010.338 (0) finding files: custom-150x150.jpg: adding to list (97)
+0010.338 (0) finding files: custom-300x195.jpg: adding to list (98)
+0010.338 (0) finding files: custom-300x300.jpg: adding to list (99)
+0010.338 (0) finding files: custom-600x391.jpg: adding to list (100)
+0010.339 (0) finding files: custom-768x500.jpg: adding to list (101)
+0010.339 (0) finding files: custom.jpg: adding to list (102)
+0010.339 (0) finding files: Customize.svg: adding to list (103)
+0010.340 (0) finding files: date-time.svg: adding to list (104)
+0010.340 (0) finding files: GeoIP.dat: adding to list (105)
+0010.340 (0) finding files: GeoIPv6.dat: adding to list (106)
+0010.340 (0) finding files: GeoLite2-Country.mmdb: adding to list (107)
+0010.340 (0) finding files: Header-still-image-100x100.png: adding to list (108)
+0010.340 (0) finding files: Header-still-image-1024x577.png: adding to list (109)
+0010.340 (0) finding files: Header-still-image-150x150.png: adding to list (110)
+0010.340 (0) finding files: Header-still-image-300x169.png: adding to list (111)
+0010.340 (0) finding files: Header-still-image-300x300.png: adding to list (112)
+0010.340 (0) finding files: Header-still-image-600x338.png: adding to list (113)
+0010.340 (0) finding files: Header-still-image-768x432.png: adding to list (114)
+0010.340 (0) finding files: Header-still-image.png: adding to list (115)
+0010.340 (0) finding files: home-banner_1.mp4: adding to list (116)
+0010.340 (0) finding files: home-sushi-chef-south-florida-100x100.jpg: adding to list (117)
+0010.340 (0) finding files: home-sushi-chef-south-florida-150x150.jpg: adding to list (118)
+0010.340 (0) finding files: home-sushi-chef-south-florida-300x300.jpg: adding to list (119)
+0010.340 (0) finding files: home-sushi-chef-south-florida-600x600.jpg: adding to list (120)
+0010.341 (0) finding files: home-sushi-chef-south-florida-768x768.jpg: adding to list (121)
+0010.341 (0) finding files: home-sushi-chef-south-florida.jpg: adding to list (122)
+0010.341 (0) finding files: location-default-thumb-100x100.png: adding to list (123)
+0010.341 (0) finding files: location-default-thumb.png: adding to list (124)
+0010.341 (0) finding files: meet-chef-vu-bg-100x100.jpg: adding to list (125)
+0010.341 (0) finding files: meet-chef-vu-bg-1024x436.jpg: adding to list (126)
+0010.341 (0) finding files: meet-chef-vu-bg-150x150.jpg: adding to list (127)
+0010.341 (0) finding files: meet-chef-vu-bg-300x128.jpg: adding to list (128)
+0010.341 (0) finding files: meet-chef-vu-bg-300x300.jpg: adding to list (129)
+0010.341 (0) finding files: meet-chef-vu-bg-600x256.jpg: adding to list (130)
+0010.341 (0) finding files: meet-chef-vu-bg-768x327.jpg: adding to list (131)
+0010.341 (0) finding files: meet-chef-vu-bg.jpg: adding to list (132)
+0010.341 (0) finding files: meet-the-chef-bg-placeholder-100x100.jpg: adding to list (133)
+0010.342 (0) finding files: meet-the-chef-bg-placeholder-1024x267.jpg: adding to list (134)
+0010.342 (0) finding files: meet-the-chef-bg-placeholder-150x150.jpg: adding to list (135)
+0010.342 (0) finding files: meet-the-chef-bg-placeholder-300x300.jpg: adding to list (136)
+0010.342 (0) finding files: meet-the-chef-bg-placeholder-300x78.jpg: adding to list (137)
+0010.342 (0) finding files: meet-the-chef-bg-placeholder-600x156.jpg: adding to list (138)
+0010.342 (0) finding files: meet-the-chef-bg-placeholder-768x200.jpg: adding to list (139)
+0010.342 (0) finding files: meet-the-chef-bg-placeholder.jpg: adding to list (140)
+0010.342 (0) finding files: meet-the-chef-book-now-cta-100x100.jpg: adding to list (141)
+0010.354 (0) finding files: meet-the-chef-book-now-cta-1024x213.jpg: adding to list (142)
+0010.354 (0) finding files: meet-the-chef-book-now-cta-150x150.jpg: adding to list (143)
+0010.354 (0) finding files: meet-the-chef-book-now-cta-300x300.jpg: adding to list (144)
+0010.354 (0) finding files: meet-the-chef-book-now-cta-300x63.jpg: adding to list (145)
+0010.355 (0) finding files: meet-the-chef-book-now-cta-600x125.jpg: adding to list (146)
+0010.355 (0) finding files: meet-the-chef-book-now-cta-768x160.jpg: adding to list (147)
+0010.355 (0) finding files: meet-the-chef-book-now-cta.jpg: adding to list (148)
+0010.355 (0) finding files: menu-underline-chopstick-100x100.png: adding to list (149)
+0010.355 (0) finding files: menu-underline-chopstick.png: adding to list (150)
+0010.355 (0) finding files: never-before-sushi-experience-bg-100x100.jpg: adding to list (151)
+0010.355 (0) finding files: never-before-sushi-experience-bg-1024x267.jpg: adding to list (152)
+0010.355 (0) finding files: never-before-sushi-experience-bg-150x150.jpg: adding to list (153)
+0010.355 (0) finding files: never-before-sushi-experience-bg-300x300.jpg: adding to list (154)
+0010.355 (0) finding files: never-before-sushi-experience-bg-300x78.jpg: adding to list (155)
+0010.355 (0) finding files: never-before-sushi-experience-bg-600x156.jpg: adding to list (156)
+0010.355 (0) finding files: never-before-sushi-experience-bg-768x200.jpg: adding to list (157)
+0010.355 (0) finding files: never-before-sushi-experience-bg.jpg: adding to list (158)
+0010.356 (0) finding files: partcipants.svg: adding to list (159)
+0010.356 (0) finding files: placehold-image-long-100x100.png: adding to list (160)
+0010.356 (0) finding files: placehold-image-long-150x150.png: adding to list (161)
+0010.356 (0) finding files: placehold-image-long-225x300.png: adding to list (162)
+0010.356 (0) finding files: placehold-image-long-300x300.png: adding to list (163)
+0010.356 (0) finding files: placehold-image-long.png: adding to list (164)
+0010.356 (0) finding files: premium-100x100.jpg: adding to list (165)
+0010.356 (0) finding files: premium-150x150.jpg: adding to list (166)
+0010.356 (0) finding files: premium-300x195.jpg: adding to list (167)
+0010.356 (0) finding files: premium-300x300.jpg: adding to list (168)
+0010.356 (0) finding files: premium-600x391.jpg: adding to list (169)
+0010.356 (0) finding files: premium-768x500.jpg: adding to list (170)
+0010.356 (0) finding files: premium.jpg: adding to list (171)
+0010.356 (0) finding files: reserve.svg: adding to list (172)
+0010.356 (0) finding files: Review-Us-On-Angies-List-100x100.png: adding to list (173)
+0010.356 (0) finding files: Review-Us-On-Angies-List-150x150.png: adding to list (174)
+0010.356 (0) finding files: Review-Us-On-Angies-List-300x300.png: adding to list (175)
+0010.356 (0) finding files: Review-Us-On-Angies-List-600x600.png: adding to list (176)
+0010.357 (0) finding files: Review-Us-On-Angies-List-768x768.png: adding to list (177)
+0010.357 (0) finding files: Review-Us-On-Angies-List.png: adding to list (178)
+0010.357 (0) finding files: Review-Us-On-BBB-100x100.png: adding to list (179)
+0010.357 (0) finding files: Review-Us-On-BBB-150x150.png: adding to list (180)
+0010.357 (0) finding files: Review-Us-On-BBB-300x300.png: adding to list (181)
+0010.357 (0) finding files: Review-Us-On-BBB-600x600.png: adding to list (182)
+0010.357 (0) finding files: Review-Us-On-BBB-768x768.png: adding to list (183)
+0010.357 (0) finding files: Review-Us-On-BBB.png: adding to list (184)
+0010.357 (0) finding files: Review-Us-On-Facebook-100x100.png: adding to list (185)
+0010.357 (0) finding files: Review-Us-On-Facebook-150x150.png: adding to list (186)
+0010.357 (0) finding files: Review-Us-On-Facebook-300x300.png: adding to list (187)
+0010.357 (0) finding files: Review-Us-On-Facebook-600x600.png: adding to list (188)
+0010.357 (0) finding files: Review-Us-On-Facebook-768x768.png: adding to list (189)
+0010.357 (0) finding files: Review-Us-On-Facebook.png: adding to list (190)
+0010.357 (0) finding files: Review-Us-On-Google-100x100.png: adding to list (191)
+0010.357 (0) finding files: Review-Us-On-Google-150x150.png: adding to list (192)
+0010.357 (0) finding files: Review-Us-On-Google-300x300.png: adding to list (193)
+0010.357 (0) finding files: Review-Us-On-Google-600x600.png: adding to list (194)
+0010.358 (0) finding files: Review-Us-On-Google-768x768.png: adding to list (195)
+0010.358 (0) finding files: Review-Us-On-Google.png: adding to list (196)
+0010.358 (0) finding files: Review-Us-On-Home-Advisor-100x100.png: adding to list (197)
+0010.358 (0) finding files: Review-Us-On-Home-Advisor-150x150.png: adding to list (198)
+0010.358 (0) finding files: Review-Us-On-Home-Advisor-300x300.png: adding to list (199)
+0010.358 (0) finding files: Review-Us-On-Home-Advisor-600x600.png: adding to list (200)
+0010.359 (0) finding files: Review-Us-On-Home-Advisor-768x768.png: adding to list (201)
+0010.360 (0) finding files: Review-Us-On-Home-Advisor.png: adding to list (202)
+0010.360 (0) finding files: Review-Us-On-Manta-100x100.png: adding to list (203)
+0010.360 (0) finding files: Review-Us-On-Manta-150x150.png: adding to list (204)
+0010.360 (0) finding files: Review-Us-On-Manta-300x300.png: adding to list (205)
+0010.360 (0) finding files: Review-Us-On-Manta-600x600.png: adding to list (206)
+0010.360 (0) finding files: Review-Us-On-Manta-768x768.png: adding to list (207)
+0010.360 (0) finding files: Review-Us-On-Manta.png: adding to list (208)
+0010.360 (0) finding files: Review-Us-On-Yellow-Pages-100x100.png: adding to list (209)
+0010.360 (0) finding files: Review-Us-On-Yellow-Pages-150x150.png: adding to list (210)
+0010.367 (0) finding files: Review-Us-On-Yellow-Pages-300x300.png: adding to list (211)
+0010.367 (0) finding files: Review-Us-On-Yellow-Pages-600x600.png: adding to list (212)
+0010.367 (0) finding files: Review-Us-On-Yellow-Pages-768x768.png: adding to list (213)
+0010.367 (0) finding files: Review-Us-On-Yellow-Pages.png: adding to list (214)
+0010.367 (0) finding files: Review-Us-On-Yelp-100x100.png: adding to list (215)
+0010.367 (0) finding files: Review-Us-On-Yelp-150x150.png: adding to list (216)
+0010.367 (0) finding files: Review-Us-On-Yelp-300x300.png: adding to list (217)
+0010.367 (0) finding files: Review-Us-On-Yelp-600x600.png: adding to list (218)
+0010.367 (0) finding files: Review-Us-On-Yelp-768x768.png: adding to list (219)
+0010.367 (0) finding files: Review-Us-On-Yelp.png: adding to list (220)
+0010.367 (0) finding files: revslider: adding to list (221)
+0010.367 (0) finding files: south-florida-private-sushi-chef-100x100.jpg: adding to list (222)
+0010.367 (0) finding files: south-florida-private-sushi-chef-150x150.jpg: adding to list (223)
+0010.367 (0) finding files: south-florida-private-sushi-chef-300x300.jpg: adding to list (224)
+0010.367 (0) finding files: south-florida-private-sushi-chef-600x600.jpg: adding to list (225)
+0010.367 (0) finding files: south-florida-private-sushi-chef-768x768.jpg: adding to list (226)
+0010.368 (0) finding files: south-florida-private-sushi-chef.jpg: adding to list (227)
+0010.368 (0) finding files: south-florida-sushi-catering-100x100.jpg: adding to list (228)
+0010.368 (0) finding files: south-florida-sushi-catering-150x150.jpg: adding to list (229)
+0010.368 (0) finding files: south-florida-sushi-catering-300x300.jpg: adding to list (230)
+0010.368 (0) finding files: south-florida-sushi-catering-600x600.jpg: adding to list (231)
+0010.368 (0) finding files: south-florida-sushi-catering-768x768.jpg: adding to list (232)
+0010.368 (0) finding files: south-florida-sushi-catering.jpg: adding to list (233)
+0010.368 (0) finding files: standard-100x100.jpg: adding to list (234)
+0010.368 (0) finding files: standard-150x150.jpg: adding to list (235)
+0010.368 (0) finding files: standard-300x195.jpg: adding to list (236)
+0010.368 (0) finding files: standard-300x300.jpg: adding to list (237)
+0010.368 (0) finding files: standard-600x391.jpg: adding to list (238)
+0010.368 (0) finding files: standard-768x500.jpg: adding to list (239)
+0010.368 (0) finding files: standard.jpg: adding to list (240)
+0010.368 (0) finding files: sushi-catering-south-florida-100x100.jpg: adding to list (241)
+0010.368 (0) finding files: sushi-catering-south-florida-150x150.jpg: adding to list (242)
+0010.368 (0) finding files: sushi-catering-south-florida-300x300.jpg: adding to list (243)
+0010.369 (0) finding files: sushi-catering-south-florida-600x600.jpg: adding to list (244)
+0010.369 (0) finding files: sushi-catering-south-florida-768x768.jpg: adding to list (245)
+0010.369 (0) finding files: sushi-catering-south-florida.jpg: adding to list (246)
+0010.369 (0) finding files: sushi-mobile-logo-100x100.png: adding to list (247)
+0010.369 (0) finding files: sushi-mobile-logo-150x150.png: adding to list (248)
+0010.369 (0) finding files: sushi-mobile-logo-300x156.png: adding to list (249)
+0010.369 (0) finding files: sushi-mobile-logo-300x300.png: adding to list (250)
+0010.369 (0) finding files: sushi-mobile-logo-600x313.png: adding to list (251)
+0010.369 (0) finding files: sushi-mobile-logo-768x400.png: adding to list (252)
+0010.369 (0) finding files: sushi-mobile-logo.png: adding to list (253)
+0010.369 (0) finding files: sushi-time.svg: adding to list (254)
+0010.369 (0) finding files: the-experience-gallery-1-100x100.jpg: adding to list (255)
+0010.369 (0) finding files: the-experience-gallery-1-150x150.jpg: adding to list (256)
+0010.369 (0) finding files: the-experience-gallery-1-300x300.jpg: adding to list (257)
+0010.369 (0) finding files: the-experience-gallery-1-600x598.jpg: adding to list (258)
+0010.369 (0) finding files: the-experience-gallery-1-768x765.jpg: adding to list (259)
+0010.369 (0) finding files: the-experience-gallery-1.jpg: adding to list (260)
+0010.369 (0) finding files: the-experience-gallery-2-100x100.jpg: adding to list (261)
+0010.370 (0) finding files: the-experience-gallery-2-150x150.jpg: adding to list (262)
+0010.370 (0) finding files: the-experience-gallery-2-300x300.jpg: adding to list (263)
+0010.370 (0) finding files: the-experience-gallery-2-600x598.jpg: adding to list (264)
+0010.370 (0) finding files: the-experience-gallery-2-768x765.jpg: adding to list (265)
+0010.370 (0) finding files: the-experience-gallery-2.jpg: adding to list (266)
+0010.370 (0) finding files: the-experience-gallery-3-100x100.jpg: adding to list (267)
+0010.370 (0) finding files: the-experience-gallery-3-150x150.jpg: adding to list (268)
+0010.370 (0) finding files: the-experience-gallery-3-300x300.jpg: adding to list (269)
+0010.370 (0) finding files: the-experience-gallery-3-600x598.jpg: adding to list (270)
+0010.370 (0) finding files: the-experience-gallery-3-768x765.jpg: adding to list (271)
+0010.370 (0) finding files: the-experience-gallery-3.jpg: adding to list (272)
+0010.370 (0) finding files: the-experience-gallery-4-100x100.jpg: adding to list (273)
+0010.370 (0) finding files: the-experience-gallery-4-150x150.jpg: adding to list (274)
+0010.370 (0) finding files: the-experience-gallery-4-300x300.jpg: adding to list (275)
+0010.370 (0) finding files: the-experience-gallery-4-600x598.jpg: adding to list (276)
+0010.371 (0) finding files: the-experience-gallery-4-768x765.jpg: adding to list (277)
+0010.382 (0) finding files: the-experience-gallery-4.jpg: adding to list (278)
+0010.382 (0) finding files: the-experience-header-bg-100x100.jpg: adding to list (279)
+0010.382 (0) finding files: the-experience-header-bg-1024x267.jpg: adding to list (280)
+0010.382 (0) finding files: the-experience-header-bg-150x150.jpg: adding to list (281)
+0010.382 (0) finding files: the-experience-header-bg-300x300.jpg: adding to list (282)
+0010.382 (0) finding files: the-experience-header-bg-300x78.jpg: adding to list (283)
+0010.382 (0) finding files: the-experience-header-bg-600x156.jpg: adding to list (284)
+0010.382 (0) finding files: the-experience-header-bg-768x200.jpg: adding to list (285)
+0010.382 (0) finding files: the-experience-header-bg.jpg: adding to list (286)
+0010.382 (0) finding files: the-sushi-experience-contact-bg-100x100.jpg: adding to list (287)
+0010.382 (0) finding files: the-sushi-experience-contact-bg-1024x432.jpg: adding to list (288)
+0010.382 (0) finding files: the-sushi-experience-contact-bg-150x150.jpg: adding to list (289)
+0010.383 (0) finding files: the-sushi-experience-contact-bg-300x127.jpg: adding to list (290)
+0010.383 (0) finding files: the-sushi-experience-contact-bg-300x300.jpg: adding to list (291)
+0010.383 (0) finding files: the-sushi-experience-contact-bg-600x253.jpg: adding to list (292)
+0010.383 (0) finding files: the-sushi-experience-contact-bg-768x324.jpg: adding to list (293)
+0010.383 (0) finding files: the-sushi-experience-contact-bg.jpg: adding to list (294)
+0010.383 (0) finding files: the-sushi-experience-favicon-100x100.png: adding to list (295)
+0010.383 (0) finding files: the-sushi-experience-favicon-150x150.png: adding to list (296)
+0010.383 (0) finding files: the-sushi-experience-favicon-300x300.png: adding to list (297)
+0010.383 (0) finding files: the-sushi-experience-favicon.png: adding to list (298)
+0010.383 (0) finding files: the-sushi-experience-header-bg-1-100x100.jpg: adding to list (299)
+0010.383 (0) finding files: the-sushi-experience-header-bg-1-1024x533.jpg: adding to list (300)
+0010.384 (0) finding files: the-sushi-experience-header-bg-1-150x150.jpg: adding to list (301)
+0010.384 (0) finding files: the-sushi-experience-header-bg-1-300x156.jpg: adding to list (302)
+0010.384 (0) finding files: the-sushi-experience-header-bg-1-300x300.jpg: adding to list (303)
+0010.384 (0) finding files: the-sushi-experience-header-bg-1-600x312.jpg: adding to list (304)
+0010.384 (0) finding files: the-sushi-experience-header-bg-1-768x400.jpg: adding to list (305)
+0010.384 (0) finding files: the-sushi-experience-header-bg-1.jpg: adding to list (306)
+0010.385 (0) finding files: the-sushi-experience-header-bg-100x100.jpg: adding to list (307)
+0010.385 (0) finding files: the-sushi-experience-header-bg-1024x533.jpg: adding to list (308)
+0010.385 (0) finding files: the-sushi-experience-header-bg-150x150.jpg: adding to list (309)
+0010.385 (0) finding files: the-sushi-experience-header-bg-300x156.jpg: adding to list (310)
+0010.385 (0) finding files: the-sushi-experience-header-bg-300x300.jpg: adding to list (311)
+0010.385 (0) finding files: the-sushi-experience-header-bg-600x313.jpg: adding to list (312)
+0010.385 (0) finding files: the-sushi-experience-header-bg-768x400.jpg: adding to list (313)
+0010.385 (0) finding files: the-sushi-experience-header-bg.jpg: adding to list (314)
+0010.385 (0) finding files: the-sushi-experience-header-txt-150x150.png: adding to list (315)
+0010.385 (0) finding files: the-sushi-experience-header-txt-300x196.png: adding to list (316)
+0010.385 (0) finding files: the-sushi-experience-header-txt-768x503.png: adding to list (317)
+0010.385 (0) finding files: the-sushi-experience-header-txt-e1519924962462-100x100.png: adding to list (318)
+0010.385 (0) finding files: the-sushi-experience-header-txt-e1519924962462-300x300.png: adding to list (319)
+0010.385 (0) finding files: the-sushi-experience-header-txt-e1519924962462-600x393.png: adding to list (320)
+0010.385 (0) finding files: the-sushi-experience-header-txt-e1519924962462.png: adding to list (321)
+0010.385 (0) finding files: the-sushi-experience-header-txt.png: adding to list (322)
+0010.385 (0) finding files: the-sushi-experience-logo-100x100.png: adding to list (323)
+0010.385 (0) finding files: the-sushi-experience-logo-150x150.png: adding to list (324)
+0010.386 (0) finding files: the-sushi-experience-logo-300x217.png: adding to list (325)
+0010.386 (0) finding files: the-sushi-experience-logo-300x289.png: adding to list (326)
+0010.386 (0) finding files: the-sushi-experience-logo.png: adding to list (327)
+0010.386 (0) finding files: The-Sushi-Experience-Menu.pdf: adding to list (328)
+0010.386 (0) finding files: the-sushi-experience-mobile-logo-100x100.png: adding to list (329)
+0010.386 (0) finding files: the-sushi-experience-mobile-logo-150x150.png: adding to list (330)
+0010.386 (0) finding files: the-sushi-experience-mobile-logo-300x176.png: adding to list (331)
+0010.386 (0) finding files: the-sushi-experience-mobile-logo-300x300.png: adding to list (332)
+0010.386 (0) finding files: the-sushi-experience-mobile-logo-600x352.png: adding to list (333)
+0010.386 (0) finding files: the-sushi-experience-mobile-logo-768x451.png: adding to list (334)
+0010.386 (0) finding files: the-sushi-experience-mobile-logo.png: adding to list (335)
+0010.386 (0) finding files: Vu-Tracking_2_1.mp4: adding to list (336)
+0010.386 (0) finding files: wc-logs: adding to list (337)
+0010.386 (0) finding files: what-is-the-sushi-experience-bg-1-100x100.jpg: adding to list (338)
+0010.386 (0) finding files: what-is-the-sushi-experience-bg-1-1024x267.jpg: adding to list (339)
+0010.386 (0) finding files: what-is-the-sushi-experience-bg-1-150x150.jpg: adding to list (340)
+0010.386 (0) finding files: what-is-the-sushi-experience-bg-1-300x300.jpg: adding to list (341)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-1-300x78.jpg: adding to list (342)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-1-600x156.jpg: adding to list (343)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-1-768x200.jpg: adding to list (344)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-1.jpg: adding to list (345)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-100x100.jpg: adding to list (346)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-1024x373.jpg: adding to list (347)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-150x150.jpg: adding to list (348)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-300x109.jpg: adding to list (349)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-300x300.jpg: adding to list (350)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-600x219.jpg: adding to list (351)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg-768x280.jpg: adding to list (352)
+0010.387 (0) finding files: what-is-the-sushi-experience-bg.jpg: adding to list (353)
+0010.387 (0) finding files: woocommerce_uploads: adding to list (354)
+0010.387 (0) finding files: wp-less: adding to list (355)
+0010.387 (0) finding files: wpcf7_captcha: adding to list (356)
+0010.387 (0) finding files: wpcf7_uploads: adding to list (357)
+0010.387 (0) Beginning creation of dump of uploads (split every: 700 MB)
+0010.438 (0) Total entities for the zip file: 74 directories, 544 files (0 skipped as non-modified), 34 MB
+0010.442 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0010.445 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0010.448 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip.tmp: 300 files added (on-disk size: 0 KB)
+0010.452 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip.tmp: 400 files added (on-disk size: 0 KB)
+0010.454 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25 MB, 544 files batched, 443 (443) added so far); re-opening (prior size: 0 KB)
+0011.489 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip.tmp: size is now: 21.90 MB
+0011.492 (0) A useful amount of data was added after this amount of zip processing: 2 s (normalised: 2 s, rate: 13113.2 KB/s)
+0011.494 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.9542360305786, normalised_time=1.9522248541103, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=80567768)
+0011.498 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip.tmp: 500 files added (on-disk size: 22446.4 KB)
+0011.771 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip.tmp: size is now: 30.50 MB
+0012.493 (0) Created uploads zip (0) - 31206.1 KB in 2.1 s (14828.1 KB/s) (sha1: 45fd2b48f3d57f4501cd3fcd3f256778e71ca148, sha256: 92d4bd674306cc5ed8473bc681dd6cc62dbfba1c292621b86c30291cfe86ded7)
+0012.497 (0) Exclusion option setting (wpcore): 
+0012.498 (0) Looking for candidates to back up in: /Users/brandcoders/Sites/sushi/bc
+0012.499 (0) finding files: .DS_Store: adding to list (1)
+0012.500 (0) finding files: bower.json: adding to list (2)
+0012.501 (0) finding files: bower_components: adding to list (3)
+0012.502 (0) finding files: Gruntfile.js: adding to list (4)
+0012.503 (0) finding files: index.php: adding to list (5)
+0012.504 (0) finding files: license.txt: adding to list (6)
+0012.505 (0) finding files: node_modules: adding to list (7)
+0012.506 (0) finding files: package.json: adding to list (8)
+0012.507 (0) finding files: readme.html: adding to list (9)
+0012.507 (0) finding files: README.md: adding to list (10)
+0012.508 (0) finding files: wp-activate.php: adding to list (11)
+0012.509 (0) finding files: wp-admin: adding to list (12)
+0012.510 (0) finding files: wp-blog-header.php: adding to list (13)
+0012.511 (0) finding files: wp-comments-post.php: adding to list (14)
+0012.512 (0) finding files: wp-config-sample.php: adding to list (15)
+0012.512 (0) finding files: wp-config.php: adding to list (16)
+0012.514 (0) finding files: wp-content: skipping: this is the wp-content directory
+0012.514 (0) finding files: wp-cron.php: adding to list (17)
+0012.515 (0) finding files: wp-includes: adding to list (18)
+0012.516 (0) finding files: wp-links-opml.php: adding to list (19)
+0012.517 (0) finding files: wp-load.php: adding to list (20)
+0012.518 (0) finding files: wp-login.php: adding to list (21)
+0012.518 (0) finding files: wp-mail.php: adding to list (22)
+0012.519 (0) finding files: wp-settings.php: adding to list (23)
+0012.520 (0) finding files: wp-signup.php: adding to list (24)
+0012.521 (0) finding files: wp-trackback.php: adding to list (25)
+0012.522 (0) finding files: xmlrpc.php: adding to list (26)
+0012.523 (0) Beginning creation of dump of wpcore (split every: 700 MB)
+0012.936 (0) Total entities for the zip file: 822 directories, 6523 files (0 skipped as non-modified), 49 MB
+0012.940 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 100 files added (on-disk size: 0 KB)
+0012.944 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 200 files added (on-disk size: 0 KB)
+0012.947 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 300 files added (on-disk size: 0 KB)
+0012.951 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 400 files added (on-disk size: 0 KB)
+0012.954 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 500 files added (on-disk size: 0 KB)
+0012.955 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.5 MB, 6523 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0013.382 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: size is now: 2.30 MB
+0013.387 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 600 files added (on-disk size: 2374.9 KB)
+0013.391 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 700 files added (on-disk size: 2374.9 KB)
+0013.394 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 800 files added (on-disk size: 2374.9 KB)
+0013.398 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 900 files added (on-disk size: 2374.9 KB)
+0013.402 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1000 files added (on-disk size: 2374.9 KB)
+0013.403 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.5 MB, 6523 files batched, 501 (1002) added so far); re-opening (prior size: 2374.9 KB)
+0013.690 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: size is now: 3.60 MB
+0013.696 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1100 files added (on-disk size: 3729.8 KB)
+0013.699 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1200 files added (on-disk size: 3729.8 KB)
+0013.703 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1300 files added (on-disk size: 3729.8 KB)
+0013.706 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1400 files added (on-disk size: 3729.8 KB)
+0013.710 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1500 files added (on-disk size: 3729.8 KB)
+0013.711 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.6 MB, 6523 files batched, 501 (1503) added so far); re-opening (prior size: 3729.8 KB)
+0013.922 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: size is now: 4.60 MB
+0013.928 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1600 files added (on-disk size: 4708.3 KB)
+0013.931 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1700 files added (on-disk size: 4708.3 KB)
+0013.935 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1800 files added (on-disk size: 4708.3 KB)
+0013.938 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 1900 files added (on-disk size: 4708.3 KB)
+0013.942 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2000 files added (on-disk size: 4708.3 KB)
+0013.943 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.4 MB, 6523 files batched, 501 (2004) added so far); re-opening (prior size: 4708.3 KB)
+0014.058 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2100 files added (on-disk size: 4994.3 KB)
+0014.062 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2200 files added (on-disk size: 4994.3 KB)
+0014.065 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2300 files added (on-disk size: 4994.3 KB)
+0014.069 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2400 files added (on-disk size: 4994.3 KB)
+0014.073 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2500 files added (on-disk size: 4994.3 KB)
+0014.074 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 6523 files batched, 501 (2505) added so far); re-opening (prior size: 4994.3 KB)
+0014.305 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2600 files added (on-disk size: 5708.5 KB)
+0014.309 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2700 files added (on-disk size: 5708.5 KB)
+0014.312 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2800 files added (on-disk size: 5708.5 KB)
+0014.316 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 2900 files added (on-disk size: 5708.5 KB)
+0014.319 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3000 files added (on-disk size: 5708.5 KB)
+0014.320 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.2 MB, 6523 files batched, 501 (3006) added so far); re-opening (prior size: 5708.5 KB)
+0014.562 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: size is now: 6.80 MB
+0014.568 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3100 files added (on-disk size: 7005.9 KB)
+0014.571 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3200 files added (on-disk size: 7005.9 KB)
+0014.575 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3300 files added (on-disk size: 7005.9 KB)
+0014.578 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3400 files added (on-disk size: 7005.9 KB)
+0014.582 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3500 files added (on-disk size: 7005.9 KB)
+0014.583 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.9 MB, 6523 files batched, 501 (3507) added so far); re-opening (prior size: 7005.9 KB)
+0014.735 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3600 files added (on-disk size: 7447.2 KB)
+0014.739 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3700 files added (on-disk size: 7447.2 KB)
+0014.742 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3800 files added (on-disk size: 7447.2 KB)
+0014.746 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 3900 files added (on-disk size: 7447.2 KB)
+0014.749 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4000 files added (on-disk size: 7447.2 KB)
+0014.750 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.3 MB, 6523 files batched, 501 (4008) added so far); re-opening (prior size: 7447.2 KB)
+0014.868 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4100 files added (on-disk size: 7691.8 KB)
+0014.872 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4200 files added (on-disk size: 7691.8 KB)
+0014.875 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4300 files added (on-disk size: 7691.8 KB)
+0014.879 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4400 files added (on-disk size: 7691.8 KB)
+0014.883 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4500 files added (on-disk size: 7691.8 KB)
+0014.884 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.4 MB, 6523 files batched, 501 (4509) added so far); re-opening (prior size: 7691.8 KB)
+0015.029 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4600 files added (on-disk size: 7929.8 KB)
+0015.032 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4700 files added (on-disk size: 7929.8 KB)
+0015.036 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4800 files added (on-disk size: 7929.8 KB)
+0015.039 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 4900 files added (on-disk size: 7929.8 KB)
+0015.043 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5000 files added (on-disk size: 7929.8 KB)
+0015.044 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.3 MB, 6523 files batched, 501 (5010) added so far); re-opening (prior size: 7929.8 KB)
+0015.202 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5100 files added (on-disk size: 8406.9 KB)
+0015.206 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5200 files added (on-disk size: 8406.9 KB)
+0015.209 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5300 files added (on-disk size: 8406.9 KB)
+0015.213 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5400 files added (on-disk size: 8406.9 KB)
+0015.216 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5500 files added (on-disk size: 8406.9 KB)
+0015.218 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.6 MB, 6523 files batched, 501 (5511) added so far); re-opening (prior size: 8406.9 KB)
+0015.528 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: size is now: 10.10 MB
+0015.536 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5600 files added (on-disk size: 10335.5 KB)
+0015.539 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5700 files added (on-disk size: 10335.5 KB)
+0015.543 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5800 files added (on-disk size: 10335.5 KB)
+0015.547 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 5900 files added (on-disk size: 10335.5 KB)
+0015.550 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 6000 files added (on-disk size: 10335.5 KB)
+0015.551 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.8 MB, 6523 files batched, 501 (6012) added so far); re-opening (prior size: 10335.5 KB)
+0015.924 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: size is now: 12.40 MB
+0015.929 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 6100 files added (on-disk size: 12650 KB)
+0015.933 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 6200 files added (on-disk size: 12650 KB)
+0015.937 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 6300 files added (on-disk size: 12650 KB)
+0015.940 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 6400 files added (on-disk size: 12650 KB)
+0015.944 (0) Zip: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: 6500 files added (on-disk size: 12650 KB)
+0015.945 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10.2 MB, 6523 files batched, 501 (6513) added so far); re-opening (prior size: 12650 KB)
+0016.507 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip.tmp: size is now: 15.50 MB
+0016.941 (0) Created wpcore zip (0) - 15888.6 KB in 4.4 s (3597.1 KB/s) (sha1: 3234d2260cbdb75292168a440b6997cb99d35082, sha256: 63ebd45c22a6fd1535b1a558b99492638974bb4de98f23e2418646366f3f2412)
+0016.944 (0) Beginning backup of other directories found in the content directory (index: 0)
+0016.946 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0016.947 (0) Looking for candidates to back up in: /Users/brandcoders/Sites/sushi/bc/wp-content
+0016.948 (0) finding files: .DS_Store: adding to list (1)
+0016.949 (0) finding files: cache: skipping: excluded by options
+0016.950 (0) finding files: index.php: adding to list (2)
+0016.951 (0) finding files: plugins: skipping: this is the plugins directory
+0016.952 (0) finding files: themes: skipping: this is the themes directory
+0016.953 (0) finding files: updraft: skipping: excluded by options
+0016.953 (0) finding files: updraft-backups: skipping: this is the updraft directory
+0016.954 (0) finding files: upgrade: skipping: excluded by options
+0016.955 (0) finding files: uploads: skipping: this is the uploads directory
+0016.956 (0) finding files: w3tc-config: adding to list (3)
+0016.960 (0) Total entities for the zip file: 1 directories, 5 files (0 skipped as non-modified), 0 MB
+0016.990 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-others.zip.tmp: size is now: 0.00 MB
+0016.996 (0) Created others zip (0) - 6.6 KB in 0 s (174.3 KB/s) (sha1: a8f3e0535c2477fb8a9d3af09507790cb9851906, sha256: c512c4a3478f2a9477df6fa7bd0992cd464c3913bede627dd38fa8f287ab7ee4)
+0016.997 (0) No backup of more: excluded by user's options
+0017.002 (0) Saving backup status to database (elements: 10)
+0017.006 (0) Beginning creation of database dump (WordPress DB)
+0017.006 (0) All tables found will be backed up (indicated by backupdb_nonwp option)
+0017.047 (0) Table wp_options: Total expected rows (approximate): 661
+0017.089 (0) Table wp_options: Total rows added: 709 in 0.04 seconds
+0017.097 (0) Table wp_options: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_options.table.gz - 58.5 KB)
+0017.102 (0) Table wp_users: Total expected rows (approximate): 0
+0017.105 (0) Table wp_users: Total rows added: 6 in 0.00 seconds
+0017.117 (0) Table wp_users: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_users.table.gz - 0.9 KB)
+0017.123 (0) Table wp_usermeta: Total expected rows (approximate): 169
+0017.129 (0) Table wp_usermeta: Total rows added: 182 in 0.00 seconds
+0017.136 (0) Table wp_usermeta: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_usermeta.table.gz - 5.8 KB)
+0017.143 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0017.145 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0017.152 (0) Table wp_commentmeta: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0017.157 (0) Table wp_comments: Total expected rows (approximate): 0
+0017.160 (0) Table wp_comments: Total rows added: 0 in 0.00 seconds
+0017.173 (0) Table wp_comments: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_comments.table.gz - 0.5 KB)
+0017.180 (0) Table wp_links: Total expected rows (approximate): 0
+0017.183 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0017.189 (0) Table wp_links: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_links.table.gz - 0.4 KB)
+0017.195 (0) Table wp_postmeta: Total expected rows (approximate): 4003
+0017.269 (0) Table wp_postmeta: Total rows added: 4370 in 0.07 seconds
+0017.276 (0) Table wp_postmeta: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_postmeta.table.gz - 40.3 KB)
+0017.282 (0) Table wp_posts: Total expected rows (approximate): 613
+0017.398 (0) Table wp_posts: Total rows added: 902 in 0.12 seconds
+0017.405 (0) Table wp_posts: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_posts.table.gz - 88.9 KB)
+0017.410 (0) Table wp_term_relationships: Total expected rows (approximate): 27
+0017.414 (0) Table wp_term_relationships: Total rows added: 35 in 0.00 seconds
+0017.421 (0) Table wp_term_relationships: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_term_relationships.table.gz - 0.5 KB)
+0017.426 (0) Table wp_term_taxonomy: Total expected rows (approximate): 17
+0017.429 (0) Table wp_term_taxonomy: Total rows added: 21 in 0.00 seconds
+0017.436 (0) Table wp_term_taxonomy: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_term_taxonomy.table.gz - 0.6 KB)
+0017.441 (0) Table wp_termmeta: Total expected rows (approximate): 6
+0017.444 (0) Table wp_termmeta: Total rows added: 6 in 0.00 seconds
+0017.451 (0) Table wp_termmeta: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_termmeta.table.gz - 0.4 KB)
+0017.456 (0) Table wp_terms: Total expected rows (approximate): 17
+0017.459 (0) Table wp_terms: Total rows added: 21 in 0.00 seconds
+0017.466 (0) Table wp_terms: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_terms.table.gz - 0.6 KB)
+0017.472 (0) Table wp_woocommerce_order_itemmeta: Total expected rows (approximate): 0
+0017.474 (0) Table wp_woocommerce_order_itemmeta: Total rows added: 0 in 0.00 seconds
+0017.481 (0) Table wp_woocommerce_order_itemmeta: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_order_itemmeta.table.gz - 0.4 KB)
+0017.486 (0) Table wp_woocommerce_payment_tokenmeta: Total expected rows (approximate): 0
+0017.489 (0) Table wp_woocommerce_payment_tokenmeta: Total rows added: 0 in 0.00 seconds
+0017.495 (0) Table wp_woocommerce_payment_tokenmeta: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_payment_tokenmeta.table.gz - 0.4 KB)
+0017.500 (0) Table wp_yoast_seo_links: Total expected rows (approximate): 25
+0017.503 (0) Table wp_yoast_seo_links: Total rows added: 25 in 0.00 seconds
+0017.510 (0) Table wp_yoast_seo_links: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_yoast_seo_links.table.gz - 0.8 KB)
+0017.515 (0) Table wp_yoast_seo_meta: Total expected rows (approximate): 483
+0017.520 (0) Table wp_yoast_seo_meta: Total rows added: 483 in 0.00 seconds
+0017.532 (0) Table wp_yoast_seo_meta: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_yoast_seo_meta.table.gz - 1.6 KB)
+0017.539 (0) Table wp_mondula_form_wizards: Total expected rows (approximate): 0
+0017.542 (0) Table wp_mondula_form_wizards: Total rows added: 1 in 0.00 seconds
+0017.548 (0) Table wp_mondula_form_wizards: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_mondula_form_wizards.table.gz - 0.6 KB)
+0017.554 (0) Table wp_revslider_css: Total expected rows (approximate): 109
+0017.560 (0) Table wp_revslider_css: Total rows added: 109 in 0.01 seconds
+0017.567 (0) Table wp_revslider_css: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_css.table.gz - 4.8 KB)
+0017.572 (0) Table wp_revslider_layer_animations: Total expected rows (approximate): 0
+0017.574 (0) Table wp_revslider_layer_animations: Total rows added: 0 in 0.00 seconds
+0017.586 (0) Table wp_revslider_layer_animations: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_layer_animations.table.gz - 0.3 KB)
+0017.592 (0) Table wp_revslider_navigations: Total expected rows (approximate): 0
+0017.595 (0) Table wp_revslider_navigations: Total rows added: 0 in 0.00 seconds
+0017.607 (0) Table wp_revslider_navigations: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_navigations.table.gz - 0.3 KB)
+0017.613 (0) Table wp_revslider_sliders: Total expected rows (approximate): 0
+0017.616 (0) Table wp_revslider_sliders: Total rows added: 0 in 0.00 seconds
+0017.623 (0) Table wp_revslider_sliders: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_sliders.table.gz - 0.3 KB)
+0017.629 (0) Table wp_revslider_slides: Total expected rows (approximate): 0
+0017.632 (0) Table wp_revslider_slides: Total rows added: 0 in 0.00 seconds
+0017.639 (0) Table wp_revslider_slides: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_slides.table.gz - 0.3 KB)
+0017.644 (0) Table wp_revslider_static_slides: Total expected rows (approximate): 0
+0017.646 (0) Table wp_revslider_static_slides: Total rows added: 0 in 0.00 seconds
+0017.653 (0) Table wp_revslider_static_slides: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_static_slides.table.gz - 0.3 KB)
+0017.660 (0) Table wp_wc_booking_relationships: Total expected rows (approximate): 0
+0017.662 (0) Table wp_wc_booking_relationships: Total rows added: 0 in 0.00 seconds
+0017.669 (0) Table wp_wc_booking_relationships: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wc_booking_relationships.table.gz - 0.3 KB)
+0017.675 (0) Table wp_wc_download_log: Total expected rows (approximate): 0
+0017.677 (0) Table wp_wc_download_log: Total rows added: 0 in 0.00 seconds
+0017.684 (0) Table wp_wc_download_log: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wc_download_log.table.gz - 0.4 KB)
+0017.690 (0) Table wp_wc_webhooks: Total expected rows (approximate): 0
+0017.693 (0) Table wp_wc_webhooks: Total rows added: 0 in 0.00 seconds
+0017.700 (0) Table wp_wc_webhooks: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wc_webhooks.table.gz - 0.5 KB)
+0017.706 (0) Table wp_wcpv_commissions: Total expected rows (approximate): 0
+0017.708 (0) Table wp_wcpv_commissions: Total rows added: 0 in 0.00 seconds
+0017.715 (0) Table wp_wcpv_commissions: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wcpv_commissions.table.gz - 0.4 KB)
+0017.722 (0) Table wp_wcpv_per_product_shipping_rules: Total expected rows (approximate): 0
+0017.724 (0) Table wp_wcpv_per_product_shipping_rules: Total rows added: 0 in 0.00 seconds
+0017.731 (0) Table wp_wcpv_per_product_shipping_rules: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wcpv_per_product_shipping_rules.table.gz - 0.4 KB)
+0017.737 (0) Table wp_woocommerce_api_keys: Total expected rows (approximate): 0
+0017.739 (0) Table wp_woocommerce_api_keys: Total rows added: 0 in 0.00 seconds
+0017.746 (0) Table wp_woocommerce_api_keys: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_api_keys.table.gz - 0.4 KB)
+0017.753 (0) Table wp_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0017.755 (0) Table wp_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.00 seconds
+0017.762 (0) Table wp_woocommerce_attribute_taxonomies: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_attribute_taxonomies.table.gz - 0.4 KB)
+0017.768 (0) Table wp_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0017.771 (0) Table wp_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.00 seconds
+0017.778 (0) Table wp_woocommerce_downloadable_product_permissions: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_downloadable_product_permissions.table.gz - 0.5 KB)
+0017.783 (0) Table wp_woocommerce_log: Total expected rows (approximate): 0
+0017.786 (0) Table wp_woocommerce_log: Total rows added: 0 in 0.00 seconds
+0017.792 (0) Table wp_woocommerce_log: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_log.table.gz - 0.4 KB)
+0017.811 (0) Table wp_woocommerce_order_items: Total expected rows (approximate): 0
+0017.815 (0) Table wp_woocommerce_order_items: Total rows added: 0 in 0.00 seconds
+0017.823 (0) Table wp_woocommerce_order_items: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_order_items.table.gz - 0.4 KB)
+0017.829 (0) Table wp_woocommerce_payment_tokens: Total expected rows (approximate): 0
+0017.831 (0) Table wp_woocommerce_payment_tokens: Total rows added: 0 in 0.00 seconds
+0017.838 (0) Table wp_woocommerce_payment_tokens: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_payment_tokens.table.gz - 0.4 KB)
+0017.842 (0) Table wp_woocommerce_sessions: Total expected rows (approximate): 1
+0017.845 (0) Table wp_woocommerce_sessions: Total rows added: 1 in 0.00 seconds
+0017.859 (0) Table wp_woocommerce_sessions: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_sessions.table.gz - 1.1 KB)
+0017.865 (0) Table wp_woocommerce_shipping_zone_locations: Total expected rows (approximate): 0
+0017.868 (0) Table wp_woocommerce_shipping_zone_locations: Total rows added: 0 in 0.00 seconds
+0017.874 (0) Table wp_woocommerce_shipping_zone_locations: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_shipping_zone_locations.table.gz - 0.4 KB)
+0017.879 (0) Table wp_woocommerce_shipping_zone_methods: Total expected rows (approximate): 0
+0017.882 (0) Table wp_woocommerce_shipping_zone_methods: Total rows added: 0 in 0.00 seconds
+0017.889 (0) Table wp_woocommerce_shipping_zone_methods: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_shipping_zone_methods.table.gz - 0.4 KB)
+0017.894 (0) Table wp_woocommerce_shipping_zones: Total expected rows (approximate): 0
+0017.896 (0) Table wp_woocommerce_shipping_zones: Total rows added: 0 in 0.00 seconds
+0017.911 (0) Table wp_woocommerce_shipping_zones: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_shipping_zones.table.gz - 0.3 KB)
+0017.916 (0) Table wp_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0017.919 (0) Table wp_woocommerce_tax_rate_locations: Total rows added: 0 in 0.00 seconds
+0017.927 (0) Table wp_woocommerce_tax_rate_locations: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_tax_rate_locations.table.gz - 0.4 KB)
+0017.932 (0) Table wp_woocommerce_tax_rates: Total expected rows (approximate): 0
+0017.935 (0) Table wp_woocommerce_tax_rates: Total rows added: 0 in 0.00 seconds
+0017.942 (0) Table wp_woocommerce_tax_rates: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_tax_rates.table.gz - 0.4 KB)
+0017.947 (0) Table wp_wpeditor_settings: Total expected rows (approximate): 38
+0017.950 (0) Table wp_wpeditor_settings: Total rows added: 38 in 0.00 seconds
+0017.957 (0) Table wp_wpeditor_settings: finishing file (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wpeditor_settings.table.gz - 0.8 KB)
+0017.962 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_options.table.gz (1/41): adding to final database dump
+0017.983 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_users.table.gz (2/41): adding to final database dump
+0017.985 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_usermeta.table.gz (3/41): adding to final database dump
+0017.988 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_commentmeta.table.gz (4/41): adding to final database dump
+0017.989 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_comments.table.gz (5/41): adding to final database dump
+0017.990 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_links.table.gz (6/41): adding to final database dump
+0017.991 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_postmeta.table.gz (7/41): adding to final database dump
+0018.013 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_posts.table.gz (8/41): adding to final database dump
+0018.092 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_term_relationships.table.gz (9/41): adding to final database dump
+0018.094 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_term_taxonomy.table.gz (10/41): adding to final database dump
+0018.095 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_termmeta.table.gz (11/41): adding to final database dump
+0018.096 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_terms.table.gz (12/41): adding to final database dump
+0018.097 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_order_itemmeta.table.gz (13/41): adding to final database dump
+0018.098 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_payment_tokenmeta.table.gz (14/41): adding to final database dump
+0018.099 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_yoast_seo_links.table.gz (15/41): adding to final database dump
+0018.101 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_yoast_seo_meta.table.gz (16/41): adding to final database dump
+0018.102 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_mondula_form_wizards.table.gz (17/41): adding to final database dump
+0018.104 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_css.table.gz (18/41): adding to final database dump
+0018.107 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_layer_animations.table.gz (19/41): adding to final database dump
+0018.108 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_navigations.table.gz (20/41): adding to final database dump
+0018.109 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_sliders.table.gz (21/41): adding to final database dump
+0018.110 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_slides.table.gz (22/41): adding to final database dump
+0018.111 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_revslider_static_slides.table.gz (23/41): adding to final database dump
+0018.113 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wc_booking_relationships.table.gz (24/41): adding to final database dump
+0018.114 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wc_download_log.table.gz (25/41): adding to final database dump
+0018.115 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wc_webhooks.table.gz (26/41): adding to final database dump
+0018.116 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wcpv_commissions.table.gz (27/41): adding to final database dump
+0018.117 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wcpv_per_product_shipping_rules.table.gz (28/41): adding to final database dump
+0018.118 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_api_keys.table.gz (29/41): adding to final database dump
+0018.119 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_attribute_taxonomies.table.gz (30/41): adding to final database dump
+0018.120 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_downloadable_product_permissions.table.gz (31/41): adding to final database dump
+0018.122 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_log.table.gz (32/41): adding to final database dump
+0018.123 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_order_items.table.gz (33/41): adding to final database dump
+0018.124 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_payment_tokens.table.gz (34/41): adding to final database dump
+0018.125 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_sessions.table.gz (35/41): adding to final database dump
+0018.126 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_shipping_zone_locations.table.gz (36/41): adding to final database dump
+0018.127 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_shipping_zone_methods.table.gz (37/41): adding to final database dump
+0018.128 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_shipping_zones.table.gz (38/41): adding to final database dump
+0018.129 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_tax_rate_locations.table.gz (39/41): adding to final database dump
+0018.130 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_woocommerce_tax_rates.table.gz (40/41): adding to final database dump
+0018.131 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db-table-wp_wpeditor_settings.table.gz (41/41): adding to final database dump
+0018.132 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db.gz: finished writing out complete database file (176 KB)
+0018.152 (0) Total database tables backed up: 41 (backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db.gz, size: 211915, sha256)
+0018.159 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0018.160 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0018.161 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0018.162 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip: wpcore: This file has not yet been successfully uploaded: will queue
+0018.163 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-others.zip: others: This file has not yet been successfully uploaded: will queue
+0018.164 (0) backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db.gz: db: This file has not yet been successfully uploaded: will queue
+0018.165 (0) Saving backup history. Total backup size: 83.2 MB
+0018.168 (0) Requesting upload of the files that have not yet been successfully uploaded (6)
+0018.172 (0) Cloud backup selection (1/1): s3 with instance (1/1) (last)
+0018.173 (0) Beginning dispatch of backup to remote (s3) (instance identifier s-cc320ed294cd27e40614f067aed41591)
+0018.874 (0) S3 upload (): backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip (chunks: 5) -> s3://brandcoders/WordPressBackups/brandcoders5.com/backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip
+0019.545 (0) S3 chunked upload: got multipart ID: 6UNoupKr7F7kLTLHLSwL92RJH2kFPK8eucAlp8ROhq581jmr7a3cvVIQYDZJ6Puh.kUBr1_mPZ2SQv6.REM7Lsb1I85QURf_66Q3HS5JdQ4Cyc6rXu1bfCLpgcTK5Uv_
+0021.777 (0) S3 chunked upload: 20 % uploaded (1, "26ca25fd159f5e3e278e9e71672fbd72")
+0024.196 (0) S3 chunked upload: 40 % uploaded (2, "ea25ee168ac02123d3a887bcf21535c3")
+0026.262 (0) S3 chunked upload: 60 % uploaded (3, "4368ee3b989dbceae1fb5309377f0fe8")
+0028.337 (0) S3 chunked upload: 80 % uploaded (4, "053e48890f73293e3195e2f219be1eea")
+0028.916 (0) S3 chunked upload: 100 % uploaded (5, "62c65b54284c4b614796072590c7843d")
+0028.919 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0029.080 (0) S3 upload (plugins0): re-assembly succeeded
+0029.083 (0) Recording as successfully uploaded: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip (ace9b40e6b16cea0aeaf0a4a468e30f1)
+0029.089 (0) Deleting local file: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-plugins.zip: OK
+0029.090 (0) S3 upload (): backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip (chunks: 4) -> s3://brandcoders/WordPressBackups/brandcoders5.com/backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip
+0029.132 (0) S3 chunked upload: got multipart ID: 01YSPk3dyzxh4RZb.PVKAcKWzUM1qf83bF4jZLKNhZreWor7b5bTWumctUevMszFr5hJRbOe0..2Dw7tSzUJOQxbSH8WS7DHxZ3.0LtqYLNJjAWLCPWbCArvvxzNetYp
+0031.187 (0) S3 chunked upload: 25 % uploaded (1, "59ecc02c05a723d23f37d9cb94ae00c4")
+0033.174 (0) S3 chunked upload: 50 % uploaded (2, "1342ff9575c17830842c1b82eb96401e")
+0035.179 (0) S3 chunked upload: 75 % uploaded (3, "2dbf8625bf9a2ad724d1aa6275045ace")
+0035.649 (0) S3 chunked upload: 100 % uploaded (4, "ce44da4647e009b5ace4da1da249f23c")
+0035.653 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0035.782 (0) S3 upload (themes0): re-assembly succeeded
+0035.786 (0) Recording as successfully uploaded: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip (5b57a8ebba36a51de761c2260c0af784)
+0035.791 (0) Deleting local file: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-themes.zip: OK
+0035.791 (0) S3 upload (): backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip (chunks: 7) -> s3://brandcoders/WordPressBackups/brandcoders5.com/backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip
+0035.835 (0) S3 chunked upload: got multipart ID: ooaXg3DkzlmQFs.ArP6CUjKqsQf23CfirFADBtCvIIIYihYFkvuKxmcux5hXlTU7I02WqtBqF02yY5r0C2dxdN00zCBFmSYqD50LTOcGUvI50Gv6VBtVIOwHU_3SVceK
+0037.913 (0) S3 chunked upload: 14.3 % uploaded (1, "3f998ea055822932ee9ae6eb37fab303")
+0039.975 (0) S3 chunked upload: 28.6 % uploaded (2, "b0c69c27f3dffd8008ea0b1f23d8c559")
+0041.997 (0) S3 chunked upload: 42.9 % uploaded (3, "388e29cdac26ebaa7f4a719ba216d884")
+0044.005 (0) S3 chunked upload: 57.1 % uploaded (4, "b450147af83c87f5c9e8b0ab75254e07")
+0046.007 (0) S3 chunked upload: 71.4 % uploaded (5, "687da8eb1d8d67685336dad43e288704")
+0048.098 (0) S3 chunked upload: 85.7 % uploaded (6, "ca1587844cfbe710fb6fcc7da56ef887")
+0048.422 (0) S3 chunked upload: 100 % uploaded (7, "d01a590a10879fb096bd5e240b7ee687")
+0048.427 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0048.612 (0) S3 upload (uploads0): re-assembly succeeded
+0048.615 (0) Recording as successfully uploaded: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip (dd1b472411f420baac1221fff945a858)
+0048.621 (0) Deleting local file: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-uploads.zip: OK
+0048.622 (0) S3 upload (): backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip (chunks: 4) -> s3://brandcoders/WordPressBackups/brandcoders5.com/backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip
+0048.667 (0) S3 chunked upload: got multipart ID: qYTmT7n0AyskEg3uQ2eb2bEWs62sjSidK6Wu3EidqfFL5sSNukFyek8tBEfIJ33arnuyDPUZqirbEXYt1RrpyA7XdAPaheQgtt3dtN5ftYs46ckomVKF3a1bgAwzSuYh
+0050.662 (0) S3 chunked upload: 25 % uploaded (1, "eb852dc2a16e4dfc482a004456f38186")
+0052.691 (0) S3 chunked upload: 50 % uploaded (2, "f059a270b819c10d3d7d9f007b54eece")
+0054.692 (0) S3 chunked upload: 75 % uploaded (3, "ec1804cabb8d9c2b7e77fc22c3ba2ff6")
+0055.060 (0) S3 chunked upload: 100 % uploaded (4, "3b24e4cf1ee598e87aa38a05c4c47a91")
+0055.065 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0055.188 (0) S3 upload (wpcore0): re-assembly succeeded
+0055.191 (0) Recording as successfully uploaded: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip (45ea7dca040705506a97f6332d1a6534)
+0055.196 (0) Deleting local file: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-wpcore.zip: OK
+0055.197 (0) S3 upload (): backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-others.zip (chunks: 1) -> s3://brandcoders/WordPressBackups/brandcoders5.com/backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-others.zip
+0055.446 (0) S3 regular upload: success
+0055.452 (0) Recording as successfully uploaded: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-others.zip (053d083930222e9413288a801ecccf1a)
+0055.458 (0) Deleting local file: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-others.zip: OK
+0055.459 (0) S3 upload (): backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db.gz (chunks: 1) -> s3://brandcoders/WordPressBackups/brandcoders5.com/backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db.gz
+0055.738 (0) S3 regular upload: success
+0055.741 (0) Recording as successfully uploaded: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db.gz (769e74482ca52c4ba17749e2b921b4b2)
+0055.747 (0) Deleting local file: backup_2018-05-30-0836_The_Sushi_Experience_3d9c247f26a5-db.gz: OK
+0055.749 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=1, retain_db=1
+0055.751 (0) Number of backup sets in history: 2; groups (db): 1
+0055.752 (0) Examining (for databases) backup set with group_id=0, nonce=3d9c247f26a5, datestamp=1527687382 (May 30 2018 13:36:22)
+0055.753 (0) This backup set is the backup set just made, so will not be deleted.
+0055.753 (0) Examining (for databases) backup set with group_id=0, nonce=0ba57d93b6e3, datestamp=1526728578 (May 19 2018 11:16:18)
+0055.754 (0) 1526728578: db: this set includes a database (backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-db.gz); db count is now 1
+0055.754 (0) 1526728578: db: over retain limit (1); will delete this database
+0055.754 (0) Delete file: backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-db.gz, service=s3
+0055.755 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/brandcoders5.com/backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-db.gz
+0055.889 (0) S3 delete failed: Access Denied (line: 91, file: /Users/brandcoders/Sites/sushi/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0055.892 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0055.893 (0) Number of backup sets in history: 2; groups (files): 1
+0055.894 (0) Examining (for files) backup set with nonce=3d9c247f26a5, datestamp=1527687382 (May 30 2018 13:36:22)
+0055.894 (0) This backup set is the backup set just made, so will not be deleted.
+0055.895 (0) This backup set is the backup set just made, so will not be deleted.
+0055.895 (0) This backup set is the backup set just made, so will not be deleted.
+0055.895 (0) This backup set is the backup set just made, so will not be deleted.
+0055.896 (0) This backup set is the backup set just made, so will not be deleted.
+0055.896 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0055.897 (0) Examining (for files) backup set with nonce=0ba57d93b6e3, datestamp=1526728578 (May 19 2018 11:16:18)
+0055.897 (0) plugins: over retain limit (1); will delete this file entity
+0055.897 (0) themes: over retain limit (1); will delete this file entity
+0055.897 (0) uploads: over retain limit (1); will delete this file entity
+0055.897 (0) wpcore: over retain limit (1); will delete this file entity
+0055.897 (0) others: over retain limit (1); will delete this file entity
+0055.897 (0) Delete file: backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-plugins.zip, service=s3
+0055.898 (0) Delete file: backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-themes.zip, service=s3
+0055.899 (0) Delete file: backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-uploads.zip, service=s3
+0055.900 (0) Delete file: backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-wpcore.zip, service=s3
+0055.901 (0) Delete file: backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-others.zip, service=s3
+0055.901 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/brandcoders5.com/backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-plugins.zip
+0055.945 (0) S3 delete failed: Access Denied (line: 91, file: /Users/brandcoders/Sites/sushi/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0055.947 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/brandcoders5.com/backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-themes.zip
+0055.989 (0) S3 delete failed: Access Denied (line: 91, file: /Users/brandcoders/Sites/sushi/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0055.990 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/brandcoders5.com/backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-uploads.zip
+0056.030 (0) S3 delete failed: Access Denied (line: 91, file: /Users/brandcoders/Sites/sushi/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0056.031 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/brandcoders5.com/backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-wpcore.zip
+0056.071 (0) S3 delete failed: Access Denied (line: 91, file: /Users/brandcoders/Sites/sushi/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0056.072 (0) S3: Delete remote: bucket=brandcoders, URI=WordPressBackups/brandcoders5.com/backup_2018-05-19-0616_The_Sushi_Experience_0ba57d93b6e3-others.zip
+0056.113 (0) S3 delete failed: Access Denied (line: 91, file: /Users/brandcoders/Sites/sushi/bc/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Common/Exception/NamespaceExceptionFactory.php)
+0056.116 (0) This backup set is now empty; will remove from history
+0056.117 (0) Deleting log file (log.0ba57d93b6e3.txt)
+0056.124 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0056.128 (0) Resume backup (3d9c247f26a5, 0): finish run
+0056.131 (0) Decremented the semaphore (fd) by 1
+0056.133 (0) Semaphore (fd) unlocked
+0056.134 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0056.141 (0) No report will be sent to this address, as it is configured to receive them only when there are errors or warnings: backu...
+0056.142 (0) The backup apparently succeeded and is now complete

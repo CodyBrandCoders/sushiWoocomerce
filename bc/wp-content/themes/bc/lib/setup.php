@@ -23,7 +23,7 @@ remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
 // Disable Visual Editor For ALL Users
-add_filter( 'user_can_richedit' , '__return_false', 50 );
+//add_filter( 'user_can_richedit' , '__return_false', 50 );
 
 // Registering Menus
 if(!function_exists('register_theme_menus')):
