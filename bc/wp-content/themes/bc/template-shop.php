@@ -110,11 +110,49 @@
 					</section>
 					<h3>Event Information</h3>
 					<section class="section section-package-details">
-						<div class="product-ajax-wrapper"></div>
+						<div class="col col-lg-9">
+							<div class="product-ajax-wrapper"></div>
 
-						<!-- THIS LOADS THE CORRECT JS FILES NEEDS TO BE HERE -->
-						<div style="display:none"><?php echo do_shortcode( '[product_page id="2951"]') ?></div>
+							<!-- THIS LOADS THE CORRECT JS FILES NEEDS TO BE HERE -->
+							<div style="display:none"><?php echo do_shortcode( '[product_page id="2951"]') ?></div>
+							<a href="#" class="next-step">Continue</a>
+						</div>
+						<div class="col col-flex col-lg-3">
+							<div class="cart-ajax-wrapper">
+								<h2>My Sushi Experience</h2>
+								<div class="inner-cart">
+									<h3>Package: </h3>
+									<span class="package-title"></span>
+									<span class="package-price" data-id="">$</span>
 
+									<h3>Add-Ons: </h3>
+									<div class="cart-addons">
+										<?php
+											global $woocommerce;
+											$items = $woocommerce->cart->get_cart();
+
+											foreach($items as $item => $values) { 
+												$_product =  wc_get_product( $values['data']->get_id()); 
+												$price = get_post_meta($values['product_id'] , '_price', true);
+										
+												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
+													echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
+													echo '<span class="package-title">'.$_product->get_title().'</span>';
+													echo '<span class="package-price">'.$price.'</span>';
+												echo '</div>';
+											}   
+										?>
+
+										<?php //echo do_shortcode('[woocommerce_cart]'); ?>
+									</div>
+								</div>
+								<div class="sushi-party-size">
+									<span>Party Size: </span>
+									<input class="sushi-value sushi-value-input" onClick="this.select();" type="number" name="pnumber" placeholder="0">
+								</div>
+								<h3 class="cart-subtotal">Subtotal: <span class="sushie-value-total"></span></h3>
+							</div>
+						</div>
 					</section>
 					<h3>Payment Information</h3>
 					<section class="section section-payment">
