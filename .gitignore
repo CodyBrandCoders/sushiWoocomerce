@@ -3,7 +3,6 @@ sitemap.xml
 sitemap.xml.gz
 bc/wp-content/plugins/hello.php
 node_modules/
-bower_components/
 bc/wp-admin/
 bc/wp-includes/
 
