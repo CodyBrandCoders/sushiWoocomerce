@@ -1,13 +1,6 @@
 *.log
 sitemap.xml
 sitemap.xml.gz
-bc/wp-config.php
-bc/wp-content/advanced-cache.php
-bc/wp-content/backup-db/
-bc/wp-content/backups/
-bc/wp-content/blogs.dir/
-bc/wp-content/cache/
-bc/wp-content/wp-cache-config.php
 bc/wp-content/plugins/hello.php
 node_modules/
 bower_components/
