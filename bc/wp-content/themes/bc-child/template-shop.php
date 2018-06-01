@@ -77,7 +77,7 @@
 								<div class="inner-cart">
 									<h3>Package: </h3>
 									<span class="package-title"></span>
-									<span class="package-price" data-id="">$</span>
+									<span class="package-price" data-id=""></span>
 
 									<h3>Add-Ons: </h3>
 									<div class="cart-addons">
@@ -92,7 +92,7 @@
 												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
 													echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
 													echo '<span class="package-title">'.$_product->get_title().'</span>';
-													echo '<span class="package-price">'.$price.'</span>';
+													echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 												echo '</div>';
 											}   
 										?>
@@ -104,7 +104,7 @@
 									<span>Party Size: </span>
 									<input class="sushi-value sushi-value-input" onClick="this.select();" type="number" name="pnumber" placeholder="0">
 								</div>
-								<h3 class="cart-subtotal">Subtotal: <span class="sushie-value-total"></span></h3>
+								<h3 class="cart-subtotal">Subtotal: $<span class="sushie-value-total">0</span>.00</h3>
 							</div>
 						</div>
 					</section>
@@ -123,7 +123,7 @@
 								<div class="inner-cart">
 									<h3>Package: </h3>
 									<span class="package-title"></span>
-									<span class="package-price" data-id="">$</span>
+									<span class="package-price" data-id=""></span>
 
 									<h3>Add-Ons: </h3>
 									<div class="cart-addons">
@@ -138,7 +138,7 @@
 												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
 													echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
 													echo '<span class="package-title">'.$_product->get_title().'</span>';
-													echo '<span class="package-price">'.$price.'</span>';
+													echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 												echo '</div>';
 											}   
 										?>
@@ -150,13 +150,15 @@
 									<span>Party Size: </span>
 									<input class="sushi-value sushi-value-input" onClick="this.select();" type="number" name="pnumber" placeholder="0">
 								</div>
-								<h3 class="cart-subtotal">Subtotal: <span class="sushie-value-total"></span></h3>
+								<h3 class="cart-subtotal">Subtotal: $<span class="sushie-value-total">0</span>.00</h3>
 							</div>
 						</div>
 					</section>
 					<h3>Payment Information</h3>
 					<section class="section section-payment">
-						<div class="checkout-ajax-wrapper"></div>
+						<div class="checkout-ajax-wrapper"><?php echo do_shortcode('[woocommerce_checkout]'); ?></div>
+
+						
 					</section>
 					<h3>Complete Booking</h3>
 					<section>

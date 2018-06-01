@@ -126,7 +126,7 @@ function clear_cart() {
 		echo '<div class="addon-item product-'. $_product->get_type() .'" data-price="'.$price.'">';
 			echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
 			echo '<span class="package-title">'.$_product->get_title().'</span>';
-			echo '<span class="package-price">'.$price.'</span>';
+			echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 		echo '</div>';
 	}   
 }

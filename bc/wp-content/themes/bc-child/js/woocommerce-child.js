@@ -51,6 +51,7 @@ jQuery(document).ready( function($) {
         $.getScript("/bc/wp-content/plugins/woocommerce-bookings1/assets/js/booking-form.min.js");
         $.getScript("/bc/wp-content/plugins/woocommerce-bookings1/assets/js/date-picker.min.js");
         $.getScript("/bc/wp-content/plugins/woocommerce-bookings1/assets/js/month-picker.min.js");
+        $.getScript("/bc/wp-content/plugins/woocommerce-bookings1/assets/js/time-picker.min.js");
     }
     /////////////////////////////////
     // END AJAX FOR LOADING PRODUCT    
@@ -184,6 +185,7 @@ jQuery(document).ready( function($) {
         sushiVal = $(this).val();
         //console.log('value is ' + sushiVal);
         $('.sushi-value-input').val(sushiVal);
+        $('#wc_bookings_field_persons').val(sushiVal);
     });
 
     /////////////////////////////////////
@@ -196,21 +198,22 @@ jQuery(document).ready( function($) {
     });
 
     function reloadCalc() {
-       // setTimeout(function(){
+        //setTimeout(function(){
 
             packageTotal ='';
             packageTotal = $('.col-flex .package-price').attr('data-id');
+            packageTotal = Number(packageTotal);
 
             //GET DATA FROM ALL CHILDREN(ADDONS)
             var addonArray =[];
-            $('.addon-item').each(function(i,item) {
+            $('.current .col-flex .addon-item').each(function(i,item) {
                 addonArray.push($(item).data('price'));
             });
 
             var addonTotal = addonArray.reduce(function (a,b){
                 return a + b;
             }, 0);
-
+            console.log(addonArray);
             console.log(addonTotal);
             var addTotal = (packageTotal + addonTotal);
 
@@ -221,9 +224,12 @@ jQuery(document).ready( function($) {
             } else {
                 console.log('Its greater than 0');
                 sushiTotal = addTotal * sushiVal;
+                console.log(sushiTotal);
+
             }
 
             $('.sushie-value-total').html(sushiTotal);
         //}, 500);
     }
+
 });

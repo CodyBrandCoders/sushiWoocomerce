@@ -55,11 +55,3 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 </form>
 
 <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
-
-<form class="cart" method="post" enctype='multipart/form-data' data-nonce="<?php echo esc_attr( $nonce ); ?>">
-    <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( is_callable( array( $product, 'get_id' ) ) ? $product->get_id() : $product->id ); ?>" class="wc-booking-product-id" />
-    <input type="hidden" name="wc_bookings_field_start_date_year" value="booking_start_date_year">
-    <input type="hidden" name="wc_bookings_field_start_date_month" value="booking_start_date_month">
-    <input type="hidden" name="wc_bookings_field_start_date_day" value="booking_start_date_day">
-    <button type="submit" class="wc-bookings-booking-form-button single_ button alt disabled" style="display:none"><?php echo $product->single_add_to_cart_text(); ?></button>
-</form>
