@@ -8,8 +8,6 @@ bc/wp-content/backup-db/
 bc/wp-content/backups/
 bc/wp-content/blogs.dir/
 bc/wp-content/cache/
-bc/wp-content/upgrade/
-bc/wp-content/uploads/
 bc/wp-content/wp-cache-config.php
 bc/wp-content/plugins/hello.php
 node_modules/
