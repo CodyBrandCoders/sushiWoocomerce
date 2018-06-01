@@ -1,5 +1,4 @@
 *.log
-.htaccess
 sitemap.xml
 sitemap.xml.gz
 bc/wp-config.php
