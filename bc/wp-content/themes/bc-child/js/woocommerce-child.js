@@ -232,4 +232,12 @@ jQuery(document).ready( function($) {
         //}, 500);
     }
 
+    $('.ajax-form .wc-bookings-booking-form-button').click(function( event ) {
+        event.preventDefault();
+        //var formData = new FormData($('.ajax-form'));
+        var formData = $('.ajax-form').serializeArray();
+
+        console.log(formData);
+    });
+
 });

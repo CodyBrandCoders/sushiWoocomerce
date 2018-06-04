@@ -30,6 +30,11 @@ function myplugin_ajaxurl() {
 add_action( 'wp_ajax_get_product_shortcode', 'get_product_shortcode' );
 add_action( 'wp_ajax_nopriv_get_product_shortcode', 'get_product_shortcode' );
 
+/**
+ * Remove related products output
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
 function get_product_shortcode() {
 
 	$product_id = $_REQUEST['prodID'];
@@ -104,7 +109,7 @@ function remove_addon() {
 		if ($cart_item['product_id'] == $addon_id) {
 			//remove single product
 			$woocommerce->cart->remove_cart_item($cart_item_key);
-			$woocommerce->cart->empty_cart();
+			//$woocommerce->cart->empty_cart();
 		}
 	};
 

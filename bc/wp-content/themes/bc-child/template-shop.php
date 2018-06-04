@@ -64,6 +64,39 @@
 					<h3>Select your package</h3>
 					<section class="section section-package">
 						<?php echo do_shortcode( '[product_category category="bookable"]' ); ?>
+
+							<?php
+
+							$args = array(
+								'post_type' => 'product',
+								'post_status' => 'publish',
+								'tax_query' => array(
+									array(
+										'taxonomy'         => 'product_cat',
+										'terms'            => 'bookable',
+										'field'            => 'slug',
+									)
+								)
+							);
+
+							$query = new WP_Query( $args );
+
+								// The Loop
+							if ( $query->have_posts() ) {
+							while ( $query->have_posts() ) {
+							$query->the_post(); ?>
+
+
+							<?php echo do_shortcode( '[product_page id="'. get_the_ID().'"]') ?>
+							<?php }
+							} else {
+							// no posts found
+							}
+
+							// Restore original Post Data
+							wp_reset_postdata(); ?>
+
+
 					</section>
 					<h3>Add-Ons</h3>
 					<section class="section section-addons">

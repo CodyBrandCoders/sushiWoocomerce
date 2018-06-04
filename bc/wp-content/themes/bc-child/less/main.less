@@ -220,8 +220,36 @@
 /****************************
     Section specific styles
 ****************************/
+    // .section-package {
+    //     .woocommerce-error {
+    //         display: none,
+    //     }
+    //     .wc-bookings-booking-form .block-picker {
+    //         display: block;
+    //     }
+    //     .summary {
+    //         width: auto !important;
+    //         float: none !important;
+    //         .product_title,.price,.woocommerce-product-details__short-description {
+    //             display: none !important;
+    //         }
+            
+    //     }
+    //     .woocommerce-product-gallery {
+    //         display: none;
+    //     }
+    //     .woocommerce-tabs.wc-tabs-wrapper {
+    //         display: none;
+    //     }
+    //     .product_meta {
+    //         display: none;
+    //     }
+    // }
     .section-addons {
         display: flex;
+        .woocommerce .woocommerce {
+            display: none;
+        }
         .col-flex {
             display: flex;
             .cart-ajax-wrapper {
@@ -244,8 +272,5 @@
             }
         }
         display: flex;
-        .woocommerce-tabs.wc-tabs-wrapper, .related.products {
-            display: none;
-        }
     }
 }

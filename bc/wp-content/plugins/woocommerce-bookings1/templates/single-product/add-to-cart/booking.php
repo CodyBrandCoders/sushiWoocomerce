@@ -32,7 +32,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 <noscript><?php _e( 'Your browser must support JavaScript in order to make a booking.', 'woocommerce-bookings' ); ?></noscript>
 
-<form class="cart" method="post" enctype='multipart/form-data' data-nonce="<?php echo esc_attr( $nonce ); ?>">
+<form class="cart ajax-form" method="post" enctype='multipart/form-data' data-nonce="<?php echo esc_attr( $nonce ); ?>">
 
 	<div id="wc-bookings-booking-form" class="wc-bookings-booking-form" style="display:none">
 
