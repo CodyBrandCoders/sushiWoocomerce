@@ -48,6 +48,55 @@
                 pointer-events: none;
                 cursor: default;
             }
+            .woocommerce, .single-product, .product {
+                height: 100%;
+            }
+            legend {
+                display: none;
+            }
+            .single-product .woocommerce-message, .single-product .woocommerce-info {
+                display: none;
+            }
+            .summary {
+                float: none;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+            .block-picker {
+                display: block;
+            }
+            .wc-bookings-booking-form-button {
+                display: none !important;
+            }
+            .wc-bookings-booking-form {
+                border: 0 none;
+            }
+            .price-bookable-item {
+                border-top: solid 2px #000;
+                border-bottom: solid 2px #000;
+                margin-bottom: 0;
+                padding: 0.5em 0;
+            }
+            .wc-bookings-booking-form .form-field input[type=number] {
+                width: 100%;
+            }
+            .form-field.form-field-wide.wc_bookings_field_persons {
+                width: 100%;
+            }
+            form.cart {
+                margin-bottom: 0;
+            }
+            .woocommerce-product-details__short-description, .product_meta, .price  {
+                display: none;
+            }
+            .content-bookable-item {
+                margin-bottom: auto;
+                flex-grow: 1;
+
+            }
             flex: 1;
             text-align: center;
             margin: 0 1em;
@@ -63,17 +112,8 @@
                     color: #000;
                     text-decoration: none;
                 }
-                .content-bookable-item {
-                    flex-grow: 1;
-                }
                 span.price {
                     display: none;
-                }
-                .price-bookable-item {
-                    border-top: solid 2px #000;
-                    border-bottom: solid 2px #000;
-                    margin-bottom: 0;
-                    padding: 0.5em 0;
                 }
             }
             img {
@@ -82,7 +122,12 @@
             .add_to_cart_button {
                 display: none;
             }
+            .product-var-bookable.disabled {
+                // pointer-events: none;
+                // cursor: default;
+            }
             .product-var-bookable {
+                position: relative;
                 background: red;
                 color: #fff;
                 padding: 1em;
@@ -93,6 +138,22 @@
             }
         }
         
+    }
+    .tooltip-container {
+        position: absolute;
+        bottom: 0;
+        height: 4em;
+        width: 100%;
+        left: 0;
+        z-index: 99;
+    }
+    .tooltip.fade {
+        position: absolute;
+        //bottom: 0;
+        color: #000;
+        background-color: #a4a4a4;
+        border-radius: 5px;
+        padding: 0.5em 2em;
     }
     .next-step {
         display: block;
@@ -120,6 +181,7 @@
             font-size: 28px;
             padding: 0.2em 0;
             line-height: 1;
+            margin-bottom: 1px;
         } 
         .sub-title-bookable-item {
             border-bottom: solid 2px #000;
@@ -220,31 +282,6 @@
 /****************************
     Section specific styles
 ****************************/
-    // .section-package {
-    //     .woocommerce-error {
-    //         display: none,
-    //     }
-    //     .wc-bookings-booking-form .block-picker {
-    //         display: block;
-    //     }
-    //     .summary {
-    //         width: auto !important;
-    //         float: none !important;
-    //         .product_title,.price,.woocommerce-product-details__short-description {
-    //             display: none !important;
-    //         }
-            
-    //     }
-    //     .woocommerce-product-gallery {
-    //         display: none;
-    //     }
-    //     .woocommerce-tabs.wc-tabs-wrapper {
-    //         display: none;
-    //     }
-    //     .product_meta {
-    //         display: none;
-    //     }
-    // }
     .section-addons {
         display: flex;
         .woocommerce .woocommerce {
@@ -260,6 +297,12 @@
                 }
             }
         }
+        .cart-ajax-wrapper .sushi-party-size {
+            input {
+                pointer-events: none;
+                cursor: default;
+            }
+        }
     }
     .section-package-details {
         .col.col-lg-9 {
@@ -272,5 +315,10 @@
             }
         }
         display: flex;
+    }
+    .section-payment {
+        .woocommerce-message {
+            display: none;
+        }
     }
 }

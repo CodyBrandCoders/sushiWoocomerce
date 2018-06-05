@@ -26,31 +26,32 @@ function myplugin_ajaxurl() {
          </script>';
 }
 
-//INJECT THE CORRECT PRODUCT INTO THE FORM
-add_action( 'wp_ajax_get_product_shortcode', 'get_product_shortcode' );
-add_action( 'wp_ajax_nopriv_get_product_shortcode', 'get_product_shortcode' );
-
 /**
  * Remove related products output
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
-function get_product_shortcode() {
 
-	$product_id = $_REQUEST['prodID'];
+//EMPTY CART
+add_action( 'wp_ajax_empty_cart', 'empty_cart' );
+add_action( 'wp_ajax_nopriv_empty_cart', 'empty_cart' );
 
-	//ALSO EMPTY CART AS WERE SELECTING NEW MAIN PRODUCT
+add_action('woocommerce_before_cart', 'fs_check_category_in_cart');
+function empty_cart() {
+
 	global $woocommerce;
-	$woocommerce->cart->empty_cart(true);
 
-	//GATHER BOTH DATA SETS
-	$shortcode_array = [];
+	foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
 
-	$shortcode_array['data_1'] = do_shortcode('[product_page id="' . $product_id . '"]');
-	$shortcode_array['data_2'] = clear_cart();
+		$product = $cart_item['data'];
 
-	echo json_encode($shortcode_array);
+		if ( has_term( 'bookable', 'product_cat', $product->get_id() ) ) {
+			$woocommerce->cart->remove_cart_item($cart_item_key);
+			echo clear_cart();
+		}
+	};
 	
+
     wp_die(); // this is required to terminate immediately and return a proper response
 }
 
@@ -117,6 +118,57 @@ function remove_addon() {
 
 	wp_die(); // this is required to terminate immediately and return a proper response
 	
+}
+
+//ADD PRODUCT TO CART
+add_action( 'wp_ajax_custom_add_to_cart', 'custom_add_to_cart' );
+add_action( 'wp_ajax_nopriv_custom_add_to_cart', 'custom_add_to_cart' );
+
+function custom_add_to_cart() {
+
+    //$form_data = $_REQUEST['formData'];
+    $product_id = $_POST['add-to-cart'];
+    
+    $product = wc_get_product( $product_id );
+    //print_r($product);
+
+    if ( ! is_wc_booking_product( $product ) ) {
+        wp_die();
+    }
+
+    $booking_form                       = new WC_Booking_Form( $product );
+    $cart_item_meta['booking']          = $booking_form->get_posted_data( $_POST );
+    $cart_item_meta['booking']['_cost'] = $booking_form->calculate_booking_cost( $_POST );
+
+    $cart_manager = new WC_Booking_Cart_Manager();
+    // Create the new booking
+    $new_booking_data = array(
+        'product_id'    => $product_id, // Booking ID
+        'cost'          => $cart_item_meta['booking']['_cost'],
+        'start_date'    => $cart_item_meta['booking']['_start_date'],
+        'end_date'      => $cart_item_meta['booking']['_end_date'],
+        'all_day'       => $cart_item_meta['booking']['_all_day'],
+    );
+
+    // Check if the booking has resources
+    if ( isset( $cart_item_meta['booking']['_resource_id'] ) ) {
+        $new_booking_data['resource_id'] = $cart_item_meta['booking']['_resource_id']; // ID of the resource
+    }
+
+    // Checks if the booking allows persons
+    if ( isset( $cart_item_meta['booking']['_persons'] ) ) {
+        $new_booking_data['persons'] = $cart_item_meta['booking']['_persons']; // Count of persons making booking
+    }
+
+    print_r($new_booking_data);
+    $new_booking = get_wc_booking( $new_booking_data );
+       $new_booking->create( 'in-cart' );
+
+    // Schedule this item to be removed from the cart if the user is inactive.
+    $cart_manager->schedule_cart_removal( $new_booking->get_id() );
+    
+
+	wp_die(); // this is required to terminate immediately and return a proper response
 }
 
 function clear_cart() {

@@ -29,72 +29,64 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 ?>
 <div id="sushi-bookable-item" <?php post_class(); ?>>
 	<div class="sushi-bookable-item-wrapper">
-	<li <?php post_class(); ?>>
-		<?php
-		/**
-		 * woocommerce_before_shop_loop_item hook.
-		 *
-		 * @hooked woocommerce_template_loop_product_link_open - 10
-		 */
-		do_action( 'woocommerce_before_shop_loop_item' );
+		<li <?php post_class(); ?>>
+			<?php
+			/**
+			 * woocommerce_before_shop_loop_item hook.
+			 *
+			 * @hooked woocommerce_template_loop_product_link_open - 10
+			 */
+			do_action( 'woocommerce_before_shop_loop_item' );
 
-		/**
-		 * woocommerce_before_shop_loop_item_title hook.
-		 *
-		 * @hooked woocommerce_show_product_loop_sale_flash - 10
-		 * @hooked woocommerce_template_loop_product_thumbnail - 10
-		 */
-		do_action( 'woocommerce_before_shop_loop_item_title' );
+			/**
+			 * woocommerce_before_shop_loop_item_title hook.
+			 *
+			 * @hooked woocommerce_show_product_loop_sale_flash - 10
+			 * @hooked woocommerce_template_loop_product_thumbnail - 10
+			 */
+			do_action( 'woocommerce_before_shop_loop_item_title' );
 
-		/**
-		 * woocommerce_shop_loop_item_title hook.
-		 *
-		 * @hooked woocommerce_template_loop_product_title - 10
-		 */
-		do_action( 'woocommerce_shop_loop_item_title' );
-		echo '<div class="sub-title-bookable-item">' . get_field('product_sub_title') . '</div>';
-		echo '<div class="content-bookable-item">' . get_field('product_description') . '</div>';
-		
-		/**
-		 * woocommerce_after_shop_loop_item_title hook.
-		 *
-		 * @hooked woocommerce_template_loop_rating - 5
-		 * @hooked woocommerce_template_loop_price - 10
-		 */
-		do_action( 'woocommerce_after_shop_loop_item_title' );
-		
+			/**
+			 * woocommerce_shop_loop_item_title hook.
+			 *
+			 * @hooked woocommerce_template_loop_product_title - 10
+			 */
+			do_action( 'woocommerce_shop_loop_item_title' );
+			echo '<div class="sub-title-bookable-item">' . get_field('product_sub_title') . '</div>';
+			echo '<div class="content-bookable-item">' . get_field('product_description') . '</div>';
+			
+			/**
+			 * woocommerce_after_shop_loop_item_title hook.
+			 *
+			 * @hooked woocommerce_template_loop_rating - 5
+			 * @hooked woocommerce_template_loop_price - 10
+			 */
+			do_action( 'woocommerce_after_shop_loop_item_title' );
+			
 
-		/**
-		 * woocommerce_after_shop_loop_item hook.
-		 *
-		 * @hooked woocommerce_template_loop_product_link_close - 5
-		 * @hooked woocommerce_template_loop_add_to_cart - 10
-		 */
-		do_action( 'woocommerce_after_shop_loop_item' );
+			/**
+			 * woocommerce_after_shop_loop_item hook.
+			 *
+			 * @hooked woocommerce_template_loop_product_link_close - 5
+			 * @hooked woocommerce_template_loop_add_to_cart - 10
+			 */
+			do_action( 'woocommerce_after_shop_loop_item' );
 
-		//Modifications to user count/price stroed vars
-		$this_product_price = $product->get_price();
+			//Modifications to user count/price stroed vars
+			$this_product_price = $product->get_price();
 
-		echo '<h2 class="price-bookable-item">$' . $this_product_price . ' Per Person</h2>'; ?>
+			echo '<h2 class="price-bookable-item">$' . $this_product_price . ' Per Person</h2>'; ?>
 
-		<!-- PARTY INPUT -->
-		<div class="sushi-party-size">
-			<span>Party Size: </span>
-			<input class="sushi-value force-select-all" onClick="this.select();" type="number" name="pnumber" value="1">
-		</div>
+			<!-- PARTY INPUT -->
+			<!-- <div class="sushi-party-size">
+				<span>Party Size: </span>
+				<input class="sushi-value force-select-all" onClick="this.select();" type="number" name="pnumber" value="1">
+			</div> -->
 
-	</li>
+		</li>
+	</div>
+
 	
-</div>
-
-<!-- Get Product ID -->
-
-	<?php
-		global $product;
-		$id = $product->id;
-
-	?>
-	<a class="product-var-bookable" data-id="<?php echo $id; ?>" href="#">Get Started</a>
 	
 
 </div>
