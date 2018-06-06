@@ -22,11 +22,11 @@
     .sushi-party-size {
         display: flex;
         flex-wrap: nowrap;
-        padding: 0 1em;
+        padding: 0 0.5em;
         align-items: baseline;
-        margin: 1em 0;
+        margin: 1em 0 0;
         span {
-            flex: 1 1 80%;
+            flex: 1 1 45%;
             font-size: 20px;
         }
         input {
@@ -41,18 +41,39 @@
                 border: solid 2px #000;
                 height: 100%;
             }
+            .wc-bookings-date-picker {
+                border: 0;
+            }
             .force-select-all {
                 -webkit-user-select: all;
                 -moz-user-select: all;
                 -ms-user-select: all;
                 user-select: all;
               }
+            .wc-bookings-date-picker {
+                position: relative;
+            }
             .woocommerce-LoopProduct-link.woocommerce-loop-product__link {
                 pointer-events: none;
                 cursor: default;
             }
             .woocommerce, .single-product, .product {
                 height: 100%;
+            }
+            legend {
+                span {
+                    display: none;
+                }
+            }
+            .wc-bookings-date-picker-choose-date {
+                color: #fff;
+                background: #000;
+                text-decoration: none;
+                padding: 0.15em 2em;
+                display: inline;
+                position: absolute;
+                right: 0;
+                top: -55px;
             }
             .wc-bookings-date-picker-date-fields{
                 display: none;
