@@ -82,9 +82,6 @@
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <meta name="author" content="BrandCoders LLC | Orlando, Florida Website Design">
     
-    <!-- JS FOR CART EXPERIENCE -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script>
-    
     <?php //ENABLE PHONE TRACKING SCRIPT IF USING NUMBER CHANGING FROM GOOGLE
 
     /*** Google Number Changer For PPC Tracking ***/

@@ -7,8 +7,11 @@ function my_theme_enqueue_styles() {
 }
 function theme_js() {
 	
-	wp_register_script( 'script_modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js', false, false, false );
-	wp_enqueue_script( 'script_modernizr' );
+	wp_register_script( 'script_steps', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js', false, false, false );
+	wp_register_script( 'script_sensor', 'https://cdnjs.cloudflare.com/ajax/libs/css-element-queries/1.0.2/ResizeSensor.min.js', false, false, false );
+
+	wp_enqueue_script( 'script_steps' );
+	wp_enqueue_script( 'script_sensor' );
 	wp_enqueue_script( 'theme_js', get_stylesheet_directory_uri() . '/js/woocommerce-child.js', array( 'jquery' ), '1.0', true );
 
 }
@@ -144,7 +147,7 @@ function custom_add_to_cart() {
     // Create the new booking
     $new_booking_data = array(
         'product_id'    => $product_id, // Booking ID
-        'cost'          => $cart_item_meta['booking']['_cost'],
+        //'cost'          => $cart_item_meta['booking']['_cost'],
         'start_date'    => $cart_item_meta['booking']['_start_date'],
         'end_date'      => $cart_item_meta['booking']['_end_date'],
         'all_day'       => $cart_item_meta['booking']['_all_day'],

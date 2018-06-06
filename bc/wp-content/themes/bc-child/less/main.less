@@ -16,6 +16,9 @@
     .col {
         padding: 0;
     }
+    .woocommerce-error {
+        display: none;
+    }
     .sushi-party-size {
         display: flex;
         flex-wrap: nowrap;
@@ -51,7 +54,7 @@
             .woocommerce, .single-product, .product {
                 height: 100%;
             }
-            legend {
+            .wc-bookings-date-picker-date-fields{
                 display: none;
             }
             .single-product .woocommerce-message, .single-product .woocommerce-info {
@@ -122,10 +125,6 @@
             .add_to_cart_button {
                 display: none;
             }
-            .product-var-bookable.disabled {
-                // pointer-events: none;
-                // cursor: default;
-            }
             .product-var-bookable {
                 position: relative;
                 background: red;
@@ -136,6 +135,9 @@
                     background-color: #000;
                 }
             }
+        }
+        .wc-bookings-booking-form .wc-bookings-booking-cost {
+            margin: 0;
         }
         
     }

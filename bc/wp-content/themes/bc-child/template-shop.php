@@ -93,7 +93,7 @@
 									<?php echo do_shortcode( '[product_page id="'. $Queryid .'"]') ?>
 								</div>
 								<div title="Please select a date and time above." class="tooltip-container"></div>
-								<a class="product-var-bookable disabled" data-id="<?php echo $Queryid; ?>" href="#">Get Started</a>
+								<a class="product-var-bookable " data-id="<?php echo $Queryid; ?>" href="#">Get Started</a>
 							</div>
 							<?php }
 							} else {
@@ -148,47 +148,6 @@
 							</div>
 						</div>
 					</section>
-					<h3>Event Information</h3>
-					<section class="section section-package-details">
-						<div class="col col-lg-9">
-							<div class="product-ajax-wrapper"></div>
-							<a href="#" class="next-step">Continue</a>
-						</div>
-						<div class="col col-flex col-lg-3">
-							<!-- <div class="cart-ajax-wrapper">
-								<h2>My Sushi Experience</h2>
-								<div class="inner-cart">
-									<h3>Package: </h3>
-									<span class="package-title"></span>
-									<span class="package-price" data-id=""></span>
-
-									<h3>Add-Ons: </h3>
-									<div class="cart-addons">
-										<?php
-											// global $woocommerce;
-											// $items = $woocommerce->cart->get_cart();
-
-											// foreach($items as $item => $values) { 
-											// 	$_product =  wc_get_product( $values['data']->get_id()); 
-											// 	$price = get_post_meta($values['product_id'] , '_price', true);
-										
-											// 	echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
-											// 		echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
-											// 		echo '<span class="package-title">'.$_product->get_title().'</span>';
-											// 		echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
-											// 	echo '</div>';
-											//}   
-										?>
-									</div>
-								</div>
-								<div class="sushi-party-size">
-									<span>Party Size: </span>
-									<input class="sushi-value sushi-value-input" onClick="this.select();" type="number" name="pnumber" placeholder="0">
-								</div>
-								<h3 class="cart-subtotal">Subtotal: $<span class="sushie-value-total">0</span>.00</h3>
-							</div> -->
-						</div>
-					</section>
 					<h3>Payment Information</h3>
 					<section class="section section-payment">
 						<div class="checkout-ajax-wrapper"><?php echo do_shortcode('[woocommerce_checkout]'); ?></div>
@@ -207,7 +166,7 @@
 						headerTag: "h3",
 						bodyTag: "section",
 						transitionEffect: "fade",
-						enableAllSteps: true,
+						enableAllSteps: false,
 						transitionEffectSpeed: 800
 					});
 				</script>

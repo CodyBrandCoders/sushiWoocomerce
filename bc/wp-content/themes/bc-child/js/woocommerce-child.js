@@ -26,26 +26,23 @@ jQuery(document).ready( function($) {
     //Reset Flex on main page 
     setTimeout(function(){
         $('.page-template-template-shop #sushi-bookable-item h2').css('margin-bottom', 0);
-    }, 1000);
+    }, 2000);
 
     //reset flex on element size changes from calander
-    $('.sushi-value').on("change keyup paste", function(){
+    new ResizeSensor(jQuery('.content-bookable-item'), function(){ 
         setTimeout(function(){
-            console.log('clicked');
-            $('.page-template-template-shop .products #sushi-bookable-item .content-bookable-item').css('flex-grow', '2');
-        }, 1000);
-        $('.page-template-template-shop .products #sushi-bookable-item .content-bookable-item').css('flex-grow', '1');
-    });
-    $('.booking_date_month').on("change paste keyup select", function(){
-        setTimeout(function(){
-            console.log('clicked');
             $('.page-template-template-shop .products #sushi-bookable-item .content-bookable-item').css('flex-grow', '2');
         }, 1000);
         $('.page-template-template-shop .products #sushi-bookable-item .content-bookable-item').css('flex-grow', '1');
     });
 
+    //Allow contintue only after date has been selected
+    $(".booking_date_day").on('propertychange change keyup input paste', function(){
+        $(this).closest('#sushi-bookable-item').find('div.tooltip-container').css('height', '0');
+      });
+
     ////////////////////////////////////////////////////
-    // ENSURE THERE ARE NECER MORE THAN ONE EXPERIENCE 
+    // ENSURE THERE ARE NEVER MORE THAN ONE EXPERIENCE 
     ///////////////////////////////////////////////////
     $('#wizard-t-0, .section-package #sushi-bookable-item #wc_bookings_field_persons').on('click', function() {
 
@@ -167,7 +164,7 @@ jQuery(document).ready( function($) {
     /////////////////////////////////////
     // AJAX FOR RELOADING CHECKOUT  
     ////////////////////////////////////
-    $('#wizard, .product-var-bookable').on('click', function() {
+    $('.next-step, .product-var-bookable').on('click', function() {
 
         $.ajax({
             type: 'POST',
@@ -195,6 +192,7 @@ jQuery(document).ready( function($) {
     /////////////////////////////////////
     
     //var sushiVal = $('.sushi-value').val();
+    sushiVal = 1;
 
     $('.sushi-value').on("change keyup paste", function(){
         sushiVal = $(this).val();

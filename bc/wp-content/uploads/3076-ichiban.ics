@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//WooThemes//WooCommerce Bookings 1.11.1//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:The Sushi Experience
+X-ORIGINAL-URL:http://sushiexperience.com.test/
+X-WR-CALDESC:Bookings from The Sushi Experience
+X-WR-TIMEZONE:America/Chicago
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20180622
+UID:wc_bookings_3076
+DTSTAMP:20180606T153151
+LOCATION:
+DESCRIPTION:Person(s): 3\n\nBooking description:\nthis is short description
+URL;VALUE=URI:http://sushiexperience.com.test/my-account/view-order/3078
+SUMMARY:#3076 - Ichiban
+DTSTART;VALUE=DATE:20180622
+END:VEVENT
+END:VCALENDAR
