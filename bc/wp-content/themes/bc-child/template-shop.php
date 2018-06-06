@@ -90,11 +90,12 @@
 
 							<div id="sushi-bookable-item">
 								<div class="sushi-bookable-item-wrapper">
-									<?php echo do_shortcode( '[product_page id="'. $Queryid .'"]') ?>
+									<?php echo do_shortcode( '[product_page id="2951"]') ?>
 								</div>
 								<div title="Please select a date and time above." class="tooltip-container"></div>
 								<a class="product-var-bookable " data-id="<?php echo $Queryid; ?>" href="#">Get Started</a>
 							</div>
+							
 							<?php }
 							} else {
 							// no posts found
@@ -103,6 +104,7 @@
 							// Restore original Post Data
 							wp_reset_postdata(); ?>
 							</ul>
+							
 
 					</section>
 					<h3>Add-Ons</h3>

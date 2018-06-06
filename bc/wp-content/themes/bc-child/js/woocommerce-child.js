@@ -1,5 +1,4 @@
 jQuery(document).ready( function($) {
-
     //enabled tooltips
     $('.tooltip-container').tooltip();
 
@@ -29,7 +28,7 @@ jQuery(document).ready( function($) {
     //Reset Flex on main page 
     setTimeout(function(){
         $('.page-template-template-shop #sushi-bookable-item h2').css('margin-bottom', 0);
-    }, 1000);
+    }, 500);
 
     //reset flex on element size changes from calander
     new ResizeSensor(jQuery('.content-bookable-item'), function(){ 
@@ -43,6 +42,7 @@ jQuery(document).ready( function($) {
     $(".booking_date_day").on('propertychange change keyup input paste', function(){
         $(this).closest('#sushi-bookable-item').find('div.tooltip-container').css('height', '0');
       });
+
 
     ////////////////////////////////////////////////////
     // ENSURE THERE ARE NEVER MORE THAN ONE EXPERIENCE 
