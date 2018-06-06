@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WooCommerce - WooCommerce Bookings - Latest package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-10-12 11:58:14+0000\n"
+"PO-Revision-Date: 2018-03-29 15:49:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: templates/order/booking-display.php:41
 msgid "View my bookings &rarr;"
-msgstr ""
+msgstr "Voir mes réservations &rarr;"
 
 #: templates/order/admin/booking-display.php:31
 #: templates/order/booking-display.php:33
@@ -59,18 +59,18 @@ msgstr ""
 
 #: includes/wc-bookings-functions.php:202
 msgid "In Cart"
-msgstr ""
+msgstr "Dans le panier"
 
 #: includes/wc-bookings-functions.php:159
 #: includes/wc-bookings-functions.php:207
 msgid "Partially Paid"
-msgstr ""
+msgstr "Partiellement Payé"
 
 #: includes/wc-bookings-functions.php:155
 #: includes/wc-bookings-functions.php:181
 #: includes/wc-bookings-functions.php:201
 msgid "Complete"
-msgstr ""
+msgstr "Terminé"
 
 #: includes/wc-bookings-functions.php:154
 #: includes/wc-bookings-functions.php:180
@@ -91,14 +91,14 @@ msgstr "Premium"
 #: includes/wc-bookings-functions.php:192
 #: includes/wc-bookings-functions.php:199
 msgid "Confirmed"
-msgstr ""
+msgstr "Confirmé"
 
 #: includes/wc-bookings-functions.php:151
 #: includes/wc-bookings-functions.php:177
 #: includes/wc-bookings-functions.php:186
 #: includes/wc-bookings-functions.php:198
 msgid "Pending Confirmation"
-msgstr ""
+msgstr "En attente de confirmation"
 
 #: includes/wc-bookings-functions.php:150
 #: includes/wc-bookings-functions.php:176
@@ -131,7 +131,7 @@ msgstr ""
 
 #: includes/compatibility/class-wc-product-data-store-cpt.php:117
 msgid "Invalid product."
-msgstr ""
+msgstr "Produit invalide."
 
 #: includes/compatibility/class-wc-data-store.php:75
 #: includes/compatibility/class-wc-data-store.php:80
@@ -204,7 +204,7 @@ msgstr ""
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:222
 msgid "Booked product:"
-msgstr ""
+msgstr "Produit réservé : "
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:191
 msgid "%1$s (#%2$s &ndash; %3$s)"
@@ -220,7 +220,7 @@ msgstr ""
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:85
 msgid "It appears the booking product associated with this booking has been removed."
-msgstr ""
+msgstr "Il semble que le produit de réservation associé à cette réservation a été supprimé."
 
 #: includes/admin/class-wc-bookings-admin.php:60
 msgid "This tool will clean the person types that are not used by any booking or a product."
@@ -470,11 +470,11 @@ msgstr "Votre navigateur doit supporter JavaScript pour pouvoir faire une réser
 
 #: templates/myaccount/my-bookings.php:23
 msgid "My Bookings"
-msgstr ""
+msgstr "Mes Réservations"
 
 #: templates/myaccount/bookings.php:98
 msgid "No bookings available yet."
-msgstr ""
+msgstr "Aucune réservation disponible pour le moment."
 
 #: templates/myaccount/bookings.php:96
 msgid "Go Shop"
@@ -1383,8 +1383,8 @@ msgid "Booking Product"
 msgstr "Produit réservable"
 
 #: includes/admin/views/html-notifications-page.php:4
-msgid "You may send an email notification to all customers who have a %1$sfuture%2$s booking for a particular product. This will use the default template specified under %3$sWooCommerce > Settings > Emails%4$s."
-msgstr "Vous pouvez envoyer une notification par e-mail à tous les clients qui ont une réservation %1$sfuture%2$s pour un produit en particulier. Elle utilisera le modèle par défaut défini sous %3$sWooCommerce > Paramètres > Emails%4$s."
+msgid "You may send an email notification to all customers who have a %sfuture%s booking for a particular product. This will use the default template specified under %sWooCommerce > Settings > Emails%s."
+msgstr "Vous pouvez envoyer une notification par e-mail à tous les clients qui ont une réservation %sfuture%s pour un produit en particulier. Elle utilisera le modèle par défaut défini sous %sWooCommerce > Paramètres > Emails%s."
 
 #: includes/admin/views/html-global-availability-settings.php:103
 msgid "Save Changes"

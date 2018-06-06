@@ -1383,7 +1383,7 @@ msgid "Booking Product"
 msgstr "Bokningsprodukt"
 
 #: includes/admin/views/html-notifications-page.php:4
-msgid "You may send an email notification to all customers who have a %1$sfuture%2$s booking for a particular product. This will use the default template specified under %3$sWooCommerce > Settings > Emails%4$s."
+msgid "You may send an email notification to all customers who have a %sfuture%s booking for a particular product. This will use the default template specified under %sWooCommerce > Settings > Emails%s."
 msgstr ""
 
 #: includes/admin/views/html-global-availability-settings.php:103

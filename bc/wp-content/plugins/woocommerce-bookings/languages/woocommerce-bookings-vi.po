@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WooCommerce - WooCommerce Bookings - Latest package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-10-11 08:25:10+0000\n"
+"PO-Revision-Date: 2018-01-15 11:31:41+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -549,7 +549,7 @@ msgstr ""
 
 #: templates/emails/customer-booking-confirmed.php:98
 msgid "Price"
-msgstr ""
+msgstr "Giá"
 
 #: templates/emails/customer-booking-confirmed.php:97
 msgid "Quantity"

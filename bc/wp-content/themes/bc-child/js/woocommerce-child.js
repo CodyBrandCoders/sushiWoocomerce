@@ -1,12 +1,15 @@
 jQuery(document).ready( function($) {
 
-
     //enabled tooltips
     $('.tooltip-container').tooltip();
 
     //MOVE THROUGH FORM
     $('.product-var-bookable, .next-step ').on('click', function() {
         $("#wizard").steps('next');
+    });
+    $('.change-party-number').on('click', function() {
+        $("#wizard").steps('previous');
+        reloadCalc();
     });
 
     //disable addons after click
@@ -26,7 +29,7 @@ jQuery(document).ready( function($) {
     //Reset Flex on main page 
     setTimeout(function(){
         $('.page-template-template-shop #sushi-bookable-item h2').css('margin-bottom', 0);
-    }, 2000);
+    }, 1000);
 
     //reset flex on element size changes from calander
     new ResizeSensor(jQuery('.content-bookable-item'), function(){ 
@@ -44,7 +47,7 @@ jQuery(document).ready( function($) {
     ////////////////////////////////////////////////////
     // ENSURE THERE ARE NEVER MORE THAN ONE EXPERIENCE 
     ///////////////////////////////////////////////////
-    $('#wizard-t-0, .section-package #sushi-bookable-item #wc_bookings_field_persons').on('click', function() {
+    $('#wizard-t-0, .change-party-number, .wc-bookings-date-picker-choose-date').on('click', function() {
 
         $.ajax({
             type: 'POST',
@@ -197,7 +200,7 @@ jQuery(document).ready( function($) {
     $('.sushi-value').on("change keyup paste", function(){
         sushiVal = $(this).val();
         //console.log('value is ' + sushiVal);
-        $('.sushi-value-input').val(sushiVal);
+        $('.sushi-value-input').html(sushiVal);
         $('#wc_bookings_field_persons').val(sushiVal);
         reloadCalc();
     });

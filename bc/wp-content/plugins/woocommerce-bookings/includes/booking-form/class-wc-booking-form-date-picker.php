@@ -78,7 +78,7 @@ class WC_Booking_Form_Date_Picker extends WC_Booking_Form_Picker {
 		$default_date = strtotime( 'midnight' );
 
 		/**
-		 * Filter . By default the calendar
+		 * Filter wc_bookings_calendar_default_to_current_date. By default the calendar
 		 * will show the current date first. If you would like it to display the first available date
 		 * you can return false to this filter and then we'll search for the first available date,
 		 * depending on the booked days calculation.

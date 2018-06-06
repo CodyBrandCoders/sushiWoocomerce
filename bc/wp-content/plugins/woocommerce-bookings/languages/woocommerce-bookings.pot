@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3.0.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Bookings 1.11.1\n"
+"Project-Id-Version: WooCommerce Bookings 1.11.2\n"
 "Report-Msgid-Bugs-To: https://docs.woocommerce.com\n"
-"POT-Creation-Date: 2018-04-24 16:51:07+00:00\n"
+"POT-Creation-Date: 2018-05-23 13:16:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgid "N/A"
 msgstr ""
 
 #: includes/admin/class-wc-bookable-resource-cpt.php:101
-#: woocommerce-bookings.php:382 woocommerce-bookings.php:422
+#: woocommerce-bookings.php:383 woocommerce-bookings.php:423
 msgid "Edit"
 msgstr ""
 
@@ -109,7 +109,9 @@ msgstr ""
 
 #: includes/admin/class-wc-bookings-addons.php:23
 #: includes/class-wc-booking-order-manager.php:152
-#: includes/class-wc-booking-order-manager.php:174 woocommerce-bookings.php:418
+#: includes/class-wc-booking-order-manager.php:174
+#: includes/class-wc-booking-privacy.php:12
+#: includes/class-wc-booking-privacy.php:64 woocommerce-bookings.php:419
 msgid "Bookings"
 msgstr ""
 
@@ -127,8 +129,8 @@ msgstr ""
 
 #: includes/admin/class-wc-bookings-admin.php:342
 #: includes/admin/views/html-booking-resources.php:36
-#: includes/admin/views/html-booking-tab.php:1 woocommerce-bookings.php:376
-#: woocommerce-bookings.php:392
+#: includes/admin/views/html-booking-tab.php:1 woocommerce-bookings.php:377
+#: woocommerce-bookings.php:393
 msgid "Resources"
 msgstr ""
 
@@ -175,6 +177,7 @@ msgid "Booking submitted."
 msgstr ""
 
 #: includes/admin/class-wc-bookings-admin.php:530
+#: includes/class-wc-booking-privacy.php:80
 msgid "Bookable product"
 msgstr ""
 
@@ -567,7 +570,7 @@ msgstr ""
 #: includes/admin/views/html-create-booking-page-2.php:7
 #: includes/admin/views/html-create-booking-page-2.php:28
 #: includes/admin/views/html-create-booking-page.php:7
-#: woocommerce-bookings.php:420
+#: woocommerce-bookings.php:421
 msgid "Add Booking"
 msgstr ""
 
@@ -1800,6 +1803,35 @@ msgstr ""
 msgid "Past Bookings"
 msgstr ""
 
+#: includes/class-wc-booking-privacy.php:14
+#: includes/class-wc-booking-privacy.php:15
+msgid "WooCommerce Bookings Data"
+msgstr ""
+
+#: includes/class-wc-booking-privacy.php:41
+msgid "By using this extension, you may be storing personal data or sharing data with an external service. <a href=\"%s\" target=\"_blank\">Learn more about how this works, including what you may want to include in your privacy policy.</a>"
+msgstr ""
+
+#: includes/class-wc-booking-privacy.php:68
+msgid "Booking Number"
+msgstr ""
+
+#: includes/class-wc-booking-privacy.php:72
+msgid "Booking start"
+msgstr ""
+
+#: includes/class-wc-booking-privacy.php:76
+msgid "Booking end"
+msgstr ""
+
+#: includes/class-wc-booking-privacy.php:84
+msgid "Booked order ID"
+msgstr ""
+
+#: includes/class-wc-booking-privacy.php:141
+msgid "WooCommerce Bookings Data Erased."
+msgstr ""
+
 #. translators: 1: site name
 
 #: includes/class-wc-bookings-ics-exporter.php:166
@@ -2089,7 +2121,7 @@ msgid "[{blogname}] A reminder about your booking of \"{product_title}\""
 msgstr ""
 
 #: includes/emails/class-wc-email-new-booking.php:29
-#: woocommerce-bookings.php:424
+#: woocommerce-bookings.php:425
 msgid "New Booking"
 msgstr ""
 
@@ -2321,7 +2353,7 @@ msgid "Booking Type"
 msgstr ""
 
 #: includes/integrations/class-wc-bookings-google-calendar-integration.php:640
-#: woocommerce-bookings.php:416 woocommerce-bookings.php:419
+#: woocommerce-bookings.php:417 woocommerce-bookings.php:420
 msgid "Booking"
 msgstr ""
 
@@ -2749,216 +2781,216 @@ msgstr ""
 msgid "Add or edit a product to manage bookings in the Product Data section for individual products and then go to the <a href=\"%s\" target=\"_blank\">Bookings page</a> to manage them individually."
 msgstr ""
 
-#: woocommerce-bookings.php:365
+#: woocommerce-bookings.php:366
 msgid "Person Type"
 msgstr ""
 
-#: woocommerce-bookings.php:378
+#: woocommerce-bookings.php:379
 msgid "Bookable resources"
 msgstr ""
 
-#: woocommerce-bookings.php:379
+#: woocommerce-bookings.php:380
 msgid "Bookable resource"
 msgstr ""
 
-#: woocommerce-bookings.php:380
+#: woocommerce-bookings.php:381
 msgid "Add Resource"
 msgstr ""
 
-#: woocommerce-bookings.php:381
+#: woocommerce-bookings.php:382
 msgid "Add New Resource"
 msgstr ""
 
-#: woocommerce-bookings.php:383
+#: woocommerce-bookings.php:384
 msgid "Edit Resource"
 msgstr ""
 
-#: woocommerce-bookings.php:384
+#: woocommerce-bookings.php:385
 msgid "New Resource"
 msgstr ""
 
-#: woocommerce-bookings.php:385 woocommerce-bookings.php:386
+#: woocommerce-bookings.php:386 woocommerce-bookings.php:387
 msgid "View Resource"
 msgstr ""
 
-#: woocommerce-bookings.php:387
+#: woocommerce-bookings.php:388
 msgid "Search Resource"
 msgstr ""
 
-#: woocommerce-bookings.php:388
+#: woocommerce-bookings.php:389
 msgid "No Resource found"
 msgstr ""
 
-#: woocommerce-bookings.php:389
+#: woocommerce-bookings.php:390
 msgid "No Resource found in trash"
 msgstr ""
 
-#: woocommerce-bookings.php:390
+#: woocommerce-bookings.php:391
 msgid "Parent Resources"
 msgstr ""
 
-#: woocommerce-bookings.php:391
+#: woocommerce-bookings.php:392
 msgctxt "Admin menu name"
 msgid "Resources"
 msgstr ""
 
-#: woocommerce-bookings.php:394
+#: woocommerce-bookings.php:395
 msgid "Bookable resources are bookable within a bookings product."
 msgstr ""
 
-#: woocommerce-bookings.php:421
+#: woocommerce-bookings.php:422
 msgid "Add New Booking"
 msgstr ""
 
-#: woocommerce-bookings.php:423
+#: woocommerce-bookings.php:424
 msgid "Edit Booking"
 msgstr ""
 
-#: woocommerce-bookings.php:425 woocommerce-bookings.php:426
+#: woocommerce-bookings.php:426 woocommerce-bookings.php:427
 msgid "View Booking"
 msgstr ""
 
-#: woocommerce-bookings.php:427
+#: woocommerce-bookings.php:428
 msgid "Search Bookings"
 msgstr ""
 
-#: woocommerce-bookings.php:428
+#: woocommerce-bookings.php:429
 msgid "No Bookings found"
 msgstr ""
 
-#: woocommerce-bookings.php:429
+#: woocommerce-bookings.php:430
 msgid "No Bookings found in trash"
 msgstr ""
 
-#: woocommerce-bookings.php:430
+#: woocommerce-bookings.php:431
 msgid "Parent Bookings"
 msgstr ""
 
-#: woocommerce-bookings.php:431
+#: woocommerce-bookings.php:432
 msgctxt "Admin menu name"
 msgid "Bookings"
 msgstr ""
 
-#: woocommerce-bookings.php:432
+#: woocommerce-bookings.php:433
 msgid "All Bookings"
 msgstr ""
 
-#: woocommerce-bookings.php:434
+#: woocommerce-bookings.php:435
 msgid "This is where bookings are stored."
 msgstr ""
 
-#: woocommerce-bookings.php:457
+#: woocommerce-bookings.php:458
 msgctxt "woocommerce-bookings"
 msgid "Complete"
 msgstr ""
 
 #. translators: 1: count, 2: count
 
-#: woocommerce-bookings.php:463
+#: woocommerce-bookings.php:464
 msgid "Complete <span class=\"count\">(%s)</span>"
 msgid_plural "Complete <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce-bookings.php:466
+#: woocommerce-bookings.php:467
 msgctxt "woocommerce-bookings"
 msgid "Paid &amp; Confirmed"
 msgstr ""
 
 #. translators: 1: count, 2: count
 
-#: woocommerce-bookings.php:472
+#: woocommerce-bookings.php:473
 msgid "Paid &amp; Confirmed <span class=\"count\">(%s)</span>"
 msgid_plural "Paid &amp; Confirmed <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce-bookings.php:475
+#: woocommerce-bookings.php:476
 msgctxt "woocommerce-bookings"
 msgid "Confirmed"
 msgstr ""
 
 #. translators: 1: count, 2: count
 
-#: woocommerce-bookings.php:481
+#: woocommerce-bookings.php:482
 msgid "Confirmed <span class=\"count\">(%s)</span>"
 msgid_plural "Confirmed <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce-bookings.php:484
+#: woocommerce-bookings.php:485
 msgctxt "woocommerce-bookings"
 msgid "Un-paid"
 msgstr ""
 
 #. translators: 1: count, 2: count
 
-#: woocommerce-bookings.php:490
+#: woocommerce-bookings.php:491
 msgid "Un-paid <span class=\"count\">(%s)</span>"
 msgid_plural "Un-paid <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce-bookings.php:493
+#: woocommerce-bookings.php:494
 msgctxt "woocommerce-bookings"
 msgid "Pending Confirmation"
 msgstr ""
 
 #. translators: 1: count, 2: count
 
-#: woocommerce-bookings.php:499
+#: woocommerce-bookings.php:500
 msgid "Pending Confirmation <span class=\"count\">(%s)</span>"
 msgid_plural "Pending Confirmation <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce-bookings.php:502
+#: woocommerce-bookings.php:503
 msgctxt "woocommerce-bookings"
 msgid "Cancelled"
 msgstr ""
 
 #. translators: 1: count, 2: count
 
-#: woocommerce-bookings.php:508
+#: woocommerce-bookings.php:509
 msgid "Cancelled <span class=\"count\">(%s)</span>"
 msgid_plural "Cancelled <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce-bookings.php:511
+#: woocommerce-bookings.php:512
 msgctxt "woocommerce-bookings"
 msgid "In Cart"
 msgstr ""
 
 #. translators: 1: count, 2: count
 
-#: woocommerce-bookings.php:517
+#: woocommerce-bookings.php:518
 msgid "In Cart <span class=\"count\">(%s)</span>"
 msgid_plural "In Cart <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce-bookings.php:686
+#: woocommerce-bookings.php:687
 msgid "Enable Bookings Timezone calculation"
 msgstr ""
 
-#: woocommerce-bookings.php:687
+#: woocommerce-bookings.php:688
 msgid "Schedule Bookings events, such as reminder emails and auto-completions of bookings, using your site’s configured timezone."
 msgstr ""
 
-#: woocommerce-bookings.php:711
+#: woocommerce-bookings.php:712
 msgid "View Documentation"
 msgstr ""
 
-#: woocommerce-bookings.php:711
+#: woocommerce-bookings.php:712
 msgid "Docs"
 msgstr ""
 
-#: woocommerce-bookings.php:712
+#: woocommerce-bookings.php:713
 msgid "Visit Premium Customer Support"
 msgstr ""
 
-#: woocommerce-bookings.php:712
+#: woocommerce-bookings.php:713
 msgid "Premium Support"
 msgstr ""
 #. Plugin Name of the plugin/theme

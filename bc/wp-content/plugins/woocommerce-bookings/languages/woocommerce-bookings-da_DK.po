@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WooCommerce - WooCommerce Bookings - Latest package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-10-11 08:25:14+0000\n"
+"PO-Revision-Date: 2018-01-15 11:25:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -559,11 +559,11 @@ msgstr ""
 
 #: templates/emails/customer-booking-confirmed.php:98
 msgid "Price"
-msgstr ""
+msgstr "Pris"
 
 #: templates/emails/customer-booking-confirmed.php:97
 msgid "Quantity"
-msgstr ""
+msgstr "Antal"
 
 #: includes/compatibility/class-wc-product-data-store-cpt.php:81
 #: includes/data-stores/class-wc-product-booking-data-store-cpt.php:103
@@ -761,7 +761,7 @@ msgstr ""
 
 #: includes/integrations/class-wc-bookings-google-calendar-integration.php:165
 msgid "Disconnect"
-msgstr ""
+msgstr "Afbryd forbindelse"
 
 #: includes/integrations/class-wc-bookings-google-calendar-integration.php:164
 msgid "Successfully authenticated."
@@ -1383,7 +1383,7 @@ msgid "Booking Product"
 msgstr ""
 
 #: includes/admin/views/html-notifications-page.php:4
-msgid "You may send an email notification to all customers who have a %1$sfuture%2$s booking for a particular product. This will use the default template specified under %3$sWooCommerce > Settings > Emails%4$s."
+msgid "You may send an email notification to all customers who have a %sfuture%s booking for a particular product. This will use the default template specified under %sWooCommerce > Settings > Emails%s."
 msgstr ""
 
 #: includes/admin/views/html-global-availability-settings.php:103

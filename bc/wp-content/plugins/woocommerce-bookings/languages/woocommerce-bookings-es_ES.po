@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WooCommerce - WooCommerce Bookings - Latest package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-10-12 11:54:00+0000\n"
+"PO-Revision-Date: 2018-01-19 15:16:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -75,7 +75,7 @@ msgstr "Completa"
 #: includes/wc-bookings-functions.php:154
 #: includes/wc-bookings-functions.php:180
 msgid "Cancelled"
-msgstr "Cancelado"
+msgstr "Cancelada"
 
 #: includes/wc-bookings-functions.php:153
 #: includes/wc-bookings-functions.php:179
@@ -83,7 +83,7 @@ msgstr "Cancelado"
 #: includes/wc-bookings-functions.php:193
 #: includes/wc-bookings-functions.php:200
 msgid "Paid"
-msgstr "De pago"
+msgstr "Pagada"
 
 #: includes/wc-bookings-functions.php:152
 #: includes/wc-bookings-functions.php:178
@@ -105,7 +105,7 @@ msgstr "Pendiente de confirmación"
 #: includes/wc-bookings-functions.php:185
 #: includes/wc-bookings-functions.php:197
 msgid "Unpaid"
-msgstr "Impagado"
+msgstr "Sin pagar"
 
 #: includes/data-stores/class-wc-product-booking-person-type-data-store-cpt.php:51
 msgid "Invalid booking person type."
@@ -220,7 +220,7 @@ msgstr "Detalles de la reserva #%s"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:85
 msgid "It appears the booking product associated with this booking has been removed."
-msgstr "Parece que el producto de reserva asociado a esta reserva se ha borrado. "
+msgstr "Parece que el producto de reserva asociado a esta reserva se ha borrado."
 
 #: includes/admin/class-wc-bookings-admin.php:60
 msgid "This tool will clean the person types that are not used by any booking or a product."
@@ -648,7 +648,7 @@ msgstr "La siguiente reserva la ha cancelado el cliente. Los detalles de la rese
 
 #: templates/booking-form/datetime-picker.php:63
 msgid "Choose a date above to see available times."
-msgstr "Elija una fecha anterior para ver los horarios disponibles."
+msgstr "Elige arriba una fecha para ver los horarios disponibles."
 
 #: templates/booking-form/datetime-picker.php:61
 msgid "Time"
@@ -1087,7 +1087,7 @@ msgstr "Gratis"
 
 #: includes/data-objects/class-wc-product-booking.php:134
 msgid "From: %s"
-msgstr "De: %s"
+msgstr "Desde: %s"
 
 #: includes/class-wc-bookings-ics-exporter.php:195
 msgid "Booking description:"
@@ -1383,8 +1383,8 @@ msgid "Booking Product"
 msgstr "Producto reservable"
 
 #: includes/admin/views/html-notifications-page.php:4
-msgid "You may send an email notification to all customers who have a %1$sfuture%2$s booking for a particular product. This will use the default template specified under %3$sWooCommerce > Settings > Emails%4$s."
-msgstr "Puedes enviar una notificación por correo electrónico a todos los clientes que tengan una reserva %1$sfutura%2$s de un producto en particular. Esto utilizará la plantilla predeterminada especificada en %3$sWooCommerce > Ajustes > Correos electrónicos%4$s ."
+msgid "You may send an email notification to all customers who have a %sfuture%s booking for a particular product. This will use the default template specified under %sWooCommerce > Settings > Emails%s."
+msgstr "Puedes enviar una notificación por correo electrónico a todos los clientes que tengan una reserva %sfutura%s de un producto en particular. Esto utilizará la plantilla predeterminada especificada en %sWooCommerce > Ajustes > Correos electrónicos%s ."
 
 #: includes/admin/views/html-global-availability-settings.php:103
 msgid "Save Changes"
@@ -1710,7 +1710,7 @@ msgstr "¿Puede cancelarse?"
 
 #: includes/admin/views/html-booking-data.php:83
 msgid "Check this box if the booking requires admin approval/confirmation. Payment will not be taken during checkout."
-msgstr "Marca esta casilla si la reserva requiere previa aprobación/confirmación del administrador. No se hará el pago durante el proceso de compra."
+msgstr "Marca esta casilla si la reserva requiere aprobación/confirmación previa del administrador. No se hará el pago durante el proceso de compra."
 
 #: includes/admin/views/html-booking-data.php:82
 msgid "Requires confirmation?"
@@ -1770,7 +1770,7 @@ msgstr "Duración de la reserva"
 
 #: includes/admin/views/html-booking-availability.php:93
 msgid "First block starts at..."
-msgstr "Primer bloque empieza a..."
+msgstr "El primer bloque empieza a las..."
 
 #: includes/admin/views/html-booking-availability.php:88
 msgid "This option affects how bookings are checked for availability."
@@ -1778,11 +1778,11 @@ msgstr "Esta opción afecta a cómo se comprueban las reservas de disponibilidad
 
 #: includes/admin/views/html-booking-availability.php:86
 msgid "The starting block only"
-msgstr "El bloque que comienza solamente"
+msgstr "Solo el bloque inicial"
 
 #: includes/admin/views/html-booking-availability.php:85
 msgid "All blocks being booked"
-msgstr "Todos los bloques están reservados"
+msgstr "Todos los bloques reservados"
 
 #: includes/admin/views/html-booking-availability.php:81
 msgid "Check rules against..."
@@ -1794,15 +1794,15 @@ msgstr "Esta opción afecta a cómo usar las reglas de abajo."
 
 #: includes/admin/views/html-booking-availability.php:72
 msgid "not-available by default"
-msgstr "no disponible por defecto"
+msgstr "no disponibles por defecto"
 
 #: includes/admin/views/html-booking-availability.php:71
 msgid "available by default"
-msgstr "disponible de forma predeterminada"
+msgstr "disponibles por defecto"
 
 #: includes/admin/views/html-booking-availability.php:67
 msgid "All dates are..."
-msgstr "Todas las fechas son..."
+msgstr "Todas las fechas están..."
 
 #: includes/admin/views/html-booking-availability.php:51
 msgid "between bookings"
@@ -2141,7 +2141,7 @@ msgstr "ID de la reserva superior:"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:215
 msgid "Booking specification"
-msgstr "Especificación de reserva"
+msgstr "Detalle de la reserva"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:183
 #: includes/admin/views/html-create-booking-page.php:18
@@ -2423,7 +2423,7 @@ msgstr "¿Estás seguro que deseas eliminar este tipo de persona?"
 
 #: includes/admin/class-wc-bookings-admin.php:530
 msgid "Bookable product"
-msgstr "Producto que se puede reservar"
+msgstr "Producto reservable"
 
 #: includes/admin/class-wc-bookings-ajax.php:66
 msgid "Unable to add resource"
@@ -2536,7 +2536,7 @@ msgstr "Editar"
 #: includes/emails/class-wc-email-booking-reminder.php:83
 #: includes/emails/class-wc-email-new-booking.php:109
 msgid "N/A"
-msgstr "N/A"
+msgstr "N/D"
 
 #: includes/admin/class-wc-bookable-resource-cpt.php:55
 #: includes/admin/class-wc-bookings-cpt.php:177
@@ -2554,7 +2554,7 @@ msgstr "Nombre"
 
 #: includes/admin/class-wc-bookable-resource-cpt.php:37
 msgid "Bookable resource name"
-msgstr "Nombre del recurso a reservar"
+msgstr "Nombre del recurso reservable"
 
 #: includes/addons/accommodation-booking.php:17
 msgid "Accommodation booking"

@@ -3,12 +3,12 @@
  * Plugin Name: WooCommerce Bookings
  * Plugin URI: https://woocommerce.com/products/woocommerce-bookings/
  * Description: Setup bookable products such as for reservations, services and hires.
- * Version: 1.11.1
+ * Version: 1.11.2
  * Author: Automattic
  * Author URI: https://woocommerce.com
  * Text Domain: woocommerce-bookings
  * Domain Path: /languages
- * WC tested up to: 3.3
+ * WC tested up to: 3.4
  * WC requires at least: 2.6
  *
  * Copyright: © 2009-2017 Automattic.
@@ -46,7 +46,7 @@ class WC_Bookings {
 	 * Constructor
 	 */
 	public function __construct() {
-		define( 'WC_BOOKINGS_VERSION', '1.11.1' );
+		define( 'WC_BOOKINGS_VERSION', '1.11.2' );
 		define( 'WC_BOOKINGS_TEMPLATE_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/templates/' );
 		define( 'WC_BOOKINGS_PLUGIN_URL', untrailingslashit( plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename( __FILE__ ) ) ) );
 		define( 'WC_BOOKINGS_MAIN_FILE', __FILE__ );
@@ -331,6 +331,7 @@ KEY resource_id (resource_id)
 		if ( class_exists( 'WC_Deposits' ) ) {
 			include_once( WC_BOOKINGS_ABSPATH . 'includes/integrations/class-wc-bookings-deposits.php' );
 		}
+		include_once( WC_BOOKINGS_ABSPATH . 'includes/class-wc-booking-privacy.php' );
 	}
 
 	/**

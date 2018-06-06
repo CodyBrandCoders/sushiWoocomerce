@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WooCommerce - WooCommerce Bookings - Latest package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-10-11 08:25:15+0000\n"
+"PO-Revision-Date: 2018-03-06 06:07:41+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,17 +14,17 @@ msgstr ""
 #: includes/data-objects/class-wc-booking.php:780
 msgctxt "Guest string with name from booking order in brackets"
 msgid "%s (Guest)"
-msgstr ""
+msgstr "%s (ゲスト)"
 
 #: woocommerce-bookings.php:480
 msgctxt "woocommerce-bookings"
 msgid "Partially Paid"
-msgstr ""
+msgstr "一部支払い済み"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:185
 msgctxt "woocommerce-bookings"
 msgid "Guest (%s)"
-msgstr ""
+msgstr "ゲスト (%s)"
 
 #: woocommerce-bookings.php:647
 msgid "Schedule Bookings events, such as reminder emails and auto-completions of bookings, using your site’s configured timezone."
@@ -37,11 +37,11 @@ msgstr ""
 #: woocommerce-bookings.php:485
 msgid "Partially Paid <span class=\"count\">(%s)</span>"
 msgid_plural "Partially Paid <span class=\"count\">(%s)</span>"
-msgstr[0] ""
+msgstr[0] "一部支払い済み <span class=\"count\">(%s)</span>"
 
 #: templates/order/booking-summary-list.php:59
 msgid "%d Persons"
-msgstr ""
+msgstr "%d人"
 
 #: templates/order/booking-display.php:41
 msgid "View my bookings &rarr;"
@@ -58,12 +58,12 @@ msgstr ""
 
 #: includes/wc-bookings-functions.php:202
 msgid "In Cart"
-msgstr ""
+msgstr "カート内"
 
 #: includes/wc-bookings-functions.php:159
 #: includes/wc-bookings-functions.php:207
 msgid "Partially Paid"
-msgstr ""
+msgstr "一部支払い済み"
 
 #: includes/wc-bookings-functions.php:155
 #: includes/wc-bookings-functions.php:181
@@ -90,14 +90,14 @@ msgstr "支払済み"
 #: includes/wc-bookings-functions.php:192
 #: includes/wc-bookings-functions.php:199
 msgid "Confirmed"
-msgstr ""
+msgstr "コンファーム済み"
 
 #: includes/wc-bookings-functions.php:151
 #: includes/wc-bookings-functions.php:177
 #: includes/wc-bookings-functions.php:186
 #: includes/wc-bookings-functions.php:198
 msgid "Pending Confirmation"
-msgstr ""
+msgstr "コンファーム保留中"
 
 #: includes/wc-bookings-functions.php:150
 #: includes/wc-bookings-functions.php:176
@@ -149,11 +149,11 @@ msgstr ""
 
 #: includes/booking-form/class-wc-booking-form.php:250
 msgid "block"
-msgstr ""
+msgstr "ブロック"
 
 #: includes/admin/views/html-booking-person.php:8
 msgid "Unlink"
-msgstr ""
+msgstr "リンク解除"
 
 #: includes/admin/views/html-booking-availability.php:103
 msgid "Restrict bookings so that they can only start on certain days of the week. Does not affect availability."
@@ -169,7 +169,7 @@ msgstr ""
 
 #: includes/admin/views/html-booking-availability.php:59
 msgid "Adjacent Buffering?"
-msgstr ""
+msgstr "隣接期間へのバッファリングを追加しますか ?"
 
 #: includes/admin/class-wc-bookings-save-meta-box.php:63
 msgid "Move to trash"
@@ -177,7 +177,7 @@ msgstr "ゴミ箱へ移動"
 
 #: includes/admin/class-wc-bookings-save-meta-box.php:50
 msgid "Booking actions"
-msgstr ""
+msgstr "予約操作"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:337
 msgid "End time:"
@@ -201,7 +201,7 @@ msgstr ""
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:222
 msgid "Booked product:"
-msgstr ""
+msgstr "予約済み商品:"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:191
 msgid "%1$s (#%2$s &ndash; %3$s)"
@@ -213,7 +213,7 @@ msgstr ""
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:137
 msgid "Booking #%s details"
-msgstr ""
+msgstr "予約番号%sの詳細"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:85
 msgid "It appears the booking product associated with this booking has been removed."
@@ -279,7 +279,7 @@ msgstr "リソース"
 #: includes/data-stores/class-wc-booking-data-store.php:55
 msgctxt "Booking date parsed by strftime"
 msgid "%b %d, %Y @ %I:%M %p"
-msgstr ""
+msgstr "%Y年%n月%e日 @ %I:%M %p"
 
 #: includes/admin/views/html-calendar-month.php:62
 msgctxt "date format"
@@ -312,7 +312,7 @@ msgstr "プレミアムサポート"
 
 #: woocommerce-bookings.php:672
 msgid "Visit Premium Customer Support"
-msgstr ""
+msgstr "プレミアムカスタマーサポートフォーラムへ移動"
 
 #: woocommerce-bookings.php:671
 msgid "Docs"
@@ -1241,7 +1241,7 @@ msgstr "&times; %s時間"
 
 #: includes/booking-form/class-wc-booking-form.php:154
 msgid "Night(s)"
-msgstr ""
+msgstr "泊"
 
 #: includes/booking-form/class-wc-booking-form.php:152
 msgid "&times; %s nights"
@@ -1366,7 +1366,7 @@ msgid "Booking Product"
 msgstr "予約商品"
 
 #: includes/admin/views/html-notifications-page.php:4
-msgid "You may send an email notification to all customers who have a %1$sfuture%2$s booking for a particular product. This will use the default template specified under %3$sWooCommerce > Settings > Emails%4$s."
+msgid "You may send an email notification to all customers who have a %sfuture%s booking for a particular product. This will use the default template specified under %sWooCommerce > Settings > Emails%s."
 msgstr ""
 
 #: includes/admin/views/html-global-availability-settings.php:103
@@ -1604,7 +1604,7 @@ msgstr "お客様の種類を有効化"
 
 #: includes/admin/views/html-booking-persons.php:42
 msgid "Enable this to count each person as a booking until the max bookings per block (in availability) is reached."
-msgstr ""
+msgstr "これを有効にすると、ブロック (上記) ごとの最大予約数に達するまで、予約を人数としてカウントします。"
 
 #: includes/admin/views/html-booking-persons.php:41
 msgid "Count persons as bookings"
@@ -2094,7 +2094,7 @@ msgstr "予約 ID"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:330
 msgid "Start time:"
-msgstr ""
+msgstr "開始時刻:"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:324
 msgid "Check this box if the booking is for all day."
@@ -2120,7 +2120,7 @@ msgstr "人数"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:229
 msgid "Parent booking ID:"
-msgstr ""
+msgstr "親予約 ID:"
 
 #: includes/admin/class-wc-bookings-details-meta-box.php:215
 msgid "Booking specification"

@@ -142,7 +142,7 @@
 								</div>
 								<div class="sushi-party-size">
 									<span>Party Size: </span>
-									<input class="sushi-value sushi-value-input" onClick="this.select();" type="number" name="pnumber" placeholder="0">
+									<div class="sushi-value sushi-value-input">1</div><div class="change-party-number">Change</div>
 								</div>
 								<h3 class="cart-subtotal">Subtotal: $<span class="sushie-value-total">0</span>.00</h3>
 							</div>

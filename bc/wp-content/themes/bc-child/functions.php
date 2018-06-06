@@ -129,6 +129,7 @@ add_action( 'wp_ajax_nopriv_custom_add_to_cart', 'custom_add_to_cart' );
 
 function custom_add_to_cart() {
 
+	
     //$form_data = $_REQUEST['formData'];
     $product_id = $_POST['add-to-cart'];
     
