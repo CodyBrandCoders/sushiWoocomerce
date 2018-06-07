@@ -11,10 +11,6 @@ jQuery(document).ready( function($) {
         reloadCalc();
     });
 
-    //disable addons after click
-    $('#sushi-bookable-item .product_type_simple.add_to_cart_button').on('click', function() {
-        $(this).addClass('active');
-    });
     //reenable product addon if its removed from cart
     $('.cart-addons').on('click', '.cart-remove-addon', function() {
 
@@ -41,7 +37,10 @@ jQuery(document).ready( function($) {
     //Allow contintue only after date has been selected
     $(".booking_date_day").on('propertychange change keyup input paste', function(){
         $(this).closest('#sushi-bookable-item').find('div.tooltip-container').css('height', '0');
-      });
+    });
+    $(".product-var-bookable ").on('click', function(){
+        $(this).closest('#sushi-bookable-item').find('div.tooltip-container').css('height', '4em');
+    });
 
 
     ////////////////////////////////////////////////////
@@ -59,9 +58,16 @@ jQuery(document).ready( function($) {
             success: function(data){
                 //console.log(data);
                 //reload Calculator
+
+                //This removes everything aside from addons
                 $('.package-calc .package-price').html('');
                 $('.package-calc .package-price').attr('data-id',data['']);
                 $('.package-calc .package-title').html('');
+                $('.booking_date_day').val('');
+                $('.block-picker li').remove();
+                $('.wc-bookings-booking-cost').css('display', 'none');
+                $('#wizard-t-*').parent().removeClass('done');
+                $('#wizard-t-*').parent().addClass('disabled');
                 reloadCalc();
             }
         });
@@ -132,8 +138,36 @@ jQuery(document).ready( function($) {
         }); 
     
     });
+
+    $('.sushi-bookable-item-wrapper .product_type_simple.add_to_cart_button').on('click', function(e) {
+        e.preventDefault();
+        
+
+        var addonID = $(this).data('product_id');
+        var $this = $(this);
+        console.log(addonID);
+        console.log('clicked this');
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            dataType: 'HTML',
+            data: { 
+                action: 'remove_addon',
+                addonID : addonID
+            },
+            success: function(response){
+                $('.cart-addons').html();
+                $('.cart-addons').html(response);
+                $this.toggleClass('active');
+                //reload Calculator
+                reloadCalc();
+            }
+        }); 
+    
+    });
+
     /////////////////////////////////////
-    // END AJAX FOR LOADING CART   
+    // END AJAX FOR REMOVING ADDONS   
     /////////////////////////////////////
     /////////////////////////////////////
     // AJAX FOR ADDONS IN CART

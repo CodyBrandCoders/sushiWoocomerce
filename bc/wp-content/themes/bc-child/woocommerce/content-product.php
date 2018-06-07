@@ -29,7 +29,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 ?>
 <div id="sushi-bookable-item" <?php post_class(); ?>>
 	<div class="sushi-bookable-item-wrapper">
-		<li <?php post_class(); ?>>
+		<li <?php post_class(); ?> data-id="<?php echo $product->id ?>">
 			<?php
 			/**
 			 * woocommerce_before_shop_loop_item hook.

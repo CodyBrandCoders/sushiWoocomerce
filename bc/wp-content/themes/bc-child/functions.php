@@ -94,7 +94,8 @@ add_action( 'wp_ajax_nopriv_get_addons', 'get_addons' );
 
 function get_addons() {
 
-	echo clear_cart();
+    echo clear_cart();
+    echo update_addon_quantity();
 
     wp_die(); // this is required to terminate immediately and return a proper response
 }
@@ -190,4 +191,24 @@ function clear_cart() {
 			echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 		echo '</div>';
 	}   
+}
+
+function update_addon_quantity() {
+    add_action('woocommerce_before_calculate_totals', 'change_cart_item_quantities', 20, 1 );
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
+
+    // HERE below define your specific products IDs
+    $specific_ids = array(2958);
+    $new_qty = 40; // New quantity
+
+    // Checking cart items
+    global $woocommerce;
+	foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
+    //foreach( $cart->get_cart() as $cart_item_key => $cart_item ) {
+        $product_id = $cart_item['data']->get_id();
+        // Check for specific product IDs and change quantity
+        if( in_array( $product_id, $specific_ids ) && $cart_item['quantity'] != $new_qty ){
+            $woocommerce->cart->set_quantity( $cart_item_key, $new_qty ); // Change quantity
+        }
+    }
 }

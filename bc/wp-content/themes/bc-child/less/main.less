@@ -68,18 +68,22 @@
             .fully_booked.ui-datepicker-unselectable.ui-state-disabled {
                 pointer-events: none;
             }
+            .partial_booked {
+                pointer-events: none;
+                cursor: none;
+            }
             .wc-bookings-date-picker-choose-date {
                 color: #fff;
                 background: #000;
                 text-decoration: none;
-                padding: 0.15em 2em;
+                padding: 0.1em 2em;
                 display: inline;
                 position: absolute;
                 right: 0;
                 top: -55px;
             }
             .wc-bookings-date-picker-date-fields{
-                //display: none;
+                display: none;
             }
             .single-product .woocommerce-message, .single-product .woocommerce-info {
                 display: none;
@@ -254,8 +258,6 @@
             transition: all ease 0.3s;
             &.active {
                 opacity: 0.6;
-                pointer-events: none;
-                cursor: default;
             }
         }
         .price-bookable-item {
