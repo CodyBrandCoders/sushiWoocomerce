@@ -4,7 +4,6 @@
 {
     display: block;
     width: 100%;
-    overflow: hidden;
 }
 
 .wizard a,
@@ -63,15 +62,62 @@
     float: left;
     width: 30%;
 }
-
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
 .wizard > .steps .number
 {
     font-size: 1.429em;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    color: #fff;
+    border: solid 4px #fff;
+    background: #EEE;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.95;
+}
+
+.wizard > .steps .current .number
+{
+    font-size: 1.429em;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    border: solid 4px;
+    width: 50px;
+    height: 50px;
+    background: #AF0000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.95;
+    animation: float 8s ease-in-out infinite;
 }
 
 .wizard > .steps > ul > li
 {
-    width: 25%;
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.wizard > .steps > ul > li .title {
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #fff;
 }
 
 .wizard > .steps > ul > li,
@@ -92,13 +138,8 @@
 {
     display: block;
     width: auto;
-    margin: 0 0.5em 0.5em;
-    padding: 1em 1em;
+    padding: 1.3em 1em 1em;
     text-decoration: none;
-
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
 }
 
 .wizard > .steps .disabled a,
@@ -114,7 +155,7 @@
 .wizard > .steps .current a:hover,
 .wizard > .steps .current a:active
 {
-    background: #2184be;
+    background: #AF0000;
     color: #fff;
     cursor: default;
 }

@@ -51,8 +51,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			 *
 			 * @hooked woocommerce_template_loop_product_title - 10
 			 */
-			do_action( 'woocommerce_shop_loop_item_title' );
-			echo '<div class="sub-title-bookable-item">' . get_field('product_sub_title') . '</div>';
+
 			echo '<div class="content-bookable-item">' . get_field('product_description') . '</div>';
 			
 			/**
@@ -72,16 +71,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			 */
 			do_action( 'woocommerce_after_shop_loop_item' );
 
-			//Modifications to user count/price stroed vars
-			$this_product_price = $product->get_price();
-
-			echo '<h2 class="price-bookable-item">$' . $this_product_price . ' Per Person</h2>'; ?>
-
-			<!-- PARTY INPUT -->
-			<!-- <div class="sushi-party-size">
-				<span>Party Size: </span>
-				<input class="sushi-value force-select-all" onClick="this.select();" type="number" name="pnumber" value="1">
-			</div> -->
+			?>
 
 		</li>
 	</div>

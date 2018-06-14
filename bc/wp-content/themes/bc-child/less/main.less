@@ -13,6 +13,34 @@
 ************************/
 
 .page-template-template-shop {
+    background-image: url("../img/cart-bg.jpg");
+    .page-banner {
+        background: #AF0000;
+    }
+    .no-padding {
+        padding: 0;
+    }
+    //Shop Intro Section
+    .shop-intro {
+        margin-bottom: 4em;
+        overflow: auto;
+        h3 {
+            color: #AF0000;
+        }
+    }
+    .image-text-wrapper-sushi {
+        position: relative;
+        overflow: hidden;
+        padding: 8em 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.80) 0%,rgba(0,0,0,0) 100%);
+        .woocommerce-product-gallery.images.woocommerce-product-gallery--with-images {
+            position: absolute;
+            float: none;
+            width: 100%;
+            top: 0;
+            z-index: -1;
+        }
+    }
     .col {
         padding: 0;
     }
@@ -24,7 +52,7 @@
         flex-wrap: nowrap;
         padding: 0 0.5em;
         align-items: baseline;
-        margin: 1em 0 0;
+        margin: 3em 0 0;
         span {
             flex: 1 1 45%;
             font-size: 20px;
@@ -38,7 +66,7 @@
         margin-bottom: 0;
         #sushi-bookable-item {
             .sushi-bookable-item-wrapper {
-                border: solid 2px #000;
+                box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.36);
                 height: 100%;
             }
             .wc-bookings-date-picker {
@@ -60,6 +88,12 @@
             .woocommerce, .single-product, .product {
                 height: 100%;
             }
+            .product {
+                z-index: 1;
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+            }
             legend {
                 span {
                     display: none;
@@ -80,7 +114,9 @@
                 display: inline;
                 position: absolute;
                 right: 0;
-                top: -55px;
+                left: 0;
+                font-size: 24px;
+                top: -85px;
             }
             .wc-bookings-date-picker-date-fields{
                 display: none;
@@ -104,12 +140,12 @@
             }
             .wc-bookings-booking-form {
                 border: 0 none;
-            }
-            .price-bookable-item {
-                border-top: solid 2px #000;
-                border-bottom: solid 2px #000;
-                margin-bottom: 0;
-                padding: 0.5em 0;
+                background-color: #fff;
+                margin: 0;
+                padding: 0;
+                .form-field.form-field-wide {
+                    margin-bottom: 0;
+                }
             }
             .wc-bookings-booking-form .form-field input[type=number] {
                 width: 100%;
@@ -146,9 +182,6 @@
                 span.price {
                     display: none;
                 }
-            }
-            img {
-                display: none;
             }
             .add_to_cart_button {
                 display: none;
@@ -207,21 +240,50 @@
         &:hover {
            top: -10px;
         }
-        h2 {
+        .product_title.entry-title {
             font-size: 28px;
-            padding: 0.2em 0;
             line-height: 1;
-            margin-bottom: 1px;
+            background: #AF0000;
+            margin-bottom: 0;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 0.5em 25px;
+            .product-title {
+                float: left;
+                font-size: 30px;
+                display: inline-block;
+                font-weight: 600;
+            }
+            .price-bookable-item {
+                float: right;
+                font-size: 24px;
+                display: inline-block;
+                line-height: 1.25;
+            }
         } 
         .sub-title-bookable-item {
-            border-bottom: solid 2px #000;
-            padding-bottom: 0.2em;
+            position: absolute;
+            top: 0;
+            text-transform: uppercase;
+            background: rgba(175, 0, 0, 0.9);
+            width: 7em;
+            padding: 0.25em 0;
+            font-size: 24px;
+            color: #fff;
+            left: 50%;
+            margin-left: -3.5em;
+            font-weight: 600;
         }
         .content-bookable-item {
-            padding: 1em 0;
+            padding: 1em 3em;
+            text-align: left;
+            background-color: #fff;
             p {
                 font-size: 15px;
                 margin: 0;
+                text-transform: capitalize;
                 &:not(:first-child) strong {
                     padding-top: 2em;
                 }
@@ -259,11 +321,6 @@
             &.active {
                 opacity: 0.6;
             }
-        }
-        .price-bookable-item {
-            border: 0;
-            font-size: 16px;
-            padding: .5em 0 1em;
         }
         .added_to_cart.wc-forward {
             display: none;

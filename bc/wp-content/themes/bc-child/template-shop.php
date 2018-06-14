@@ -24,6 +24,9 @@
 	$button_2_link = get_field('2_buttons_button_2_link' , false, false);
 	$button_2_tracking = get_field('2_buttons_button_2_tracking');
 	$button_2_target = get_field('2_buttons_button_2_target');
+
+//Page Specifics
+	$shop_introduction = get_field('shop_introduction');
 	?>
 
 <?php echo do_shortcode('[page_banner title="' . get_the_title($post->ID) . '"]'); ?>
@@ -59,7 +62,13 @@
 <section class="section">
 	<div class="container">
 		<div class="row">
-			
+			<!-- //Top Section -->
+			<div class="shop-intro">
+				<div class="col-xs-10 col-xs-offset-1">
+				<?php echo $shop_introduction; ?>
+				</div>
+			</div>
+			<div class="col-xs-12 no-padding">
 				<div id="wizard">
 					<h3>Select your package</h3>
 					<section class="section section-package">
@@ -156,10 +165,7 @@
 
 						
 					</section>
-					<h3>Complete Booking</h3>
-					<section>
-						<p>The next and previous buttons help you to navigate through your content.</p>
-					</section>
+
 				</div>
 
 				<!-- SCRIPT OFR CART FLOW -->
@@ -169,10 +175,11 @@
 						bodyTag: "section",
 						transitionEffect: "fade",
 						enableAllSteps: false,
+						titleTemplate: "<span class='number'>#index#</span><span class='title'>#title#</span>",
 						transitionEffectSpeed: 800
 					});
 				</script>
-
+			</div>
 		</div>
 	</div>
 </section>

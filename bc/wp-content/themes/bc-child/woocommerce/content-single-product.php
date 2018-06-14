@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 		<div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+			<div class="image-text-wrapper-sushi">
 			<?php
 				/**
 				 * woocommerce_before_single_product_summary hook.
@@ -45,13 +45,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 				 * @hooked woocommerce_show_product_sale_flash - 10
 				 * @hooked woocommerce_show_product_images - 20
 				 */
-				//do_action( 'woocommerce_before_single_product_summary' );
-			?>
+				?>
+	 			<div class="product_title entry-title"><?php
+					the_title( '<span class="product-title">', '</span>' );
+					//Modifications to user count/price stroed vars
+					global $product;
+					$this_product_price = $product->get_price();
 
-			<div class="summary entry-summary">
+					echo '<span class="price-bookable-item">$' . $this_product_price . ' <span style="font-weight:100;letter-spacing: 1px;">Per Person</span></span>'; ?>
+					</div>
 				<?php
-				
+				//Custom Fields
+				echo '<div class="sub-title-bookable-item">' . get_field('product_sub_title') . '</div>';
+				do_action( 'woocommerce_before_single_product_summary' );
+			?> </div> 
 
+ 			<!-- <div class="summary entry-summary"> -->
+			 <?php
 					/**
 					 * woocommerce_single_product_summary hook.
 					 *
@@ -67,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					do_action( 'woocommerce_single_product_summary' );
 				?>
 
-			</div><!-- .summary -->
+			<!-- </div>.summary  -->
 
 			<?php
 				/**
@@ -80,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				//do_action( 'woocommerce_after_single_product_summary' );
 			?>
 
-		</div><!-- #product-<?php the_ID(); ?> -->
+		</div><!-- #product-<?php //the_ID(); ?> -->
 
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

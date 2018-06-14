@@ -23,7 +23,7 @@ jQuery(document).ready( function($) {
 
     //Reset Flex on main page 
     setTimeout(function(){
-        $('.page-template-template-shop #sushi-bookable-item h2').css('margin-bottom', 0);
+        $('.page-template-template-shop #sushi-bookable-item .content-bookable-item').css('margin-bottom', 0);
     }, 500);
 
     //reset flex on element size changes from calander

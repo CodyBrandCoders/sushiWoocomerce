@@ -22,13 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-the_title( '<h2 class="product_title entry-title">', '</h2>' );
 
-//Custom Fields
-echo '<div class="sub-title-bookable-item">' . get_field('product_sub_title') . '</div>';
 echo '<div class="content-bookable-item">' . get_field('product_description') . '</div>';
-//Modifications to user count/price stroed vars
-$this_product_price = $product->get_price();
 
-echo '<h2 class="price-bookable-item">$' . $this_product_price . ' Per Person</h2>'; ?>
 
