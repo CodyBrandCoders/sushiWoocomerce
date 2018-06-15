@@ -174,7 +174,7 @@
 						headerTag: "h3",
 						bodyTag: "section",
 						transitionEffect: "fade",
-						enableAllSteps: true,
+						enableAllSteps: false,
 						titleTemplate: "<span class='number'>#index#</span><span class='title'>#title#</span>",
 						transitionEffectSpeed: 800
 					});
