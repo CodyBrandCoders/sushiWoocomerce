@@ -52,13 +52,20 @@
         flex-wrap: nowrap;
         padding: 0 0.5em;
         align-items: baseline;
-        margin: 3em 0 0;
+        margin: 0 0 2em;
         span {
-            flex: 1 1 45%;
-            font-size: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 2.8;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #af0000;
         }
         input {
             margin: 0;
+        }
+        .wc_bookings_field_persons {
+            margin-left: 20px;
         }
    }
     .products {
@@ -80,6 +87,7 @@
               }
             .wc-bookings-date-picker {
                 position: relative;
+                margin-bottom: 0;
             }
             .woocommerce-LoopProduct-link.woocommerce-loop-product__link {
                 pointer-events: none;
@@ -110,13 +118,14 @@
                 color: #fff;
                 background: #000;
                 text-decoration: none;
-                padding: 0.1em 2em;
+                padding: 0.5em 2em;
                 display: inline;
-                position: absolute;
-                right: 0;
-                left: 0;
                 font-size: 24px;
-                top: -85px;
+                .far {
+                    position: absolute;
+                    left: 20px;
+                    top: 8px;
+                }
             }
             .wc-bookings-date-picker-date-fields{
                 display: none;
@@ -148,9 +157,6 @@
                 }
             }
             .wc-bookings-booking-form .form-field input[type=number] {
-                width: 100%;
-            }
-            .form-field.form-field-wide.wc_bookings_field_persons {
                 width: 100%;
             }
             form.cart {
@@ -333,16 +339,25 @@
         }
     }
     .cart-ajax-wrapper {
-        border: solid 2px #000;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.36);
+        width: 100%;
         h2 {
             font-size: 24px;
+            color: #fff;
+            background: #AF0000;
             text-align: center;
-            border-bottom: solid 2px #000;
-            padding: 0.2em 0;
+            padding: 0.5em 0;
             margin: 0;
+        }
+        h3 {
+            margin: 0 0 15px 0;
+            padding: 0 0 6px;
+            text-transform: none;
+            border-bottom: 1px #000 solid;
         }
         .inner-cart {
             padding: 1em 1em;
+            background: #fff;
             .package-price {
                 float: right;
             }
@@ -354,14 +369,15 @@
             }
         }
         .sushi-party-size {
-            border-top: solid 2px #000;
             border-bottom: solid 2px #000;
             padding: 0.5em 1em;
             margin: 0;
+            background: #fff;
         }
         .cart-subtotal {
             padding: 0.5em 0.75em;
             margin: 0;
+            background: #fff;
         }
     }
 /****************************

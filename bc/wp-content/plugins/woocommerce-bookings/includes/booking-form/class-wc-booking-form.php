@@ -100,14 +100,14 @@ class WC_Booking_Form {
 	 * Prepare fields for the booking form
 	 */
 	public function prepare_fields() {
-		// Destroy existing fields
+
 		$this->reset_fields();
 
 		// Add fields in order
 		$this->duration_field();
-		$this->persons_field();
 		$this->resources_field();
 		$this->date_field();
+		$this->persons_field();
 
 		$this->fields = apply_filters( 'booking_form_fields', $this->fields );
 	}

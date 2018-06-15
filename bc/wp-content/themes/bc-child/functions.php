@@ -1,7 +1,7 @@
 <?php
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
-	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'multiStep', get_stylesheet_directory_uri() . '/css/multi-step.css' );
 	wp_enqueue_style( 'wooStyles', get_stylesheet_directory_uri() . '/css/main.css' );
 }
@@ -194,21 +194,21 @@ function clear_cart() {
 }
 
 function update_addon_quantity() {
-    add_action('woocommerce_before_calculate_totals', 'change_cart_item_quantities', 20, 1 );
-    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
+    // add_action('woocommerce_before_calculate_totals', 'change_cart_item_quantities', 20, 1 );
+    // if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
 
-    // HERE below define your specific products IDs
-    $specific_ids = array(2958);
-    $new_qty = 40; // New quantity
+    // // HERE below define your specific products IDs
+    // $specific_ids = array(2958);
+    // $new_qty = 40; // New quantity
 
-    // Checking cart items
-    global $woocommerce;
-	foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
-    //foreach( $cart->get_cart() as $cart_item_key => $cart_item ) {
-        $product_id = $cart_item['data']->get_id();
-        // Check for specific product IDs and change quantity
-        if( in_array( $product_id, $specific_ids ) && $cart_item['quantity'] != $new_qty ){
-            $woocommerce->cart->set_quantity( $cart_item_key, $new_qty ); // Change quantity
-        }
-    }
+    // // Checking cart items
+    // global $woocommerce;
+	// foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
+    // //foreach( $cart->get_cart() as $cart_item_key => $cart_item ) {
+    //     $product_id = $cart_item['data']->get_id();
+    //     // Check for specific product IDs and change quantity
+    //     if( in_array( $product_id, $specific_ids ) && $cart_item['quantity'] != $new_qty ){
+    //         $woocommerce->cart->set_quantity( $cart_item_key, $new_qty ); // Change quantity
+    //     }
+    // }
 }

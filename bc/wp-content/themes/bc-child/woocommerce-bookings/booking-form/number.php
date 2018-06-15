@@ -29,7 +29,7 @@ $name  = $field['name'];
 $step  = isset( $field['step'] ) ? $field['step'] : null;
 ?>
 <div class="sushi-party-size">
-    <span>Party Size: </span>
+    <span>How Many People Will Be There?</span>
     <p class="form-field form-field-wide <?php echo implode( ' ', $class ); ?>">
         <input
             type="number"

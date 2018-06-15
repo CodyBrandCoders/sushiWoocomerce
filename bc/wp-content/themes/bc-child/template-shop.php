@@ -124,7 +124,7 @@
 						</div>
 						<div class="col col-flex col-lg-3">
 							<div class="cart-ajax-wrapper">
-								<h2>My Sushi Experience</h2>
+								<h2>My Experience</h2>
 								<div class="inner-cart">
 									<h3>Package: </h3>
 										<div class="package-calc">
@@ -174,7 +174,7 @@
 						headerTag: "h3",
 						bodyTag: "section",
 						transitionEffect: "fade",
-						enableAllSteps: false,
+						enableAllSteps: true,
 						titleTemplate: "<span class='number'>#index#</span><span class='title'>#title#</span>",
 						transitionEffectSpeed: 800
 					});
