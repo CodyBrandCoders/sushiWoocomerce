@@ -2,7 +2,6 @@ jQuery(document).ready( function($) {
     //MOVE THROUGH FORM
     $('.product-var-bookable, .next-step ').on('click', function() {
         $("#wizard").steps('next');
-        reloadCalc();
     });
     $('.change-party-number').on('click', function() {
         $("#wizard").steps('previous');
@@ -292,8 +291,6 @@ return returnArray;
 
 }
 function reloadCalc() {
-    setTimeout(function(){
-
         packageTotal ='';
         packageTotal = $('.current .col-flex .package-price').attr('data-id');
         packageTotal = Number(packageTotal);
@@ -312,7 +309,7 @@ function reloadCalc() {
         console.log(addonTotal);
         var addTotal = (packageTotal + addonTotal);
 
-        if(addonTotal <= 0) {
+        if(addonTotal <= 0 || null) {
             console.log('Its 0');
             console.log(packageTotal);
             sushiTotal = packageTotal * sushiVal;
@@ -324,5 +321,4 @@ function reloadCalc() {
         }
 
         $('.sushie-value-total').html(sushiTotal);
-    }, 800);
 }
