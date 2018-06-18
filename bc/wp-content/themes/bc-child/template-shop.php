@@ -101,7 +101,6 @@
 								<div class="sushi-bookable-item-wrapper">
 									<?php echo do_shortcode( '[product_page id="'. $Queryid .'"]') ?>
 								</div>
-								<div title="Please select a date and time above." class="tooltip-container"></div>
 								<a class="product-var-bookable " data-id="<?php echo $Queryid; ?>" href="#">Get Started</a>
 							</div>
 							
@@ -120,7 +119,6 @@
 					<section class="section section-addons">
 						<div class="col col-lg-9">
 							<?php echo do_shortcode( '[product_category category="addon"]' ); ?>
-							<a href="#" class="next-step">Continue</a>
 						</div>
 						<div class="col col-flex col-lg-3">
 							<div class="cart-ajax-wrapper">
@@ -143,7 +141,7 @@
 												$price = get_post_meta($values['product_id'] , '_price', true);
 										
 												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
-													echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
+													//echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
 													echo '<span class="package-title">'.$_product->get_title().'</span>';
 													echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 												echo '</div>';
@@ -157,6 +155,7 @@
 								</div>
 								<h3 class="cart-subtotal">Subtotal: $<span class="sushie-value-total">0</span>.00</h3>
 							</div>
+							<a href="#" class="next-step">Continue</a>
 						</div>
 					</section>
 					<h3>Payment Information</h3>
@@ -174,7 +173,7 @@
 						headerTag: "h3",
 						bodyTag: "section",
 						transitionEffect: "fade",
-						enableAllSteps: false,
+						enableAllSteps: true,
 						titleTemplate: "<span class='number'>#index#</span><span class='title'>#title#</span>",
 						transitionEffectSpeed: 800
 					});

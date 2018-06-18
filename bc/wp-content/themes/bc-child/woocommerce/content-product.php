@@ -52,8 +52,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			 * @hooked woocommerce_template_loop_product_title - 10
 			 */
 			do_action( 'woocommerce_shop_loop_item_title' ); 
-      		echo '<div class="sub-title-bookable-item">' . get_field('product_sub_title') . '</div>'; 
-			echo '<div class="content-bookable-item">' . get_field('product_description') . '</div>';
+			echo '<div class="addon-content-wrapper">';
+      		
+			echo '<div class="content-addon">' . get_field('product_description') . '</div>';
+			echo '<div class="sub-title-addon">' . get_field('product_sub_title') . '</div>'; 
+
+			echo '</div>';
 			
 			/**
 			 * woocommerce_after_shop_loop_item_title hook.
@@ -74,8 +78,23 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			//Modifications to user count/price stroed vars 
 			$this_product_price = $product->get_price(); 
 		
-			echo '<h2 class="price-bookable-item">$' . $this_product_price . ' Per Person</h2>';?>
-
+			echo '<div class="addon-price-wrapper">';
+			echo '<h2 class="price-bookable-item">$' . $this_product_price . ' <span>Per Order</span></h2>';
+			echo '<i class="fas add-addon-circle fa-plus-circle"></i>';
+			echo '<i class="fas minus-addon-circle fa-minus-circle"></i>';
+			echo woocommerce_quantity_input( array(
+				'input_id'    => uniqid( 'quantity_' ),
+				'input_name'  => 'quantity',
+				'input_value' => '1',
+				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', -1, $product ),
+				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', 1, $product ),
+				'step'        => apply_filters( 'woocommerce_quantity_input_step', 1, $product ),
+				'pattern'     => apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'woocommerce_stock_amount', 'intval' ) ? '[0-9]*' : '' ),
+				'inputmode'   => apply_filters( 'woocommerce_quantity_input_inputmode', has_filter( 'woocommerce_stock_amount', 'intval' ) ? 'numeric' : '' ),
+			), $product, false );
+			
+			echo '</div>';
+	?>
 			<!-- PARTY INPUT --> 
 			<!-- <div class="sushi-party-size"> 
 			<span>Party Size: </span> 

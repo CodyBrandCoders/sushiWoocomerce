@@ -48,11 +48,14 @@
         display: none;
     }
     .sushi-party-size {
-        display: flex;
         flex-wrap: nowrap;
-        padding: 0 0.5em;
+        padding: 0 2em;
         align-items: baseline;
         margin: 0 0 2em;
+        display: none;
+        &.active {
+            display: flex;
+        }
         span {
             font-size: 15px;
             font-weight: bold;
@@ -65,16 +68,30 @@
             margin: 0;
         }
         .wc_bookings_field_persons {
-            margin-left: 20px;
+            margin-left: 10px;
         }
    }
     .products {
         display: flex;
         margin-bottom: 0;
         #sushi-bookable-item {
+            flex: 1;
+            text-align: center;
+            margin: 0 2em;
+            display: flex;
+            flex-direction: column;
+            &:first-of-type {
+                margin: 0;
+            }
+            &:last-of-type {
+                margin: 0;
+            }
             .sushi-bookable-item-wrapper {
                 box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.36);
                 height: 100%;
+            }
+            .picker {
+                padding: 1em;
             }
             .wc-bookings-date-picker {
                 border: 0;
@@ -88,10 +105,12 @@
             .wc-bookings-date-picker {
                 position: relative;
                 margin-bottom: 0;
+                padding: 0;
             }
             .woocommerce-LoopProduct-link.woocommerce-loop-product__link {
                 pointer-events: none;
                 cursor: default;
+                flex-grow: 1;
                 h2 {
                     position: absolute;
                     top: 0;
@@ -114,6 +133,7 @@
                 flex-direction: column;
             }
             legend {
+                width: 100%;
                 span {
                     display: none;
                 }
@@ -127,15 +147,40 @@
             }
             .wc-bookings-date-picker-choose-date {
                 color: #fff;
-                background: #000;
+                background: #af0000;
                 text-decoration: none;
                 padding: 0.5em 2em;
-                display: inline;
-                font-size: 24px;
+                display: block;
+                font-size: 20px;
+                margin: 0 1em;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 5px;
+                    right: 5px;
+                    top: 5px;
+                    bottom: 5px;
+                    border: solid 2px #fff;
+                    transition: all ease 0.4s;
+
+                }
+                &:hover {
+                    .far {
+                        left: 35px;
+                    }
+                    &:after {
+                        left: 0px;
+                        right: 0px;
+                        top: 0px;
+                        bottom: 0px;
+                    }
+                }
                 .far {
                     position: absolute;
-                    left: 20px;
-                    top: 8px;
+                    left: 30px;
+                    top: 18px;
+                    transition: all ease 0.4s;
                 }
             }
             .wc-bookings-date-picker-date-fields{
@@ -169,6 +214,7 @@
             }
             .wc-bookings-booking-form .form-field input[type=number] {
                 width: 100%;
+                padding: 2px 0 2px 8px;
             }
             form.cart {
                 margin-bottom: 0;
@@ -181,18 +227,12 @@
                 flex-grow: 1;
 
             }
-            flex: 1;
-            text-align: center;
-            margin: 0 1em;
-            display: flex;
-            flex-direction: column;
             li {
                 margin: 0;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 a {
-                    height: 100%;
                     color: #000;
                     text-decoration: none;
                 }
@@ -205,7 +245,9 @@
             }
             .product-var-bookable {
                 position: relative;
-                background: red;
+                background: #AF0000;
+                pointer-events: none;
+                opacity: 0;
                 color: #fff;
                 padding: 1em;
                 margin-top: 1em;
@@ -239,11 +281,15 @@
         display: block;
         max-width: 100%;
         text-align: center;
-        background-color: red;
+        background-color: #AF0000;
         color: #fff;
         padding: .5em;
         margin: 0 1em;
         border-radius: 8px;
+        transition: all ease 0.4s;
+        &:hover {
+            background-color: #000;
+        }
     }
 
 /************************
@@ -256,6 +302,11 @@
         top: 0;
         &:hover {
            top: -10px;
+           .sub-title-bookable-item {
+               width: 100%;
+               left: 0;
+               margin-left: 0;
+           }
         }
         .product_title.entry-title {
             font-size: 28px;
@@ -292,9 +343,10 @@
             left: 50%;
             margin-left: -3.5em;
             font-weight: 600;
+            transition: all ease 0.4s;
         }
         .content-bookable-item {
-            padding: 1em 3em;
+            padding: 1em 2em;
             text-align: left;
             background-color: #fff;
             p {
@@ -325,19 +377,16 @@
         .add_to_cart_button {
             display: block;
             position: absolute;
-            top: 0;
             right: 0;
-            left: 0;
             bottom: 0;
             margin: 0;
             opacity: 0;
+            width: 60px;
+            height: 60px;
             line-height: 0;
             font-size: 0;
-            background-color: green;
             transition: all ease 0.3s;
-            &.active {
-                opacity: 0.6;
-            }
+            z-index: 99;
         }
         .added_to_cart.wc-forward {
             display: none;
@@ -357,7 +406,7 @@
             color: #fff;
             background: #AF0000;
             text-align: center;
-            padding: 0.5em 0;
+            padding: 0.8em 0;
             margin: 0;
         }
         h3 {
@@ -381,9 +430,10 @@
         }
         .sushi-party-size {
             border-bottom: solid 2px #000;
-            padding: 0.5em 1em;
+            padding: 0.5em 1em 2em;
             margin: 0;
             background: #fff;
+            display: flex;
         }
         .cart-subtotal {
             padding: 0.5em 0.75em;
@@ -399,14 +449,80 @@
         .woocommerce .woocommerce {
             display: none;
         }
+        .products {
+            margin: 0;
+            flex-wrap: wrap;
+            #sushi-bookable-item {
+                margin: 0 0 2em;
+                width: 32%;
+                flex: none;
+                img {
+                    margin: 0;
+                }
+                &:nth-child(3n - 1) {
+                    margin: 0 2% 2em;
+                }
+                .addon-price-wrapper {
+                    background: #000;
+                    padding: 1em;
+                    text-align: left;
+                    position: relative;
+                    .price-bookable-item {
+                        color: #fff;
+                        margin: 0;
+                        display: inline-block;
+                        font-size: 18px;
+                        line-height: 2.2;
+                    }
+                    .quantity {
+                        display: inline-block;
+                        float: right;
+                        input {
+                            margin: 0;
+                        }
+                    }
+                    .add-addon-circle, .minus-addon-circle {
+                        color: #fff;
+                        float: right;
+                        font-size: 40px;
+                        margin-left: 20px;
+                        transition: all ease 1s;
+                        top: 17px;
+                        &.active {
+                            position: absolute;
+                            top: -30px;
+                            right: 15px;
+                            opacity: 0;
+                        }
+                    }
+                    .minus-addon-circle {
+                        display: none;
+                    }
+                }
+                .addon-content-wrapper {
+                    padding: 1em;
+                    text-align: left;
+                    
+                    .sub-title-addon {
+                        color: #AF0000;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
         .col-flex {
             display: flex;
+            margin-left: 2em;
+            flex-direction: column;
             .cart-ajax-wrapper {
                 display: flex;
                 flex-direction: column;
                 .inner-cart {
                     flex-grow: 1;
                 }
+            }
+            .next-step {
+                margin: 2em 0 ;
             }
         }
         .cart-ajax-wrapper .sushi-party-size {
@@ -417,10 +533,17 @@
         }
         .change-party-number {
             color: #fff;
-            background: #000;
-            padding: 0 0.5em;
-            margin-left: 0.5em;
+            background: #AF0000;
+            padding: 0.5em 1em;
+            margin-left: 1em;
             cursor: pointer;
+            transition: all ease 0.4s;
+            &:hover {
+                background-color: #000;
+            }
+        }
+        .sushi-value {
+            padding-left: 2em;
         }
     }
     .section-package-details {
@@ -436,8 +559,68 @@
         display: flex;
     }
     .section-payment {
+        background: #fff;
+        padding: 2em 0;
+
         .woocommerce-message {
             display: none;
+        }
+        //CHECKOUT FORM STYLES
+        .col-1 {
+            width: 58%;
+        }
+        .col-2 {
+            width: 38%;
+        }
+        .form-row.chef-info {
+            color: #AF0000;
+        }
+        .form-row.form-row-wide.south-florida {
+            color: #888;
+        }
+        .form-row.chef-info, .form-row.form-row-wide.south-florida  {
+            input, .optional {
+                display: none;
+            }
+        }
+        #order_review_heading {
+            color: #fff;
+            background: #000;
+            padding: 1em 0 1em 1em;
+            margin: 0;
+        }
+        .shop_table.woocommerce-checkout-review-order-table {
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.36);
+            border-radius: 0;
+            padding: 2em;
+        }
+        .form-row.place-order {
+            background: #fff;
+            padding-right: 0;
+        }
+        #place_order {
+            background: #AF0000;
+            padding: 1em 3em;
+            &:hover {
+                background: #000;
+            }
+        }
+        .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods {
+            display: block;
+            border-bottom: 0;
+            li {
+                list-style: none;
+                display: flex;
+                align-items: baseline;
+                flex-direction: row;
+                margin: 1em 0;
+                label {
+                    flex: 1 0 auto;
+                }
+                .payment_box.payment_method_cheque {
+                    display: none;
+                }
+            }
         }
     }
 }
