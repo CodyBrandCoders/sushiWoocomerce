@@ -153,7 +153,7 @@
 									<span>Party Size: </span>
 									<div class="sushi-value sushi-value-input">1</div><div class="change-party-number">Change</div>
 								</div>
-								<h3 class="cart-subtotal">Subtotal: $<span class="sushie-value-total">0</span>.00</h3>
+								<h3 class="cart-subtotal">Subtotal: <span class="total-price">$<span class="sushie-value-total">0</span>.00</span></h3>
 							</div>
 							<a href="#" class="next-step">Continue</a>
 						</div>
@@ -173,8 +173,8 @@
 						headerTag: "h3",
 						bodyTag: "section",
 						transitionEffect: "fade",
-						enableAllSteps: true,
-						titleTemplate: "<span class='number'>#index#</span><span class='title'>#title#</span>",
+						enableAllSteps: false,
+						titleTemplate: "<i class='far fa-check-circle'></i><span class='number'>#index#</span><span class='title'>#title#</span>",
 						transitionEffectSpeed: 800
 					});
 				</script>

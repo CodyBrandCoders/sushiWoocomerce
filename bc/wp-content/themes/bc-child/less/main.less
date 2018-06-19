@@ -283,7 +283,7 @@
         text-align: center;
         background-color: #AF0000;
         color: #fff;
-        padding: .5em;
+        padding: 1em 2em;
         margin: 0 1em;
         border-radius: 8px;
         transition: all ease 0.4s;
@@ -413,13 +413,15 @@
             margin: 0 0 15px 0;
             padding: 0 0 6px;
             text-transform: none;
-            border-bottom: 1px #000 solid;
         }
         .inner-cart {
-            padding: 1em 1em;
+            padding: 2em 2em;
             background: #fff;
             .package-price {
                 float: right;
+            }
+            h3 {
+                border-bottom: 1px #000 solid;
             }
             .product-booking {
                 display: none;
@@ -430,15 +432,19 @@
         }
         .sushi-party-size {
             border-bottom: solid 2px #000;
-            padding: 0.5em 1em 2em;
+            padding: 0.5em 2em 2em;
             margin: 0;
             background: #fff;
             display: flex;
         }
         .cart-subtotal {
-            padding: 0.5em 0.75em;
+            padding: 0.5em 1.2em;
             margin: 0;
             background: #fff;
+            .total-price {
+                float: right;
+                color: #AF0000;
+            }
         }
     }
 /****************************
