@@ -30,6 +30,19 @@ function myplugin_ajaxurl() {
 }
 
 /**
+ * Clears WC Cart on Page Load
+ * (Only when not on cart/checkout page)
+ */
+ 
+add_action( 'wp_head', 'bryce_clear_cart' );
+function bryce_clear_cart() {
+	if ( wc_get_page_id( 'cart' ) == get_the_ID() || wc_get_page_id( 'checkout' ) == get_the_ID() ) {
+		return;
+	}
+	WC()->cart->empty_cart( true );
+}
+
+/**
  * Remove related products output
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
@@ -98,8 +111,6 @@ function get_addons() {
     $addon_id = $_REQUEST['addonID'];
     $addonAmmount = $_REQUEST['addonAmmount'];
 
-    echo clear_cart();
-
     add_action('woocommerce_before_calculate_totals', 'change_cart_item_quantities', 20, 1 );
     if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
 
@@ -118,6 +129,7 @@ function get_addons() {
         }
     }
 
+    echo clear_cart();
     wp_die(); // this is required to terminate immediately and return a proper response
 }
 
@@ -204,11 +216,11 @@ function clear_cart() {
 
 	foreach($items as $item => $values) { 
 		$_product =  wc_get_product( $values['data']->get_id()); 
-		$price = get_post_meta($values['product_id'] , '_price', true);
+        $price = get_post_meta($values['product_id'] , '_price', true);
+        $addammount = $values['quantity'];
 
-		echo '<div class="addon-item product-'. $_product->get_type() .'" data-price="'.$price.'">';
-			echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
-			echo '<span class="package-title">'.$_product->get_title().'</span>';
+		echo '<div class="addon-item product-'. $_product->get_type() .'" data-price="'.$price.'" data-ammount="'.$addammount.'">';
+			echo '<span class="package-title">'.$_product->get_title().'</span><span class="addon-ammount"> ('.$addammount.')</span>';
 			echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 		echo '</div>';
 	}   

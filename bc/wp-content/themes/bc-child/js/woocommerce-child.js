@@ -299,7 +299,10 @@ function reloadCalc() {
         //GET DATA FROM ALL CHILDREN(ADDONS)
         var addonArray =[];
         $('.current .col-flex .addon-item.product-simple').each(function(i,item) {
-            addonArray.push($(item).data('price'));
+            var addonamm = $(this).data('ammount');
+            var addonprice = $(this).data('price');
+            var addonitemtotal = addonamm * addonprice;
+            addonArray.push(addonitemtotal);
         });
 
         var addonTotal = addonArray.reduce(function (a,b){
@@ -315,7 +318,7 @@ function reloadCalc() {
             sushiTotal = packageTotal * sushiVal;
         } else {
             console.log('Its greater than 0');
-            sushiTotal = addTotal * sushiVal;
+            sushiTotal = addonTotal + packageTotal * sushiVal;
             console.log(sushiTotal);
 
         }
