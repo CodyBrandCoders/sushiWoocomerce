@@ -1,4 +1,5 @@
 jQuery(document).ready( function($) {
+    
     //MOVE THROUGH FORM
     $('.product-var-bookable, .next-step ').on('click', function() {
         $("#wizard").steps('next');

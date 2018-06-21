@@ -1,6 +1,6 @@
 <?php
 
-//  Template Name: Book Your Experience
+//  Template Name: Book Your Experience Custom
 
 ?>
 <?php get_header(); ?>
@@ -70,7 +70,7 @@
 			</div>
 			<div class="col-xs-12 no-padding">
 				<div id="wizard">
-					<h3>Select your package</h3>
+					<h3>Select your Rolls</h3>
 					<section class="section section-package">
 							<ul class="products">
 							<?php
@@ -81,7 +81,7 @@
 								'tax_query' => array(
 									array(
 										'taxonomy'         => 'product_cat',
-										'terms'            => 'bookable',
+										'terms'            => 'custom',
 										'field'            => 'slug',
 									)
 								)
@@ -112,8 +112,101 @@
 							// Restore original Post Data
 							wp_reset_postdata(); ?>
 							</ul>
-							
-							<?php// echo do_shortcode( '[product_page id="2951"]') ?>
+
+							<!-- DROPDOWNS -->
+							<div class="dropdowns-custom">
+								<?php
+									$categories=get_categories(
+										array( 'hide_empty' => false, 'post_type' => 'product','taxonomy' => 'product_cat', 'terms' => 'custom-rolls',
+										)
+									);
+									foreach ($categories as $c) {
+										//var_dump($c);
+										// what you really want instead of var_dump is something to
+										// to create markup-- list items maybe, For example...
+										echo '<li>'.$c->cat_name.'</li>';
+									}
+								?>
+								<?php
+								$args = array(
+									'post_type'   => 'product',
+									'post_status' => 'publish',
+									'order'       => 'asc',
+									'tax_query' => array(
+										array(
+											'taxonomy'         => 'product_cat',
+											'terms'            => 'custom-rolls',
+											'field'            => 'slug',
+										)
+									)
+								);
+
+								$query = new WP_Query( $args );
+
+								// The Loop
+								if ( $query->have_posts() ) {
+								while ( $query->have_posts() ) {
+								$query->the_post(); 
+								
+								$Queryid = get_the_ID();
+								?>
+
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+									</div>
+								</div>
+								
+								<?php }
+								} else {
+								// no posts found
+								}
+
+								// Restore original Post Data
+								wp_reset_postdata(); ?>
+								
+							</div>
+							<div class="col col-flex">
+							<div class="cart-ajax-wrapper">
+								<h2>My Experience</h2>
+								<div class="inner-cart">
+									<h3>Package: </h3>
+										<div class="package-calc">
+											<span class="package-title"></span>
+											<span class="package-price" data-id=""></span>
+										</div>
+
+									<h3>Add-Ons: </h3>
+									<div class="cart-addons">
+										<?php
+											global $woocommerce;
+											$items = $woocommerce->cart->get_cart();
+
+											foreach($items as $item => $values) { 
+												$_product =  wc_get_product( $values['data']->get_id()); 
+												$price = get_post_meta($values['product_id'] , '_price', true);
+										
+												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
+													//echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
+													echo '<span class="package-title">'.$_product->get_title().'</span>';
+													echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
+												echo '</div>';
+											}   
+										?>
+									</div>
+								</div>
+								<div class="sushi-party-size">
+									<span>Party Size: </span>
+									<div class="sushi-value sushi-value-input">1</div><div class="change-party-number">Change</div>
+								</div>
+								<h3 class="cart-subtotal">Subtotal: <span class="total-price">$<span class="sushie-value-total">0</span>.00</span></h3>
+							</div>
+							<a href="#" class="next-step">Continue</a>
+						</div>
 					</section>
 					<h3>Add-Ons</h3>
 					<section class="section section-addons">
