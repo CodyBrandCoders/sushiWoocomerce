@@ -1,9 +1,9 @@
 jQuery(document).ready(function($) {
 
 	$('.block-picker').on( 'click', 'a', function() {
+		console.log('i clicked this');
 		var value        = $(this).data( 'value' );
 		var block_picker = $(this).closest( 'ul' );
-
 		set_selected_time( block_picker, value );
 		return false;
 	});

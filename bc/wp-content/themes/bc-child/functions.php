@@ -3,7 +3,7 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'multiStep', get_stylesheet_directory_uri() . '/css/multi-step.css' );
-    wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+    wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap-theme.min.css' );
 	wp_enqueue_style( 'wooStyles', get_stylesheet_directory_uri() . '/css/main.css' );
 }
 function theme_js() {
@@ -69,6 +69,10 @@ function empty_cart() {
 		$product = $cart_item['data'];
 
 		if ( has_term( 'bookable', 'product_cat', $product->get_id() ) ) {
+			$woocommerce->cart->remove_cart_item($cart_item_key);
+			echo clear_cart();
+        }
+        if ( has_term( 'addon', 'product_cat', $product->get_id() ) ) {
 			$woocommerce->cart->remove_cart_item($cart_item_key);
 			echo clear_cart();
 		}
@@ -225,7 +229,7 @@ function clear_cart() {
         $price = get_post_meta($values['product_id'] , '_price', true);
         $addammount = $values['quantity'];
 
-		echo '<div class="addon-item product-'. $_product->get_type() .'" data-price="'.$price.'" data-ammount="'.$addammount.'">';
+		echo '<div class="addon-item product-'. $_product->get_type() .' type-' .$_product->get_slug() .'" data-price="'.$price.'" data-ammount="'.$addammount.'">';
 			echo '<span class="package-title">'.$_product->get_title().'</span><span class="addon-ammount"> ('.$addammount.')</span>';
 			echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 		echo '</div>';

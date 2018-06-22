@@ -20,6 +20,12 @@
     .no-padding {
         padding: 0;
     }
+    .picker {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all ease 0.4s;
+    }
     //Shop Intro Section
     .shop-intro {
         margin-bottom: 4em;
@@ -504,6 +510,13 @@
                     .minus-addon-circle {
                         display: none;
                     }
+                    &.active {
+                        background-color: #AF0000;
+                        input {
+                            pointer-events: none;
+                        }
+
+                    }
                 }
                 .addon-content-wrapper {
                     padding: 1em;
@@ -702,9 +715,149 @@
  Styles for CUSTOM LAYOUT
 ************************/
 
+///DROPDOWNS
+// The dropdown wrapper (`<div>`)
+.dropup,
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  // Generate the caret automatically
+  &::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    content: "";
+  }
+
+  // Prevent the focus on the dropdown toggle when closing dropdowns
+  &:focus {
+    outline: 0;
+  }
+}
+
+.dropup {
+  .dropdown-toggle {
+    &::after {
+      border-top: 0;
+    }
+  }
+}
+
+// The dropdown menu
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  background: #fff;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  list-style: none;
+  background-clip: padding-box;
+}
+
+// Dividers (basically an `<hr>`) within the dropdown
+.dropdown-divider {
+}
+
+// Links, buttons, and more within the dropdown menu
+//
+// `<button>`-specific styles are denoted with `// For <button>s`
+.dropdown-item {
+  display: block;
+  width: 100%; // For `<button>`s
+  clear: both;
+  text-align: inherit; // For `<button>`s
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background: none; // For `<button>`s
+  border: 0; // For `<button>`s
+
+  &.active,
+  &:active {
+    text-decoration: none;
+
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+  }
+}
+
+// Open state for the dropdown
+.show {
+  // Show the menu
+  > .dropdown-menu {
+    display: block;
+  }
+
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}
+
+// Menu positioning
+//
+// Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
+// menu with the parent.
+.dropdown-menu-right {
+  right: 0;
+  left: auto; // Reset the default from `.dropdown-menu`
+}
+
+.dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+
+// Dropdown section headers
+.dropdown-header {
+  display: block;
+  margin-bottom: 0; // for use with heading elements
+  white-space: nowrap; // as with > li > a
+}
+
+// Backdrop to catch body clicks on mobile, etc.
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+//
+// Just add .dropup after the standard .dropdown class and you're set.
+
+.dropup {
+  // Different positioning for bottom up menu
+  .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+  }
+}
+
+
 .page-template-template-shop-custom {
+    .next-step {
+        margin: 1em 0 0;
+        display: none;
+    }
+    legend {
+        //pointer-events: none;
+    }
+    
     .section-package {
         display: flex;
+        overflow: hidden;
         .products, .dropdowns-custom {
             margin-right: 20px;
         }
@@ -721,23 +874,128 @@
                 .product_title.entry-title {
                     display: none;
                 }
+                .sushi-bookable-item-wrapper {
+                    height: auto;
+                }
+                #wc-bookings-booking-form {
+                    padding: 1.5em 0 0;
+                }
+            }
+            .content-bookable-item{
+                display: none;
+            }
+            .wc-bookings-booking-cost {
+                display: none !important;
             }
         }
         .dropdowns-custom {
+            position: relative;
+            top: -999px;
             flex: 2;
             display: flex;
             flex-direction: column;
+            transition: all ease 0.5s;
             .dropdown {
                 width: 100%;
                 .btn {
                     width: 100%;
+                    color: #fff;
+                    background-color: #AF0000;
+                    padding: 2em 3.5em;
+                    margin-bottom: 15px;
+                    text-align: left;
+                    font-size: 1.1em;
+                    &:after {
+                        float: right;
+                        position: relative;
+                        font-family: 'Font Awesome 5 Solid'; 
+                        font-weight: 400; 
+                        content: '\f0da';
+                    }
+                    .custom-item-img {
+                        position: absolute;
+                        left: 20px;
+                        top: 28px;
+                        transition: all ease 0.5s;
+                    }
+                    &:hover {
+                        .custom-item-img {
+                            transform: rotate(180deg);
+                        }
+                    }
                 }
                 .dropdown-menu {
                     right: 0;
+                    .inner-custom-item {
+                        position: relative;
+                        padding: 1em 2em 20px;
+                        border-bottom: solid 2px;
+                        &:hover {
+                            .custom-item-title, .custom-item-content {
+                                left: -10px;
+                            }
+                        }
+                        p.product {
+                            margin: 0;
+                            padding: 0 !important;
+                            border: 0 !important;
+                            line-height: 0;
+                        }
+                        a {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            opacity: 0;
+                            z-index: 99;
+                        }
+                        .custom-item-title {
+                            font-size: 18px;
+                            line-height: 1.67;
+                            letter-spacing: 1px;
+                            text-align: left;
+                            color: #000000;
+                            font-weight: 900;
+                            position: relative;
+                            left: 0;
+                            transition: all ease 0.4s;
+                        }
+                        .custom-item-content {
+                            margin-top: 0.5em;
+                            position: relative;
+                            left: 0;
+                            transition: all ease 0.4s;
+                        }
+                    }
                 }
             }
         }
         .col-flex {
+            flex: 1;
+            .cart-ajax-wrapper {
+                .inner-cart {
+                    padding: 1em;
+                } 
+                .sushi-party-size {
+                    display: none;
+                }
+                .cart-subtotal {
+                    padding: 0.5em 0.8em;
+                }
+            }
+        }
+    }
+    .section-addons {
+        #sushi-bookable-item {
+            .product {
+                width: 100%;
+            }
+        }
+        .cart-addons-custom {
+           .type-nigiri-roll, type-roll-2 {
+               display: none;
+           }
         }
     }
 }
