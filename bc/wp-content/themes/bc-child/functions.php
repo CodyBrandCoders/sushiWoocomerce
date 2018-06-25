@@ -24,7 +24,18 @@ function theme_js() {
 
 add_action('wp_enqueue_scripts', 'theme_js');
 
+//RESTRICT TO FLORIDA
+add_filter( 'woocommerce_states', 'wc_sell_only_states' );
+function wc_sell_only_states( $states ) {
 
+	$states['US'] = array(
+		'FL' => __( 'Florida', 'woocommerce' ),
+		
+	);
+
+	return $states;
+
+}
 //AJAX URL
 add_action('wp_head', 'myplugin_ajaxurl');
 
@@ -40,12 +51,20 @@ function myplugin_ajaxurl() {
  * (Only when not on cart/checkout page)
  */
  
-add_action( 'wp_head', 'bryce_clear_cart' );
+// add_action( 'wp_head', 'bryce_clear_cart' );
 function bryce_clear_cart() {
-	if ( wc_get_page_id( 'cart' ) == get_the_ID() || wc_get_page_id( 'checkout' ) == get_the_ID() ) {
+	if ( is_page( 3014 )) {
 		return;
 	}
-	WC()->cart->empty_cart( true );
+	global $woocommerce;
+
+	foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
+
+		$product = $cart_item['data'];
+
+			$woocommerce->cart->remove_cart_item($cart_item_key);
+			echo clear_cart();
+	};
 }
 
 /**
@@ -68,14 +87,8 @@ function empty_cart() {
 
 		$product = $cart_item['data'];
 
-		if ( has_term( 'bookable', 'product_cat', $product->get_id() ) ) {
 			$woocommerce->cart->remove_cart_item($cart_item_key);
 			echo clear_cart();
-        }
-        if ( has_term( 'addon', 'product_cat', $product->get_id() ) ) {
-			$woocommerce->cart->remove_cart_item($cart_item_key);
-			echo clear_cart();
-		}
 	};
 	
 
@@ -228,8 +241,11 @@ function clear_cart() {
 		$_product =  wc_get_product( $values['data']->get_id()); 
         $price = get_post_meta($values['product_id'] , '_price', true);
         $addammount = $values['quantity'];
+        $catarray = $_product->get_category_ids();
+        $singleCatArray = $catarray[1];
 
-		echo '<div class="addon-item product-'. $_product->get_type() .' type-' .$_product->get_slug() .'" data-price="'.$price.'" data-ammount="'.$addammount.'">';
+        echo '<div class="addon-item product-'. $_product->get_type() .' type-' . $singleCatArray .'" data-price="'.$price.'" data-ammount="'.$addammount.'">';
+        echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
 			echo '<span class="package-title">'.$_product->get_title().'</span><span class="addon-ammount"> ('.$addammount.')</span>';
 			echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 		echo '</div>';

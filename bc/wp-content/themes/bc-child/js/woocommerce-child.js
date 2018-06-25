@@ -1,11 +1,23 @@
 jQuery(document).ready( function($) {
+    $(function(){
+        var $select = $(".sushi-value");
+        for (i=4;i<=80;i++){
+            $select.append($('<option></option>').val(i).html(i))
+        }
+    });
+    $('.page-template-template-checkout #wizard .steps li').addClass('disabled');
     
     //MOVE THROUGH FORM
     $('.page-template-template-shop .product-var-bookable, .next-step ').on('click', function() {
         $("#wizard").steps('next');
+        $('#wizard .steps li').addClass('disabled');
+        reloadCalc();
     });
     $('.change-party-number').on('click', function() {
         $("#wizard").steps('previous');
+        $('.sushi-party-size').removeClass('active'); 
+        $('#sushi-bookable-item a.product-var-bookable').css('opacity', '0').css('pointer-events', 'none');
+        $('#wizard .steps li').addClass('disabled');
         reloadCalc();
     });
     //FOR CUSTOM
@@ -40,7 +52,8 @@ jQuery(document).ready( function($) {
 
     //Allow contintue only after date has been selected
     $('.block-picker').on( 'click', 'a', function() {
-		$(this).closest('#sushi-bookable-item').find('a.product-var-bookable').css('opacity', '1').css('pointer-events', 'all');
+        $(this).closest('#sushi-bookable-item').find('a.product-var-bookable').css('opacity', '1').css('pointer-events', 'all');
+        $('.blocker').fadeIn('slow');
 		return false;
 	});
     $(".wc-bookings-date-picker-choose-date").on('click', function(){
@@ -50,7 +63,7 @@ jQuery(document).ready( function($) {
     ////////////////////////////////////////////////////
     // ENSURE THERE ARE NEVER MORE THAN ONE EXPERIENCE 
     ///////////////////////////////////////////////////
-    $('#wizard-t-0, .change-party-number, .wc-bookings-date-picker-choose-date').on('click', function() {
+    $('.change-party-number, .wc-bookings-date-picker-choose-date').on('click', function() {
 
         $.ajax({
             type: 'POST',
@@ -72,6 +85,7 @@ jQuery(document).ready( function($) {
                 $('.wc-bookings-booking-cost').css('display', 'none');
                 $('#wizard-t-*').parent().removeClass('done');
                 $('#wizard-t-*').parent().addClass('disabled');
+                $('.cart-addons').html('');
                 reloadCalc();
             }
         });
@@ -236,11 +250,10 @@ jQuery(document).ready( function($) {
                 var wrapper = $('.checkout-ajax-wrapper');
 
                 wrapper.html(response);
+                
                 reloadCalc();
-       
             }
         }); 
-    
     });
     /////////////////////////////////
     // END AJAX FOR LOADING CHECKOUT   
@@ -363,28 +376,21 @@ function reloadCalc() {
         var addonTotal = addonArray.reduce(function (a,b){
             return a + b;
         }, 0);
-        console.log(addonArray);
-        console.log(addonTotal);
+
         var addTotal = (packageTotal + addonTotal);
 
         if (packageTotal == null) {
             packageTotal = 0;
         }
         if(addonTotal <= 0 ) {
-            console.log('Its 0');
-            console.log(sushiVal);
-            console.log(packageTotal);
+
             sushiTotal = packageTotal * sushiVal;
         } else {
             console.log('Its greater than 0');
             if (isNaN(packageTotal)) {
                 packageTotal = 0;
             }
-            console.log('begin');
-            console.log(packageTotal);
-            console.log(addonTotal);
-            console.log(sushiVal);
-            console.log('end');
+
             sushiTotal = addonTotal + (packageTotal * sushiVal);
             console.log(sushiTotal);
 
@@ -394,5 +400,6 @@ function reloadCalc() {
         //FOR CUSTOM CART TOTAL
         if (sushiTotal >= 200) {
             $('.page-template-template-shop-custom .next-step').css('display', 'block');
+            $('.blocker').fadeOut('slow');
         }
 }

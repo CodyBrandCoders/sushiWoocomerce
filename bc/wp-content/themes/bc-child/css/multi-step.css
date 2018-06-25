@@ -178,6 +178,7 @@
 }
 
 .wizard > .steps .disabled a,
+.wizard > .steps .last a,
 .wizard > .steps .disabled a:hover,
 .wizard > .steps .disabled a:active
 {

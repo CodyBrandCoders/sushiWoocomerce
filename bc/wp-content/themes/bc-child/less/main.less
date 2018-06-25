@@ -12,7 +12,7 @@
  Styles for Layout
 ************************/
 
-.page-template-template-shop, .page-template-template-shop-custom {
+.page-template-template-shop, .page-template-template-shop-custom, .page-template-template-checkout {
     background-image: url("../img/cart-bg.jpg");
     .page-banner {
         background: #AF0000;
@@ -33,6 +33,9 @@
         h3 {
             color: #AF0000;
         }
+    }
+    .section.bottom-cta {
+        padding: 40px !important;
     }
     .image-text-wrapper-sushi {
         position: relative;
@@ -75,6 +78,8 @@
         }
         .wc_bookings_field_persons {
             margin-left: 10px;
+
+            width: 40px;
         }
    }
     .products {
@@ -283,7 +288,7 @@
         border-radius: 5px;
         padding: 0.5em 2em;
     }
-    .next-step {
+    .next-step, .next-steps {
         display: block;
         max-width: 100%;
         text-align: center;
@@ -296,6 +301,9 @@
         &:hover {
             background-color: #000;
         }
+    }
+    .next-steps {
+        margin: 2em 0;
     }
 
 /************************
@@ -438,7 +446,7 @@
         }
         .sushi-party-size {
             border-bottom: solid 2px #000;
-            padding: 0.5em 2em 2em;
+            padding: 0.5em 1.5em 2em;
             margin: 0;
             background: #fff;
             display: flex;
@@ -648,7 +656,7 @@
     }
     .section-custom {
         padding-bottom: 6em;
-        padding-top: 4em;
+        padding-top: 2em;
         .custom-intro {
             width: 100%;
             padding: 3em;
@@ -897,6 +905,12 @@
             transition: all ease 0.5s;
             .dropdown {
                 width: 100%;
+                img.attachment-post-thumbnail {
+                    width: 100% !important;
+                    object-fit: cover;
+                    height: 200px;
+                    
+                }
                 .btn {
                     width: 100%;
                     color: #fff;
@@ -941,7 +955,7 @@
                             border: 0 !important;
                             line-height: 0;
                         }
-                        a {
+                        a.product_type_simple {
                             position: absolute;
                             left: 0;
                             right: 0;
@@ -949,6 +963,9 @@
                             bottom: 0;
                             opacity: 0;
                             z-index: 99;
+                        }
+                        a.added_to_cart {
+                            display: none;
                         }
                         .custom-item-title {
                             font-size: 18px;
@@ -985,6 +1002,15 @@
                 }
             }
         }
+        .blocker {
+            margin-top: 1em;
+            background: #AF0000;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            font-size: 20px;
+            display: none;
+        }
     }
     .section-addons {
         #sushi-bookable-item {
@@ -993,10 +1019,18 @@
             }
         }
         .cart-addons-custom {
-           .type-nigiri-roll, type-roll-2 {
-               display: none;
+           .type-23 {
+               //display: none;
            }
         }
+    }
+}
+.page-template-template-checkout {
+    h3 {
+        text-transform: capitalize;
+    }
+    #additional_info {
+        padding: 18px 10px 4em;
     }
 }
 
@@ -1005,5 +1039,121 @@
 .woocommerce-order-received {
     .woocommerce-order {
         padding: 4em;
+    }
+}
+.wc_payment_methods.payment_methods li{
+    display: block !important;
+}
+
+//MEDIA QUERIES
+
+@media (max-width:1199px) {
+    .page-template-template-shop, .page-template-template-shop-custom  {
+        #sushi-bookable-item {
+            .product_title.entry-title {
+                padding: .5em 5px;
+            }
+            .content-bookable-item {
+                padding: 1em 1em;
+            }
+            .wc-bookings-date-picker-choose-date {
+                padding: 0.5em 1em !important;
+                font-size: 15px !important;
+            }
+        }
+        .section-custom .custom-intro a {
+            padding: .5em 1em;
+        }
+    
+        .section-addons {
+            .products {
+                #sushi-bookable-item {
+                    width: 48%;
+                    margin: 0 1% 2em !important;
+                }
+            }
+        }
+    }
+}
+@media (max-width:991px) {
+    .page-template-template-shop, .page-template-template-shop-custom  {
+
+        .products {
+            flex-direction: column;
+            #sushi-bookable-item {
+                margin: 0 0;
+                .product_title.entry-title {
+                    padding: .5em 25px;
+                    .price-bookable-item {
+                        float: left;
+                        margin-left: 1em;
+                    }
+                }
+                .content-bookable-item {
+                    padding: 1em 1em;
+                }
+                .wc-bookings-date-picker-choose-date {
+                    width: 300px;
+                    padding: 0.5em 1em !important;
+                    font-size: 15px !important;
+                }
+                .block-picker {
+                    li {
+                        width: 33%;
+                        a {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+        .section-custom .custom-intro {
+            padding: 1.5em;
+            a {
+                padding: .5em 1em;
+                position: static;
+                margin-top: 1em;
+            }
+        }
+        .section-addons {
+            display: block;
+            .col-flex {
+                margin-left: 0 !important;
+            }
+            .products {
+                #sushi-bookable-item {
+                    width: 100% !important;
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+    //tabs
+    .wizard ul {
+        display: block;
+        li {
+            float: none;
+            width: 100%;
+            display: none;
+            &.current {
+                display: block;
+            }
+        }
+    }
+    .page-template-template-shop-custom .section-package {
+        display: block;
+    }
+    .page-template-template-shop-custom .section-package {
+        margin: 2em 0;
+    }
+    .page-template-template-shop-custom .section-package .products {
+        margin: 0;
+    }
+    .page-template-template-checkout .section-payment .col-1, .page-template-template-checkout .section-payment .col-2 {
+        width: 100%;
+        padding: 2em;
+    }
+    .page-template-template-checkout .woocommerce table.shop_table td{
+        padding: 3px;
     }
 }

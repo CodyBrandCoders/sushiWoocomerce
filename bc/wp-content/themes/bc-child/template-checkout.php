@@ -1,6 +1,6 @@
 <?php
 
-//  Template Name: Book Your Experience Custom
+//  Template Name: Checkout Page
 
 ?>
 <?php get_header(); ?>
@@ -64,13 +64,13 @@
 		<div class="row">
 			<!-- //Top Section -->
 			<div class="shop-intro">
-				<div class="col-xs-10 col-xs-offset-1">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 				<?php echo $shop_introduction; ?>
 				</div>
 			</div>
 			<div class="col-xs-12 no-padding">
 				<div id="wizard">
-					<h3>Select your Rolls</h3>
+					<h3>Select your package</h3>
 					<section class="section section-package">
 							<ul class="products">
 							<?php
@@ -81,7 +81,7 @@
 								'tax_query' => array(
 									array(
 										'taxonomy'         => 'product_cat',
-										'terms'            => 'custom',
+										'terms'            => 'bookable',
 										'field'            => 'slug',
 									)
 								)
@@ -101,7 +101,7 @@
 								<div class="sushi-bookable-item-wrapper">
 									<?php echo do_shortcode( '[product_page id="'. $Queryid .'"]') ?>
 								</div>
-								<a class="product-var-bookable " data-id="<?php echo $Queryid; ?>" href="#">View Rolls</a>
+								<a class="product-var-bookable " data-id="<?php echo $Queryid; ?>" href="#">Proceed to Step 2</a>
 							</div>
 							
 							<?php }
@@ -112,111 +112,8 @@
 							// Restore original Post Data
 							wp_reset_postdata(); ?>
 							</ul>
-
-							<!-- DROPDOWNS -->
-							<div class="dropdowns-custom">
-								
-									<?php 
-	
-									$term_id = 23;
-									$taxonomy_name = 'product_cat';
-									$term_children = get_term_children( $term_id, $taxonomy_name );
-									$i = 1;
-
-									foreach ( $term_children as $child ) {
-										$term = get_term_by( 'id', $child, $taxonomy_name ); ?>
-										<div class="dropdown">
-										<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton-<?php echo $i; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<img class="custom-item-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/sushi-roll.png" /><?php echo $term->name; ?>
-										</button>
-										
-										<?php // WP_Query arguments
-										$args = array(
-											'post_type'              => array( 'product' ),
-											'post_status'            => array( 'publish' ),
-											'posts_per_page'         => '-1',
-											'tax_query'              => array(
-												array(
-													'taxonomy'         => 'product_cat',
-													'terms'            => $term->term_id,
-													'field'            => 'term_id',
-												),
-											),
-										);
-
-										// The Query
-										$query = new WP_Query( $args );
-
-										// The Loop
-										if ( $query->have_posts() ) { ?>
-											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton-<?php echo $i; ?>">
-											<?php while ( $query->have_posts() ) {
-												$query->the_post();
-
-												$Queryid = get_the_ID();
-												global $product; ?>
-
-												<?php echo get_the_post_thumbnail(); ?>
-												<div class="inner-custom-item">
-													<?php 
-														echo do_shortcode( '[add_to_cart id="'. $Queryid .'" show_price="false" /]'); ?>
-														
-														<div class="custom-item-title">
-														
-															<?php the_title(); ?>
-														</div>
-														<div class="custom-item-content"><?php echo get_field('product_description') ?></div> 
-														
-												</div>
-												
-											<?php } ?>
-											</div>
-										<?php } else {
-											// no posts found
-										} ?>
-										
-										<?php $i++;
-										// Restore original Post Data
-										wp_reset_postdata(); ?>
-										</div>
-									<?php } ?>								
-
-								
-								
-							</div>
-							<div class="col col-flex">
-							<div class="cart-ajax-wrapper">
-								<h2>My Experience</h2>
-								<div class="inner-cart">
-
-									<h3> Rolls: </h3>
-									<div class="cart-addons">
-										<?php
-											global $woocommerce;
-											$items = $woocommerce->cart->get_cart();
-
-											foreach($items as $item => $values) { 
-												$_product =  wc_get_product( $values['data']->get_id()); 
-												$price = get_post_meta($values['product_id'] , '_price', true);
-										
-												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
-													echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
-													echo '<span class="package-title">'.$_product->get_title().'</span>';
-													echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
-												echo '</div>';
-											}   
-										?>
-									</div>
-								</div>
-								<div class="sushi-party-size">
-									<span>Party Size: </span>
-									<div class="sushi-value sushi-value-input">1</div><div class="change-party-number">Change</div>
-								</div>
-								<h3 class="cart-subtotal">Subtotal: <span class="total-price">$<span class="sushie-value-total">0</span>.00</span></h3>
-							</div>
-							<a href="#" class="next-step">Continue</a>
-							<div class="blocker">A minimum of $200 is required to continue</div>
-						</div>
+							
+							<?php// echo do_shortcode( '[product_page id="2951"]') ?>
 					</section>
 					<h3>Add-Ons</h3>
 					<section class="section section-addons">
@@ -227,10 +124,14 @@
 							<div class="cart-ajax-wrapper">
 								<h2>My Experience</h2>
 								<div class="inner-cart">
-									
+									<h3>Package: </h3>
+										<div class="package-calc">
+											<span class="package-title"></span>
+											<span class="package-price" data-id=""></span>
+										</div>
 
-									<h3>Items: </h3>
-									<div class="cart-addons cart-addons-custom">
+									<h3>Add-Ons: </h3>
+									<div class="cart-addons">
 										<?php
 											global $woocommerce;
 											$items = $woocommerce->cart->get_cart();
@@ -240,7 +141,7 @@
 												$price = get_post_meta($values['product_id'] , '_price', true);
 										
 												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
-													echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
+													//echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
 													echo '<span class="package-title">'.$_product->get_title().'</span>';
 													echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
 												echo '</div>';
@@ -254,7 +155,7 @@
 								</div>
 								<h3 class="cart-subtotal">Subtotal: <span class="total-price">$<span class="sushie-value-total">0</span>.00</span></h3>
 							</div>
-							<a href="/checkout/" class="next-steps">Continue</a>
+							<a href="/checkout/" class="next-step">Continue</a>
 						</div>
 					</section>
 					<h3>Payment Information</h3>
@@ -273,6 +174,7 @@
 						bodyTag: "section",
 						transitionEffect: "fade",
 						enableAllSteps: false,
+						startIndex: 2,
 						titleTemplate: "<i class='far fa-check-circle'></i><span class='number'>#index#</span><span class='title'>#title#</span>",
 						transitionEffectSpeed: 800
 					});
@@ -285,9 +187,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="custom-intro">
-					<h2>Want a pre-built sushi experience?</h2>
+					<h2>Want to create a custom sushi experience?</h2>
 					<p>Pricing starts at $35 <span>Per person</span></p>
-					<a href="/book-your-experience/">Customize Your Package</a>
+					<a href="/book-your-experience-custom/">Customize Your Package</a>
 			</div>						
 		</div>
 	</div>

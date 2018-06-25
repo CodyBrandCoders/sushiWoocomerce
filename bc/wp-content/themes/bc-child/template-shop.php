@@ -64,7 +64,7 @@
 		<div class="row">
 			<!-- //Top Section -->
 			<div class="shop-intro">
-				<div class="col-xs-10 col-xs-offset-1">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 				<?php echo $shop_introduction; ?>
 				</div>
 			</div>
@@ -101,7 +101,7 @@
 								<div class="sushi-bookable-item-wrapper">
 									<?php echo do_shortcode( '[product_page id="'. $Queryid .'"]') ?>
 								</div>
-								<a class="product-var-bookable " data-id="<?php echo $Queryid; ?>" href="#">Get Started</a>
+								<a class="product-var-bookable " data-id="<?php echo $Queryid; ?>" href="#">Proceed to Step 2</a>
 							</div>
 							
 							<?php }
@@ -113,14 +113,13 @@
 							wp_reset_postdata(); ?>
 							</ul>
 							
-							<?php// echo do_shortcode( '[product_page id="2951"]') ?>
 					</section>
 					<h3>Add-Ons</h3>
 					<section class="section section-addons">
-						<div class="col col-lg-9">
+						<div class="col col-md-12 col-lg-9">
 							<?php echo do_shortcode( '[product_category category="addon"]' ); ?>
 						</div>
-						<div class="col col-flex col-lg-3">
+						<div class="col col-flex col-md-12 col-lg-3">
 							<div class="cart-ajax-wrapper">
 								<h2>My Experience</h2>
 								<div class="inner-cart">
@@ -155,7 +154,7 @@
 								</div>
 								<h3 class="cart-subtotal">Subtotal: <span class="total-price">$<span class="sushie-value-total">0</span>.00</span></h3>
 							</div>
-							<a href="#" class="next-step">Continue</a>
+							<a href="/checkout/" class="next-steps">Continue</a>
 						</div>
 					</section>
 					<h3>Payment Information</h3>
