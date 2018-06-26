@@ -142,6 +142,36 @@ add_action( 'wp_ajax_nopriv_get_addons', 'get_addons' );
 function get_addons() {
 
     $addon_id = $_REQUEST['addonID'];
+    $addonAmt = $_REQUEST['addonAmt'];
+
+    add_action('woocommerce_before_calculate_totals', 'change_cart_item_quantities', 20, 1 );
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
+
+    // HERE below define your specific products IDs
+    $specific_ids = array($addon_id);
+    $new_qty = $addonAmt; // New quantity
+
+    // Checking cart items
+    global $woocommerce;
+	foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
+    //foreach( $cart->get_cart() as $cart_item_key => $cart_item ) {
+        $product_id = $cart_item['data']->get_id();
+        // Check for specific product IDs and change quantity
+        if( in_array( $product_id, $specific_ids ) && $cart_item['quantity'] != $new_qty ){
+            $woocommerce->cart->set_quantity( $cart_item_key, $new_qty ); // Change quantity
+        }
+    }
+
+    echo clear_cart();
+    wp_die(); // this is required to terminate immediately and return a proper response
+}
+//ADD PRODUCT ADDONS IN CALCULATOR for CUSTOM
+add_action( 'wp_ajax_get_addons_custom', 'get_addons_custom' );
+add_action( 'wp_ajax_nopriv_get_addons_custom', 'get_addons_custom' );
+
+function get_addons_custom() {
+
+    $addon_id = $_REQUEST['addonID'];
     $addonAmmount = $_REQUEST['addonAmmount'];
 
     add_action('woocommerce_before_calculate_totals', 'change_cart_item_quantities', 20, 1 );

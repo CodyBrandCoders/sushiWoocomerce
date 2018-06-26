@@ -5,27 +5,30 @@ jQuery(document).ready( function($) {
             $select.append($('<option></option>').val(i).html(i))
         }
     });
-    $('.page-template-template-checkout #wizard .steps li').addClass('disabled');
-    
+    $(function(){
+        var $select = $(".qty");
+        for (i=1;i<=10;i++){
+            $select.append($('<option></option>').val(i).html(i))
+        }
+    });
     //MOVE THROUGH FORM
-    $('.page-template-template-shop .product-var-bookable, .next-step ').on('click', function() {
+    $('.page-template-template-shop .product-var-bookable,.page-template-template-checkout .product-var-bookable, .next-step ').on('click', function() {
         $("#wizard").steps('next');
-        $('#wizard .steps li').addClass('disabled');
         reloadCalc();
     });
-    $('.change-party-number').on('click', function() {
+    $('.change-party-number, #wizard-t-0').on('click', function() {
         $("#wizard").steps('previous');
         $('.sushi-party-size').removeClass('active'); 
         $('#sushi-bookable-item a.product-var-bookable').css('opacity', '0').css('pointer-events', 'none');
-        $('#wizard .steps li').addClass('disabled');
         reloadCalc();
     });
     //FOR CUSTOM
     $('.page-template-template-shop-custom .product-var-bookable').on('click', function() {
         $(".dropdowns-custom").css('top', 0);
+        $('.blocker').fadeIn('slow');
         $('.picker').css('display', 'none');
         $('#sushi-bookable-item .block-picker').css('display', 'none');
-        $('.sushi-party-size').removeClass('active'); 
+        $('.sushi-party-size').removeClass('active');
     });
     $('#sushi-bookable-item #wc_bookings_field_persons').on("change keyup paste", function(){
         $('#sushi-bookable-item .picker').css('opacity','1').css('height', 'auto');
@@ -53,7 +56,6 @@ jQuery(document).ready( function($) {
     //Allow contintue only after date has been selected
     $('.block-picker').on( 'click', 'a', function() {
         $(this).closest('#sushi-bookable-item').find('a.product-var-bookable').css('opacity', '1').css('pointer-events', 'all');
-        $('.blocker').fadeIn('slow');
 		return false;
 	});
     $(".wc-bookings-date-picker-choose-date").on('click', function(){
@@ -63,7 +65,7 @@ jQuery(document).ready( function($) {
     ////////////////////////////////////////////////////
     // ENSURE THERE ARE NEVER MORE THAN ONE EXPERIENCE 
     ///////////////////////////////////////////////////
-    $('.change-party-number, .wc-bookings-date-picker-choose-date').on('click', function() {
+    $('#wizard-t-0, .change-party-number, .wc-bookings-date-picker-choose-date').on('click', function() {
 
         $.ajax({
             type: 'POST',
@@ -197,8 +199,8 @@ jQuery(document).ready( function($) {
     $('.sushi-bookable-item-wrapper').on('click','.ajax_add_to_cart', function(event) {
         event.preventDefault();
         
-        var addonAmmount = $(this).closest('#sushi-bookable-item').find('div.addon-price-wrapper .quantity input').val();
-        console.log('value for addon is ' + addonAmmount);
+        var addonAmt = $(this).closest('#sushi-bookable-item').find('div.addon-price-wrapper .quantity .qty').val();
+        console.log('value for addon is ' + addonAmt);
         var addonID = $(this).data('product_id');
 
         var $this = $(this);
@@ -210,7 +212,7 @@ jQuery(document).ready( function($) {
                 data: { 
                     action: 'get_addons',
                     addonID : addonID,
-                    addonAmmount : addonAmmount
+                    addonAmt : addonAmt
                 },
                 success: function(response){
         
@@ -261,7 +263,7 @@ jQuery(document).ready( function($) {
     /////////////////////////////////////
     // JS FOR CUSTOM CART
     /////////////////////////////////////
-    $('.page-template-template-shop-custom .ajax_add_to_cart').click(function( event ) {
+    $('.page-template-template-shop-custom .section-package .ajax_add_to_cart').click(function( event ) {
         event.preventDefault();
         
         var addonAmmount = $('.sushi-party-size #wc_bookings_field_persons').val();
@@ -275,7 +277,7 @@ jQuery(document).ready( function($) {
                 url: ajaxurl,
                 dataType: 'HTML',
                 data: { 
-                    action: 'get_addons',
+                    action: 'get_addons_custom',
                     addonID : addonID,
                     addonAmmount : addonAmmount
                 },

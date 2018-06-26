@@ -2,7 +2,7 @@
  Woocommerce Style Overrides
 ************************/
 
-.page-template-template-shop {
+.page-template-template-shop, .page-template-template-shop-custom, .page-template-template-checkout {
     .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
         width: 100%;
     }
@@ -11,9 +11,18 @@
 /************************
  Styles for Layout
 ************************/
+.page-template-template-shop {
+    .cart-remove-addon {
+        display: none;
+    }
+}
 
 .page-template-template-shop, .page-template-template-shop-custom, .page-template-template-checkout {
     background-image: url("../img/cart-bg.jpg");
+    .qty {
+        width: 40px;
+        margin-left: 10px;
+    }
     .page-banner {
         background: #AF0000;
     }
@@ -862,10 +871,13 @@
     legend {
         //pointer-events: none;
     }
+    .cart-remove-addon {
+        margin-right: 7px;
+    }
     
     .section-package {
         display: flex;
-        overflow: hidden;
+        //overflow: hidden;
         .products, .dropdowns-custom {
             margin-right: 20px;
         }
@@ -908,7 +920,7 @@
                 img.attachment-post-thumbnail {
                     width: 100% !important;
                     object-fit: cover;
-                    height: 200px;
+                    height: 120px;
                     
                 }
                 .btn {
@@ -1032,6 +1044,16 @@
     #additional_info {
         padding: 18px 10px 4em;
     }
+    a.checkout-links {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+    #wizard-t-1 {
+        pointer-events: none;
+    }
 }
 
 //ORDER RECIEVED PAGE
@@ -1048,7 +1070,7 @@
 //MEDIA QUERIES
 
 @media (max-width:1199px) {
-    .page-template-template-shop, .page-template-template-shop-custom  {
+    .page-template-template-shop, .page-template-template-shop-custom, .page-template-template-checkout   {
         #sushi-bookable-item {
             .product_title.entry-title {
                 padding: .5em 5px;
@@ -1076,12 +1098,16 @@
     }
 }
 @media (max-width:991px) {
-    .page-template-template-shop, .page-template-template-shop-custom  {
+    .page-template-template-shop, .page-template-template-shop-custom, .page-template-template-checkout  {
 
         .products {
             flex-direction: column;
             #sushi-bookable-item {
                 margin: 0 0;
+                img {
+                    height: 230px;
+                    object-fit: cover;
+                }
                 .product_title.entry-title {
                     padding: .5em 25px;
                     .price-bookable-item {
@@ -1096,6 +1122,7 @@
                     width: 300px;
                     padding: 0.5em 1em !important;
                     font-size: 15px !important;
+                    margin: 2em auto 0;
                 }
                 .block-picker {
                     li {

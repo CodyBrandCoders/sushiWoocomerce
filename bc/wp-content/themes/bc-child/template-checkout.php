@@ -70,6 +70,7 @@
 			</div>
 			<div class="col-xs-12 no-padding">
 				<div id="wizard">
+				
 					<h3>Select your package</h3>
 					<section class="section section-package">
 							<ul class="products">

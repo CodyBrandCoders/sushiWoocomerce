@@ -31,7 +31,6 @@ $step  = isset( $field['step'] ) ? $field['step'] : null;
 <div class="sushi-party-size">
     <span>How Many People Will Be There?</span>
     <p class="form-field form-field-wide <?php echo implode( ' ', $class ); ?>">
-            <select name="<?php echo $name; ?>"
-            id="<?php echo $name; ?>"class="sushi-value"></select>
+            <select name="<?php echo $name; ?>" id="<?php echo $name; ?>"class="sushi-value"></select>
     </p>
 </div>
