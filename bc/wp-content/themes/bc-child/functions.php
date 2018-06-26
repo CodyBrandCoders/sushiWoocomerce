@@ -8,21 +8,31 @@ function my_theme_enqueue_styles() {
 }
 function theme_js() {
 	
-	wp_register_script( 'script_steps', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js', false, false, false );
     wp_register_script( 'script_sensor', 'https://cdnjs.cloudflare.com/ajax/libs/css-element-queries/1.0.2/ResizeSensor.min.js', false, false, false );
     wp_register_script( 'script_bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', false, false, false );
     wp_register_script( 'script_popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', false, false, false );
 
 
-	wp_enqueue_script( 'script_steps' );
+	
     wp_enqueue_script( 'script_sensor' );
     wp_enqueue_script( 'script_popper' );
     wp_enqueue_script( 'script_bootstrap' );
+    wp_enqueue_script( 'script_steps', get_stylesheet_directory_uri() . '/js/jquery.steps.js', array( 'jquery' ), '1.0', true );
 	wp_enqueue_script( 'theme_js', get_stylesheet_directory_uri() . '/js/woocommerce-child.js', array( 'jquery' ), '1.0', true );
 
 }
 
 add_action('wp_enqueue_scripts', 'theme_js');
+
+// Change the US currency symbol
+function sww_change_wc_currency_symbol( $currency_symbol, $currency ) {
+    switch( $currency ) {
+         case 'USD': $currency_symbol = '&#36;'; break;
+         // Can use this for any currency symbol
+    }
+    return $currency_symbol;
+}
+add_filter('woocommerce_currency_symbol', 'sww_change_wc_currency_symbol', 10, 2);
 
 //RESTRICT TO FLORIDA
 add_filter( 'woocommerce_states', 'wc_sell_only_states' );
@@ -247,7 +257,7 @@ function clear_cart() {
         echo '<div class="addon-item product-'. $_product->get_type() .' type-' . $singleCatArray .'" data-price="'.$price.'" data-ammount="'.$addammount.'">';
         echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
 			echo '<span class="package-title">'.$_product->get_title().'</span><span class="addon-ammount"> ('.$addammount.')</span>';
-			echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
+			echo '<span class="package-price">&#36;<span class="package-price-insert">'.$price.'</span></span>';
 		echo '</div>';
 	}   
 }

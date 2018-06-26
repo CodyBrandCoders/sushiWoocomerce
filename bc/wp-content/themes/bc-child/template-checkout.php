@@ -106,7 +106,7 @@
 							
 							<?php }
 							} else {
-							// no posts found
+							 echo 'no product found';
 							}
 
 							// Restore original Post Data

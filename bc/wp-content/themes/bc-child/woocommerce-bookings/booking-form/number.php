@@ -31,18 +31,7 @@ $step  = isset( $field['step'] ) ? $field['step'] : null;
 <div class="sushi-party-size">
     <span>How Many People Will Be There?</span>
     <p class="form-field form-field-wide <?php echo implode( ' ', $class ); ?>">
-        <!-- <input
-            type="number"
-            value="<?php echo ( ! empty( $min ) ) ? $min : 0; ?>"
-            step="<?php echo ( isset( $step ) ) ? $step : ''; ?>"
-            min="<?php echo ( isset( $min ) ) ? $min : ''; ?>"
-            max="<?php echo ( isset( $max ) ) ? $max : ''; ?>"
-            name="<?php echo $name; ?>"
-            id="<?php echo $name; ?>"
-            onClick="this.select();"
-            class="sushi-value force-select-all"
-            /> <?php echo ( ! empty( $after ) ) ? $after : ''; ?> -->
             <select name="<?php echo $name; ?>"
-            id="<?php echo $name; ?>" class="sushi-value"></select>
+            id="<?php echo $name; ?>"class="sushi-value"></select>
     </p>
 </div>

@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					global $product;
 					$this_product_price = $product->get_price();
 
-					echo '<span class="price-bookable-item">$' . $this_product_price . ' <span style="font-weight:100;letter-spacing: 1px;">Per Person</span></span>'; ?>
+					echo '<span class="price-bookable-item">&#36;' . $this_product_price . ' <span style="font-weight:100;letter-spacing: 1px;">Per Person</span></span>'; ?>
 					</div>
 				<?php
 				//Custom Fields

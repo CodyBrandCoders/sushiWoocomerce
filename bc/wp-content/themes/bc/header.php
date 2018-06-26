@@ -81,7 +81,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <meta name="author" content="BrandCoders LLC | Orlando, Florida Website Design">
-    
+    <script src="<?php get_stylesheet_directory_uri();?> ../bc/wp-content/themes/bc-child/js/jquery.steps.js" type="text/javascript"></script>
     <?php //ENABLE PHONE TRACKING SCRIPT IF USING NUMBER CHANGING FROM GOOGLE
 
     /*** Google Number Changer For PPC Tracking ***/
