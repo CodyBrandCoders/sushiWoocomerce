@@ -58,7 +58,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 				//Custom Fields
 				echo '<div class="sub-title-bookable-item">' . get_field('product_sub_title') . '</div>';
 				do_action( 'woocommerce_before_single_product_summary' );
-			?> </div> 
+				
+			?> 
+			
+		</div> 
 
  			<!-- <div class="summary entry-summary"> -->
 			 <?php
@@ -74,6 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					 * @hooked woocommerce_template_single_sharing - 50
 					 * @hooked WC_Structured_Data::generate_product_data() - 60
 					 */
+					
 					do_action( 'woocommerce_single_product_summary' );
 				?>
 

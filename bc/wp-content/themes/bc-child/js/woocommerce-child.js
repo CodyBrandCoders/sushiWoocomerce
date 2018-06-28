@@ -1,19 +1,60 @@
+//LOADER
+
 jQuery(document).ready( function($) {
-    $(function(){
-        var $select = $(".sushi-value");
-        for (i=4;i<=80;i++){
-            $select.append($('<option></option>').val(i).html(i))
+    $('#loading').css('opacity', '0')
+    $('#loading').css('height', '0vh')
+});
+
+
+//PAGE JS
+
+jQuery(document).ready( function($) {
+    jQuery(".page-template-template-shop #wizard, .page-template-template-shop-custom #wizard").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "fade",
+        enableAllSteps: false,
+        titleTemplate: "<i class='far fa-check-circle'></i><span class='number'>#index#</span><span class='title'>#title#</span>",
+        transitionEffectSpeed: 800,
+        onStepChanged: function(event, currentIndex, priorIndex)
+        {     
+            console.log('changed again');
+            setTimeout(function(){
+                $(this).scrollTop(0);
+            }, 200);
         }
     });
+    //Ensure scroll to top
+    
+    $(this).scrollTop(0);
+
+    //Add rows for select boxs
+    $(function(){
+        var $select = $(".sushi-value");
+        for (i=3;i<=80;i++){
+            if(i == 3) {
+                i = '--';
+            }
+            $select.append($('<option></option>').val(i).html(i))
+            if (i == '--') {
+                i = 3;
+            }
+        }
+    });
+
     $(function(){
         var $select = $(".qty");
-        for (i=1;i<=10;i++){
+        for (i=0;i<=10;i++){
             $select.append($('<option></option>').val(i).html(i))
         }
     });
     //MOVE THROUGH FORM
     $('.page-template-template-shop .product-var-bookable,.page-template-template-checkout .product-var-bookable, .next-step ').on('click', function() {
         $("#wizard").steps('next');
+        reloadCalc();
+    });
+    $('.prev-step ').on('click', function() {
+        $("#wizard").steps('previous');
         reloadCalc();
     });
     $('.change-party-number, #wizard-t-0').on('click', function() {
@@ -61,6 +102,23 @@ jQuery(document).ready( function($) {
     $(".wc-bookings-date-picker-choose-date").on('click', function(){
         $(this).closest('#sushi-bookable-item').find('div.sushi-party-size').toggleClass('active');
     });
+    //CHECK OUT FORM
+    $('#wc_order_field_3492').click(function(){
+        if (this.checked) {
+            console.log('checked');
+            $('#billing_address_1').val($('#wc_order_field_6764').val());
+            $('#billing_address_2').val($('#wc_order_field_2060').val());
+            $('#billing_city').val($('#wc_order_field_9564').val());
+            $('#billing_postcode').val($('#wc_order_field_7953').val());
+
+        }
+    }) 
+    
+
+    //DROP DOWNS ON CUSTOM
+    $(document).on('click', '.dropdowns-custom .dropdown-menu', function (e) {
+        e.stopPropagation();
+      });
 
     ////////////////////////////////////////////////////
     // ENSURE THERE ARE NEVER MORE THAN ONE EXPERIENCE 
@@ -158,50 +216,19 @@ jQuery(document).ready( function($) {
         }); 
     
     });
-
-    $('.sushi-bookable-item-wrapper').on('click','.product_type_simple.add_to_cart_button.active', function(e) {
-        e.preventDefault();
-        
-
-        var addonID = $(this).data('product_id');
-
-        var $this = $(this);
-
-        $.ajax({
-            type: 'POST',
-            url: ajaxurl,
-            dataType: 'HTML',
-            data: { 
-                action: 'remove_addon',
-                addonID : addonID
-            },
-            success: function(response){
-                $('.cart-addons').html();
-                $('.cart-addons').html(response);
-                $this.removeClass('active');
-                $this.addClass('ajax_add_to_cart');
-                $this.closest('#sushi-bookable-item').find('.addon-price-wrapper').removeClass('active');
-                $this.closest('#sushi-bookable-item').find('.minus-addon-circle').css('display', 'none');
-                $this.closest('#sushi-bookable-item').find('.add-addon-circle').removeClass('active');
-                //reload Calculator
-                reloadCalc();
-            }
-        }); 
-    
-    });
-
     /////////////////////////////////////
     // END AJAX FOR REMOVING ADDONS   
     /////////////////////////////////////
     /////////////////////////////////////
     // AJAX FOR ADDONS IN CART
     /////////////////////////////////////
-    $('.sushi-bookable-item-wrapper').on('click','.ajax_add_to_cart', function(event) {
+    $('.sushi-bookable-item-wrapper').on("change keyup paste",'.quantity .qty', function(event) {
         event.preventDefault();
         
-        var addonAmt = $(this).closest('#sushi-bookable-item').find('div.addon-price-wrapper .quantity .qty').val();
-        console.log('value for addon is ' + addonAmt);
-        var addonID = $(this).data('product_id');
+        var addonAmtPre = $(this).closest('#sushi-bookable-item').find('div.addon-price-wrapper .quantity .qty').val();
+        var addonAmt = parseInt(addonAmtPre);
+
+        var addonID = parseInt($(this).closest('#sushi-bookable-item').find('.ajax_add_to_cart').data('product_id'));
 
         var $this = $(this);
         setTimeout(function(){
@@ -218,11 +245,11 @@ jQuery(document).ready( function($) {
         
                     $('.cart-addons').html('');
                     $('.cart-addons').html(response);
-                    $this.addClass('active');
                     $this.closest('#sushi-bookable-item').find('.addon-price-wrapper').addClass('active');
-                    $this.removeClass('ajax_add_to_cart');
-                    $this.closest('#sushi-bookable-item').find('.minus-addon-circle').css('display', 'inline-block');
-                    $this.closest('#sushi-bookable-item').find('.add-addon-circle').addClass('active');
+                    if(addonAmt == 0) {
+                        $this.closest('#sushi-bookable-item').find('.addon-price-wrapper').removeClass('active');
+                        console.log('its zero');
+                    }
                     //reload Calculator
                     reloadCalc();
         
@@ -286,7 +313,6 @@ jQuery(document).ready( function($) {
                     $('.cart-addons').html('');
                     $('.cart-addons').html(response);
                     $this.addClass('active');
-                    $this.removeClass('ajax_add_to_cart');
                     // $this.closest('#sushi-bookable-item').find('.minus-addon-circle').css('display', 'inline-block');
                     // $this.closest('#sushi-bookable-item').find('.add-addon-circle').addClass('active');
                     //reload Calculator
@@ -404,4 +430,5 @@ function reloadCalc() {
             $('.page-template-template-shop-custom .next-step').css('display', 'block');
             $('.blocker').fadeOut('slow');
         }
+
 }

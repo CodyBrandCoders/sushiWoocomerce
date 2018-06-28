@@ -56,6 +56,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
       		
 			echo '<div class="content-addon">' . get_field('product_description') . '</div>';
 			echo '<div class="sub-title-addon">' . get_field('product_sub_title') . '</div>'; 
+			
 
 			echo '</div>';
 			
@@ -80,8 +81,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		
 			echo '<div class="addon-price-wrapper">';
 			echo '<h2 class="price-bookable-item">$' . $this_product_price . ' <span>Per Order</span></h2>';
-			echo '<i class="fas add-addon-circle fa-plus-circle"></i>';
-			echo '<i class="fas minus-addon-circle fa-minus-circle"></i>';
 			echo woocommerce_quantity_input( array(
 				'input_id'    => uniqid( 'quantity_' ),
 				'input_name'  => 'quantity',

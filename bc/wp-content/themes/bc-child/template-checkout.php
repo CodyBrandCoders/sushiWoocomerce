@@ -117,7 +117,9 @@
 							<?php// echo do_shortcode( '[product_page id="2951"]') ?>
 					</section>
 					<h3>Add-Ons</h3>
+					
 					<section class="section section-addons">
+					<a href="#" class="prev-step">Previous Step</a>
 						<div class="col col-lg-9">
 							<?php echo do_shortcode( '[product_category category="addon"]' ); ?>
 						</div>
@@ -160,7 +162,9 @@
 						</div>
 					</section>
 					<h3>Payment Information</h3>
+					
 					<section class="section section-payment">
+					<a href="#" class="prev-step">Previous Step</a>
 						<div class="checkout-ajax-wrapper"><?php echo do_shortcode('[woocommerce_checkout]'); ?></div>
 
 						

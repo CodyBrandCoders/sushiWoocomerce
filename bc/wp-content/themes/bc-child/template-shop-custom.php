@@ -4,6 +4,7 @@
 
 ?>
 <?php get_header(); ?>
+<div id="loading"></div>
 
 <?php
 // 1 Button //
@@ -156,7 +157,6 @@
 												$Queryid = get_the_ID();
 												global $product; ?>
 
-												<?php echo get_the_post_thumbnail(); ?>
 												<div class="inner-custom-item">
 													<?php 
 														echo do_shortcode( '[add_to_cart id="'. $Queryid .'" show_price="false" /]'); ?>
@@ -201,8 +201,8 @@
 										
 												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
 													echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
-													echo '<span class="package-title">'.$_product->get_title().'</span>';
-													echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
+													echo '<span class="package-title">'.$_product->get_title().' - &#36;'.$price.'</span><span class="addon-ammount"> ('.$addammount.')</span>';
+													echo '<span class="package-price">&#36;<span class="package-price-insert">'.$add_total.'</span></span>';
 												echo '</div>';
 											}   
 										?>
@@ -220,6 +220,7 @@
 					</section>
 					<h3>Add-Ons</h3>
 					<section class="section section-addons">
+					<a href="#" class="prev-step">Previous Step</a>
 						<div class="col col-lg-9">
 							<?php echo do_shortcode( '[product_category category="addon"]' ); ?>
 						</div>
@@ -241,8 +242,8 @@
 										
 												echo '<div class="addon-item product-'. $_product->get_type() .'" data-id="'.$price.'">';
 													echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
-													echo '<span class="package-title">'.$_product->get_title().'</span>';
-													echo '<span class="package-price">$<span class="package-price-insert">'.$price.'</span></span>';
+													echo '<span class="package-title">'.$_product->get_title().' - &#36;'.$price.'</span><span class="addon-ammount"> ('.$addammount.')</span>';
+													echo '<span class="package-price">&#36;<span class="package-price-insert">'.$add_total.'</span></span>';
 												echo '</div>';
 											}   
 										?>
@@ -259,24 +260,13 @@
 					</section>
 					<h3>Payment Information</h3>
 					<section class="section section-payment">
+					<a href="#" class="prev-step">Previous Step</a>
 						<div class="checkout-ajax-wrapper"><?php echo do_shortcode('[woocommerce_checkout]'); ?></div>
 
 						
 					</section>
 
 				</div>
-
-				<!-- SCRIPT OFR CART FLOW -->
-				<script>
-					jQuery("#wizard").steps({
-						headerTag: "h3",
-						bodyTag: "section",
-						transitionEffect: "fade",
-						enableAllSteps: false,
-						titleTemplate: "<i class='far fa-check-circle'></i><span class='number'>#index#</span><span class='title'>#title#</span>",
-						transitionEffectSpeed: 800
-					});
-				</script>
 			</div>
 		</div>
 	</div>
@@ -287,7 +277,7 @@
 			<div class="custom-intro">
 					<h2>Want a pre-built sushi experience?</h2>
 					<p>Pricing starts at $35 <span>Per person</span></p>
-					<a href="/book-your-experience/">Customize Your Package</a>
+					<a href="/book-your-experience/">View Packages</a>
 			</div>						
 		</div>
 	</div>

@@ -1,6 +1,27 @@
 /************************
  Woocommerce Style Overrides
 ************************/
+#loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    background-image: url("../img/sushi-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all ease 0.8s;
+    opacity: 1;
+    img {
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        margin-left: -32px;
+    }
+}
 
 .page-template-template-shop, .page-template-template-shop-custom, .page-template-template-checkout {
     .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
@@ -19,9 +40,29 @@
 
 .page-template-template-shop, .page-template-template-shop-custom, .page-template-template-checkout {
     background-image: url("../img/cart-bg.jpg");
+    .woocommerce form .form-row .select2-container {
+        height: 39px;
+    }
+    span.optional {
+        display: none;
+    }
     .qty {
         width: 40px;
         margin-left: 10px;
+    }
+    .woocommerce table.shop_table td {
+        vertical-align: top;
+    }
+    a.content-bookable-pdf {
+        padding: 0em 2em 1em;
+        text-align: left;
+        color: #000;
+        font-size: 14px;
+        font-weight: 900;
+        text-decoration: underline;
+        &:hover {
+            color: #AF0000;
+        }
     }
     .page-banner {
         background: #AF0000;
@@ -87,8 +128,7 @@
         }
         .wc_bookings_field_persons {
             margin-left: 10px;
-
-            width: 40px;
+            width: 5em;
         }
    }
     .products {
@@ -131,6 +171,8 @@
                 pointer-events: none;
                 cursor: default;
                 flex-grow: 1;
+                display: flex;
+                flex-direction: column;
                 h2 {
                     position: absolute;
                     top: 0;
@@ -297,7 +339,7 @@
         border-radius: 5px;
         padding: 0.5em 2em;
     }
-    .next-step, .next-steps {
+    .next-step, .next-steps, .prev-step {
         display: block;
         max-width: 100%;
         text-align: center;
@@ -313,6 +355,11 @@
     }
     .next-steps {
         margin: 2em 0;
+    }
+    .prev-step {
+        margin: -21px 0 1em;
+        display: none;
+        text-transform: uppercase;
     }
 
 /************************
@@ -409,7 +456,6 @@
             line-height: 0;
             font-size: 0;
             transition: all ease 0.3s;
-            z-index: 99;
         }
         .added_to_cart.wc-forward {
             display: none;
@@ -475,6 +521,10 @@
 ****************************/
     .section-addons {
         display: flex;
+        .content-addon {
+            font-size: 14px;
+            flex-grow: 1;
+        }
         .woocommerce .woocommerce {
             display: none;
         }
@@ -483,7 +533,7 @@
             flex-wrap: wrap;
             #sushi-bookable-item {
                 margin: 0 0 2em;
-                width: 32%;
+                width: 31.5%;
                 flex: none;
                 img {
                     margin: 0;
@@ -528,17 +578,15 @@
                         display: none;
                     }
                     &.active {
-                        background-color: #AF0000;
-                        input {
-                            pointer-events: none;
-                        }
-
+                        background-color: #007324;
                     }
                 }
                 .addon-content-wrapper {
                     padding: 1em;
                     text-align: left;
-                    
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
                     .sub-title-addon {
                         color: #AF0000;
                         font-weight: 800;
@@ -740,7 +788,7 @@
 }
 
 .dropdown-toggle {
-  // Generate the caret automatically
+  
   &::after {
     display: inline-block;
     width: 0;
@@ -766,7 +814,7 @@
 // The dropdown menu
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 87px;
   left: 0;
   z-index: 999;
   background: #fff;
@@ -864,12 +912,12 @@
 
 
 .page-template-template-shop-custom {
+    .content-bookable-pdf {
+        display: none;
+    }
     .next-step {
         margin: 1em 0 0;
         display: none;
-    }
-    legend {
-        //pointer-events: none;
     }
     .cart-remove-addon {
         margin-right: 7px;
@@ -923,14 +971,42 @@
                     height: 120px;
                     
                 }
+                &:nth-child(1) .btn{
+                    background-image: url("../img/roll01.jpg");
+                }
+                &:nth-child(2) .btn{
+                    background-image: url("../img/roll02.jpg");
+                }
+                &:nth-child(3) .btn{
+                    background-image: url("../img/roll03.jpg");
+                }
+                &:nth-child(4) .btn{
+                    background-image: url("../img/roll04.jpg");
+                }
+                &:nth-child(5) .btn{
+                    background-image: url("../img/roll05.jpg");
+                }
                 .btn {
                     width: 100%;
                     color: #fff;
-                    background-color: #AF0000;
+                    background-size: cover;
+                    background-position-y: 232px;
                     padding: 2em 3.5em;
                     margin-bottom: 15px;
                     text-align: left;
                     font-size: 1.1em;
+                    position: relative;
+                    z-index: 99;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        background-color: rgba(0,0,0,0.75);
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;;
+                    }
                     &:after {
                         float: right;
                         position: relative;
@@ -954,9 +1030,13 @@
                     right: 0;
                     .inner-custom-item {
                         position: relative;
-                        padding: 1em 2em 20px;
+                        padding: 13px 2em 4px 4em;
                         border-bottom: solid 2px;
                         &:hover {
+                            background-color: #fff;
+                            .custom-item-title {
+                                color: #000;
+                            }
                             .custom-item-title, .custom-item-content {
                                 left: -10px;
                             }
@@ -973,8 +1053,28 @@
                             right: 0;
                             top: 0;
                             bottom: 0;
-                            opacity: 0;
-                            z-index: 99;
+                            line-height: 0;
+                            font-size: 0;
+                            z-index: 1;
+                            background: transparent;
+                            &:after {
+                                content: '\f055';
+                                font-family: 'Font Awesome 5 Solid';
+                                position: absolute;
+                                top: 50%;
+                                margin-top: 0px;
+                                left: 10px;
+                                font-size: 25px;
+                                color: #000;
+                                transition: all ease 0.3s;
+                                margin-left: 0;
+                            }
+                        }
+                        a.product_type_simple.active {
+                            &:after {
+                                content: '\f058';
+                                color: #af0000;
+                            }
                         }
                         a.added_to_cart {
                             display: none;
@@ -989,6 +1089,8 @@
                             position: relative;
                             left: 0;
                             transition: all ease 0.4s;
+                            z-index: 1;
+                            pointer-events: none;
                         }
                         .custom-item-content {
                             margin-top: 0.5em;
@@ -1007,7 +1109,15 @@
                     padding: 1em;
                 } 
                 .sushi-party-size {
-                    display: none;
+                    height: 2.5em;
+                    overflow: hidden;
+                    padding: 0 1em;
+                    .sushi-value {
+                        margin-left: 10px;
+                    }
+                    .change-party-number {
+                        display: none;
+                    }
                 }
                 .cart-subtotal {
                     padding: 0.5em 0.8em;
@@ -1099,7 +1209,24 @@
 }
 @media (max-width:991px) {
     .page-template-template-shop, .page-template-template-shop-custom, .page-template-template-checkout  {
-
+        #loading {
+            background-size: contain;
+        }
+        #wizard {
+            padding: 0 10px;
+        }
+        .sushi-party-size {
+            span {
+                font-size: 12px;
+            }
+        }
+        .woocommerce .quantity .qty {
+            width: 6em;
+        }
+        .wc-bookings-booking-form select {
+            padding: 6px 1px;
+            font-size: 12px;
+        }
         .products {
             flex-direction: column;
             #sushi-bookable-item {
@@ -1132,13 +1259,17 @@
                         }
                     }
                 }
+                .picker {
+                    padding: 10px;
+                }
             }
         }
         .section-custom .custom-intro {
             padding: 1.5em;
             a {
                 padding: .5em 1em;
-                position: static;
+                position: relative;
+                right: 0;
                 margin-top: 1em;
             }
         }
@@ -1151,6 +1282,29 @@
                 #sushi-bookable-item {
                     width: 100% !important;
                     margin: 0 !important;
+                    .product {
+                        margin-bottom: 3em;
+                    }
+                }
+            }
+            .cart-ajax-wrapper {
+                .sushi-party-size {
+                    display: block;
+                    text-align: center;
+                    .sushi-value {
+                        display: inline-block;
+                    }
+                    span {
+                        font-size: 16px;
+                        font-weight: 900;
+                    }
+                    .change-party-number {
+                        margin: 0;
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                    }
+
                 }
             }
         }
@@ -1166,6 +1320,10 @@
                 display: block;
             }
         }
+    }
+    .page-template-template-shop-custom .section-package .dropdowns-custom {
+        top: -9999px;
+        margin-right: 0;
     }
     .page-template-template-shop-custom .section-package {
         display: block;
@@ -1183,4 +1341,14 @@
     .page-template-template-checkout .woocommerce table.shop_table td{
         padding: 3px;
     }
+    //MOBILE PREV BUTTON
+    .page-template-template-shop .prev-step, .page-template-template-shop-custom .prev-step, .page-template-template-checkout .prev-step {
+        display: block;
+    }
 }
+
+//FORM FIELDS
+.woocommerce-terms-and-conditions-checkbox-text {
+    font-size: 14px;
+}
+

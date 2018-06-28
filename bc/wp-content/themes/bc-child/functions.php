@@ -34,18 +34,6 @@ function sww_change_wc_currency_symbol( $currency_symbol, $currency ) {
 }
 add_filter('woocommerce_currency_symbol', 'sww_change_wc_currency_symbol', 10, 2);
 
-//RESTRICT TO FLORIDA
-add_filter( 'woocommerce_states', 'wc_sell_only_states' );
-function wc_sell_only_states( $states ) {
-
-	$states['US'] = array(
-		'FL' => __( 'Florida', 'woocommerce' ),
-		
-	);
-
-	return $states;
-
-}
 //AJAX URL
 add_action('wp_head', 'myplugin_ajaxurl');
 
@@ -145,7 +133,6 @@ function get_addons() {
     $addonAmt = $_REQUEST['addonAmt'];
 
     add_action('woocommerce_before_calculate_totals', 'change_cart_item_quantities', 20, 1 );
-    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
 
     // HERE below define your specific products IDs
     $specific_ids = array($addon_id);
@@ -153,12 +140,20 @@ function get_addons() {
 
     // Checking cart items
     global $woocommerce;
+    $woocommerce->cart->add_to_cart( $addon_id, 1 );
 	foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
     //foreach( $cart->get_cart() as $cart_item_key => $cart_item ) {
         $product_id = $cart_item['data']->get_id();
         // Check for specific product IDs and change quantity
         if( in_array( $product_id, $specific_ids ) && $cart_item['quantity'] != $new_qty ){
             $woocommerce->cart->set_quantity( $cart_item_key, $new_qty ); // Change quantity
+        }
+        if($new_qty ==0) {
+            if ($cart_item['product_id'] == $addon_id) {
+                //remove single product
+                $woocommerce->cart->remove_cart_item($cart_item_key);
+                //$woocommerce->cart->empty_cart();
+            }
         }
     }
 
@@ -283,31 +278,13 @@ function clear_cart() {
         $addammount = $values['quantity'];
         $catarray = $_product->get_category_ids();
         $singleCatArray = $catarray[1];
+        $add_total = $price * $addammount;
 
         echo '<div class="addon-item product-'. $_product->get_type() .' type-' . $singleCatArray .'" data-price="'.$price.'" data-ammount="'.$addammount.'">';
         echo '<a class="cart-remove-addon" href="#" data-id="' .$_product->id. '">X</a>';
-			echo '<span class="package-title">'.$_product->get_title().'</span><span class="addon-ammount"> ('.$addammount.')</span>';
-			echo '<span class="package-price">&#36;<span class="package-price-insert">'.$price.'</span></span>';
+			echo '<span class="package-title">'.$_product->get_title().' - &#36;'.$price.'</span><span class="addon-ammount"> ('.$addammount.')</span>';
+			echo '<span class="package-price">&#36;<span class="package-price-insert">'.$add_total.'</span></span>';
 		echo '</div>';
 	}   
 }
 
-function update_addon_quantity() {
-    add_action('woocommerce_before_calculate_totals', 'change_cart_item_quantities', 20, 1 );
-    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
-
-    // HERE below define your specific products IDs
-    $specific_ids = array($addon_id);
-    $new_qty = 40; // New quantity
-
-    // Checking cart items
-    global $woocommerce;
-	foreach ($woocommerce->cart->get_cart() as $cart_item_key => $cart_item) {
-    //foreach( $cart->get_cart() as $cart_item_key => $cart_item ) {
-        $product_id = $cart_item['data']->get_id();
-        // Check for specific product IDs and change quantity
-        if( in_array( $product_id, $specific_ids ) && $cart_item['quantity'] != $new_qty ){
-            $woocommerce->cart->set_quantity( $cart_item_key, $new_qty ); // Change quantity
-        }
-    }
-}

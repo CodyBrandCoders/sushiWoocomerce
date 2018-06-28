@@ -24,5 +24,6 @@ global $product;
 
 
 echo '<div class="content-bookable-item">' . get_field('product_description') . '</div>';
+echo '<a target="_blank" href="../bc/wp-content/uploads/The-Sushi-Experience-Menu.pdf" class="content-bookable-pdf">View Full Menu PDF For Ingredients<i class="fas fa-angle-double-right ml10"></i></a>';
 
 
